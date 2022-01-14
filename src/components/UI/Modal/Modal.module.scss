@@ -1,0 +1,144 @@
+.container {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &._full {
+    min-height: -webkit-calc(100vh - 16px);
+    min-height: calc(100vh - 16px);
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.close {
+  position: absolute;
+  z-index: 5;
+  top: 22px;
+  right: 26px;
+  padding: 10px;
+  font-size: 0;
+  cursor: pointer;
+  color: $colorPrimary;
+  transition: color 0.25s $ease;
+  :global .svg-icon {
+    font-size: 18px;
+    &.svg-icon--arrow-left {
+      display: none;
+    }
+  }
+  span {
+    display: none;
+  }
+  &:hover {
+    color: $colorRed;
+  }
+}
+
+.mobTitle {
+  display: none;
+}
+
+.content {
+  display: block;
+  &._full {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+._narrow {
+  padding: 24px;
+  .close {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+._thanks {
+  padding: 32px 24px 40px;
+  .close {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@include r($md) {
+  .container {
+    padding: 50px 16px;
+  }
+
+  .head {
+    flex-wrap: wrap;
+    &_title {
+      order: 2;
+      flex: 0 0 100%;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  }
+  .close {
+    order: 1;
+    position: fixed;
+    z-index: 3;
+    top: 52px;
+    left: 0;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    background: $colorPrimary;
+    height: 50px;
+    padding: 12px 16px;
+    color: white;
+    :global .svg-icon {
+      margin-left: 0;
+      margin-right: 14px;
+      &.svg-icon--close {
+        display: none;
+      }
+      &.svg-icon--arrow-left {
+        display: block;
+        font-size: 14px;
+      }
+    }
+    > span {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+
+  .mobTitle {
+    margin-left: auto;
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    span {
+      display: inline-block;
+    }
+  }
+  .content {
+    display: block;
+  }
+
+  ._narrow {
+    padding: 52px 0 40px;
+    .close {
+      top: 52px;
+      right: 0;
+    }
+  }
+
+  ._thanks {
+    padding: 80px 20px 40px;
+    .close {
+      top: 52px;
+      right: 0;
+    }
+  }
+}
