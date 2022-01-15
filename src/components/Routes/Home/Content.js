@@ -149,4 +149,9 @@ export const content = {
     deadline: 'February 02 2022 15:00:00 GMT+0300',
     helper: '30 units of equity available at $25,000',
   },
+  eventBanner: {
+    description:
+      'We are hosting a LIVE event for potential investors on the 31st of January at 6pm You can meet the team and we will provide a summary of the business, a demonstration of the technology and have an open Q&A session. Attendance can be in-person* or online,  but will be by invitation only.',
+    note: '*Venue will be announced upon interest in attending',
+  },
 };
