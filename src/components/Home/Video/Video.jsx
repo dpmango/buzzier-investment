@@ -114,7 +114,7 @@ const Video = ({ className, title, video }) => {
   return (
     <div className={cns(styles.container, className)}>
       <div className="container">
-        <div className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></div>
+        <h3 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
 
         <div className={cns(styles.video, playState && styles[playState])}>
           <div className={styles.videoBody}>

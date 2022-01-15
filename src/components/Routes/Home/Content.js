@@ -40,4 +40,26 @@ export const content = {
       },
     ],
   },
+  benefits: {
+    title: '<i>Advertising</i> is native to online business. Why not Brick & Mortar?',
+    subtitle: 'Buzzier is bringing the advertising revenue options of online platforms to brick & mortar business.',
+    cols: [
+      {
+        id: 1,
+        title: 'Point-of-Purchase Advertising',
+        description: 'Advertisers alway want to be as close to point-of-purchase as possible. Buzzier enables it.',
+      },
+      {
+        id: 2,
+        title: 'Convenience',
+        description: 'We end the logistics nightmare for brands with real-world engagement  just clicks away.',
+      },
+      {
+        id: 3,
+        title: 'Proof-of-Play',
+        description:
+          'A minimum of 50% of online advertising is fraudentally billed. We guarantee 100% of the ads on Buzzier.',
+      },
+    ],
+  },
 };

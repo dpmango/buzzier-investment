@@ -1,0 +1,68 @@
+.container {
+  position: relative;
+  padding: 6rem 0 6rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  i {
+    text-decoration: underline;
+    font-style: normal;
+  }
+}
+
+.subtitle {
+  margin-top: 0.7rem;
+  font-size: 1.2rem;
+  line-height: 140%;
+  letter-spacing: -0.025em;
+  color: $colorGray;
+}
+
+.grid {
+  margin: 2.8rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  background: #f1f1f1;
+  border-radius: 10px;
+  padding: 3rem 2.5rem 2.5rem;
+}
+
+.colTitle {
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  color: #010101;
+  text-decoration: underline;
+  text-decoration-color: $colorPrimary;
+  text-decoration-thickness: 4px;
+}
+
+.colDescription {
+  margin-top: auto;
+  font-size: 1.1rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  color: $colorGray;
+}
+
+.colImage {
+  flex: 0 0 130px;
+  padding-right: 1rem;
+  font-size: 0;
+  img,
+  svg {
+    max-width: 100%;
+  }
+}

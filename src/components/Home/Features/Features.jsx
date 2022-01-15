@@ -19,7 +19,7 @@ const Features = ({ className, title, cols }) => {
   return (
     <div className={cns(styles.container, className)}>
       <div className="container">
-        <div className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
+        <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
         <div className={styles.grid}>
           {cols &&
             cols.length &&
@@ -28,7 +28,7 @@ const Features = ({ className, title, cols }) => {
                 <div className={styles.colImage}>
                   <img src={FeatureImages[col.iconId]} />
                 </div>
-                <h1 className={styles.colTitle} dangerouslySetInnerHTML={{ __html: col.title }} />
+                <div className={styles.colTitle} dangerouslySetInnerHTML={{ __html: col.title }} />
               </div>
             ))}
         </div>

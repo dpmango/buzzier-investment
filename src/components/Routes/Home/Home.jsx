@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { useQuery } from '@hooks';
 import { UiStoreContext, SessionStoreContext } from '@store';
 
-import { HomeHero, HomeVideo, HomeFeatures } from '@c/Home';
+import { HomeHero, HomeVideo, HomeFeatures, HomeBenefits } from '@c/Home';
 import { content } from './Content.js';
 
 const HomePage = observer(() => {
@@ -20,6 +20,7 @@ const HomePage = observer(() => {
       <HomeHero {...content.hero} />
       <HomeVideo {...content.video} />
       <HomeFeatures {...content.features} />
+      <HomeBenefits {...content.benefits} />
     </>
   );
 });
