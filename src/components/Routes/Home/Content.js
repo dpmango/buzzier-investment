@@ -144,6 +144,35 @@ export const content = {
       },
     ],
   },
+  team: {
+    title: 'The Team',
+    cols: [
+      {
+        id: 1,
+        image: '/img/team-ian.jpg',
+        title: 'Ian',
+        position: 'CEO',
+        extra:
+          'Finally we have Conor on our Board of Directors, one of the most influential people in connected TV and digital-out-of-home advertising and currently the Vice President of Business Development at Axciom.',
+      },
+      {
+        id: 2,
+        image: '/img/team-andrei.jpg',
+        title: 'Andrei',
+        position: 'Our CTO and principal architect',
+        extra:
+          'Finally we have Conor on our Board of Directors, one of the most influential people in connected TV and digital-out-of-home advertising and currently the Vice President of Business Development at Axciom.',
+      },
+      {
+        id: 3,
+        image: '/img/team-conor.jpg',
+        title: 'Conor',
+        position: 'Board of Directors',
+        extra:
+          'Finally we have Conor on our Board of Directors, one of the most influential people in connected TV and digital-out-of-home advertising and currently the Vice President of Business Development at Axciom.',
+      },
+    ],
+  },
   countdown: {
     title: 'Countdown to <i>live event</i>',
     deadline: 'February 02 2022 15:00:00 GMT+0300',

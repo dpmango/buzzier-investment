@@ -1,0 +1,91 @@
+.container {
+  position: relative;
+  padding: 6em 0 6rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.2rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  text-align: center;
+  i {
+    text-decoration: underline;
+    font-style: normal;
+  }
+}
+
+.grid {
+  margin: 2.2rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 0;
+  background: #f1f1f1;
+  &:hover {
+    .colContent {
+      margin-top: -10rem;
+    }
+    .extra {
+      opacity: 1;
+      height: 10rem;
+    }
+  }
+}
+
+.colImage {
+  flex: 0 0 auto;
+  font-size: 0;
+  img,
+  svg {
+    max-width: 100%;
+  }
+}
+
+.colContent {
+  padding: 1.8rem 2rem;
+  background: rgba(241, 241, 241, 0.9);
+  transition: margin 0.25s $ease;
+}
+.colTitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  color: $colorPrimary;
+}
+
+.colPosition {
+  margin-top: 0.4rem;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  color: $colorGray;
+}
+
+.extra {
+  margin-top: 1.3rem;
+  height: 0;
+  border-radius: 0 0 10px 10px;
+  opacity: 0;
+  font-size: 1rem;
+  line-height: 125%;
+  letter-spacing: -0.025em;
+  color: $colorGray;
+  transition: height 0.25s $ease, opacity 0.25s $ease;
+}
