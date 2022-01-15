@@ -1,11 +1,17 @@
 .container {
   position: relative;
-  padding: 5.5rem 0 6rem;
-  background: black;
+  padding: 6rem 0 8rem;
+  background: black url('./assets/background.png') no-repeat top center;
+  background-size: cover;
   color: white;
 }
 
+.wrapper {
+  display: flex;
+}
+
 .title {
+  max-width: 240px;
   font-weight: bold;
   font-size: 2.2rem;
   line-height: 120%;
@@ -18,18 +24,19 @@
 }
 
 .grid {
-  margin: 4rem 0 0;
+  max-width: 770px;
+  margin-left: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem 1.5rem;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
 }
 
 .col {
   display: flex;
   align-items: center;
   background: #fcfcfc;
-  border-radius: 10px;
-  padding: 2.5rem;
+  border-radius: 0.5rem;
+  padding: 2rem 2.6rem;
 }
 
 .colTitle {

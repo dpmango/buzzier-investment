@@ -62,4 +62,35 @@ export const content = {
       },
     ],
   },
+  howItWorks: {
+    title: 'How it works:',
+    cols: [
+      {
+        id: 1,
+        title: 'Any business can turn a screen into a digital billboard and start making money.',
+        iconId: 'ad',
+      },
+      {
+        id: 2,
+        title: 'We send out a Buzzier TV box.',
+        iconId: 'send',
+      },
+      {
+        id: 3,
+        title: 'The screen owner plugs it in and connects to WiFi.',
+        iconId: 'qr',
+      },
+      {
+        id: 4,
+        title: 'Our proprietary technology matches advertisers with businesses.',
+        iconId: 'scan',
+      },
+      {
+        id: 5,
+        title:
+          'Each box counts mobile devices within a set radius- we can tell the advertiser exactly how many people are seeing their ad in any location at any time.',
+        iconId: 'iq',
+      },
+    ],
+  },
 };

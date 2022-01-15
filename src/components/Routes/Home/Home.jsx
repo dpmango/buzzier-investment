@@ -1,11 +1,12 @@
 import React, { useContext, Profiler, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Helmet } from 'react-helmet';
+// import AOS from 'aos';
 
 import { useQuery } from '@hooks';
 import { UiStoreContext, SessionStoreContext } from '@store';
 
-import { HomeHero, HomeVideo, HomeFeatures, HomeBenefits } from '@c/Home';
+import { HomeHero, HomeVideo, HomeFeatures, HomeBenefits, HomeHowItWorks } from '@c/Home';
 import { content } from './Content.js';
 
 const HomePage = observer(() => {
@@ -21,6 +22,7 @@ const HomePage = observer(() => {
       <HomeVideo {...content.video} />
       <HomeFeatures {...content.features} />
       <HomeBenefits {...content.benefits} />
+      <HomeHowItWorks {...content.howItWorks} />
     </>
   );
 });
