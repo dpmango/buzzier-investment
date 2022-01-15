@@ -14,4 +14,30 @@ export const content = {
       caption: 'How do we make money for you?',
     },
   },
+  features: {
+    title: '<i>Brick & Mortar</i>  vs  <i>Virtual Counterparts</i>',
+    cols: [
+      {
+        id: 1,
+        title: 'Brick and mortar businesses are struggling to keep up with their online counterparts.',
+        iconId: 'open',
+      },
+      {
+        id: 2,
+        title:
+          'More and more physical businesses are closing down due to high costs and lack of opportunities to increase revenue.',
+        iconId: 'balance',
+      },
+      {
+        id: 3,
+        title: 'Online businesses cash in on advertising revenue and low overheads.',
+        iconId: 'ad',
+      },
+      {
+        id: 4,
+        title: 'Towns and communities are suffering from decreased business diversity.',
+        iconId: 'secure',
+      },
+    ],
+  },
 };
