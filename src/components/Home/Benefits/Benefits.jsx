@@ -9,7 +9,7 @@ const Benefits = ({ className, title, subtitle, cols }) => {
     <div className={cns(styles.container, className)}>
       <div className="container">
         <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
-        <div className={styles.subtitle} dangerouslySetInnerHTML={{ __html: subtitle }} />
+        {subtitle && <div className={styles.subtitle} dangerouslySetInnerHTML={{ __html: subtitle }} />}
 
         <div className={styles.grid}>
           {cols &&

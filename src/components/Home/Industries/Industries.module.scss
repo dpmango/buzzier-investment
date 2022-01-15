@@ -16,7 +16,7 @@
 }
 
 .description {
-  margin-top: 3rem;
+  margin-top: 4rem;
   font-size: 1.2rem;
   line-height: 120%;
   letter-spacing: -0.025em;
@@ -30,9 +30,9 @@
 }
 
 .grid {
-  margin: 4rem 0 0;
+  margin: 3rem 0 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto auto;
   grid-gap: 2rem 1.5rem;
 }
 

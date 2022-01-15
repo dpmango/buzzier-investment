@@ -1,0 +1,92 @@
+.container {
+  padding: 8.5rem 0;
+  color: white;
+  background: black url('./countdown-background.png') no-repeat center top;
+  background-size: cover;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.025em;
+  color: #fff;
+  i {
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: $colorPrimary;
+    text-decoration-thickness: 3px;
+  }
+}
+
+.helperText {
+  margin-top: 5.5rem;
+  font-size: 1.3rem;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.025em;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1.5rem;
+  margin: 6rem 0;
+}
+
+.col {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 0 0.5rem;
+  min-width: 1px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.colValue {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1px;
+  min-height: 4rem;
+  font-weight: bold;
+  font-size: 5.5rem;
+  line-height: 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+  span {
+    display: inline-block;
+  }
+}
+
+.colLabel {
+  flex: 0 0 auto;
+  position: relative;
+  font-size: 2rem;
+  line-height: 1;
+  text-align: center;
+  min-height: 4rem;
+  margin-left: 134px;
+  &::after {
+    display: inline-block;
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: $colorPrimary;
+  }
+}
+
+.cta {
+  margin: 7rem 0 5rem;
+  display: flex;
+  justify-content: center;
+}

@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  padding: 6rem 0 6rem;
+  padding: 3.6rem 0 6rem;
 }
 
 .title {
@@ -23,7 +23,7 @@
 }
 
 .grid {
-  margin: 2.8rem 0 0;
+  margin: 3.8rem 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1.5rem;
@@ -38,7 +38,7 @@
 }
 
 .colTitle {
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
   font-size: 1.6rem;
   line-height: 120%;
@@ -47,6 +47,7 @@
   text-decoration: underline;
   text-decoration-color: $colorPrimary;
   text-decoration-thickness: 4px;
+  // text-decoration-skip: edges;
 }
 
 .colDescription {

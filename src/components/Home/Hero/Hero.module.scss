@@ -3,7 +3,7 @@
 }
 
 .grid {
-  margin: 2rem 0 5rem;
+  margin: 1rem 0 4.5rem;
   display: grid;
   place-items: center;
   grid-template-columns: 500px 1fr;
@@ -36,7 +36,8 @@
 }
 
 .image {
-  transform: translateX(12%);
+  transform: translateX(13%);
+  margin-left: -20%;
   img {
     max-width: 100%;
   }

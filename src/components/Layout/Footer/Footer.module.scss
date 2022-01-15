@@ -1,6 +1,20 @@
 .footer {
   position: relative;
   background: $fontColor;
-  padding-bottom: 80px;
+  padding-bottom: 3rem;
   border-top: 2px solid $borderColor;
+  color: white;
+}
+
+.copy {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.025em;
+  strong {
+    text-decoration: underline;
+    text-decoration-color: $colorPrimary;
+    text-decoration-thickness: 3px;
+  }
 }

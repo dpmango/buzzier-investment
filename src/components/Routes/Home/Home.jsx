@@ -7,6 +7,7 @@ import { useQuery } from '@hooks';
 import { UiStoreContext, SessionStoreContext } from '@store';
 
 import { HomeHero, HomeVideo, HomeFeatures, HomeBenefits, HomeHowItWorks, HomeIndustries } from '@c/Home';
+import { EventCountdown } from '@c/Event';
 import { content } from './Content.js';
 
 const HomePage = observer(() => {
@@ -24,6 +25,8 @@ const HomePage = observer(() => {
       <HomeBenefits {...content.benefits} />
       <HomeHowItWorks {...content.howItWorks} />
       <HomeIndustries {...content.industries} />
+
+      <EventCountdown {...content.countdown} />
     </>
   );
 });

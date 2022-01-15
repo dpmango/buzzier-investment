@@ -15,8 +15,9 @@
 }
 
 .video {
-  margin-top: 1.75rem;
   position: relative;
+  overflow: hidden;
+  margin-top: 1.75rem;
   border-radius: 0.5rem;
   &.play {
     .videoCaption {
@@ -49,6 +50,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 1rem 1rem 2rem;
   color: white;
   transition: opacity 0.25s $ease;
 }
@@ -130,19 +132,19 @@
     border: none;
     overflow: hidden;
     border-radius: 4px;
-    color: #ffffff;
+    color: #fff;
     &::-moz-progress-bar {
-      background-color: #ffffff;
+      background-color: #fff;
     }
     &::-webkit-progress-value {
-      background-color: #ffffff;
+      background-color: #fff;
     }
   }
   progress span {
     width: 0%; // js-updatable
     height: 100%;
     display: inline-block;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 4px;
   }
 }

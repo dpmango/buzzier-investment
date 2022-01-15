@@ -15,7 +15,7 @@ export const content = {
     },
   },
   features: {
-    title: '<i>Brick & Mortar</i>  vs  <i>Virtual Counterparts</i>',
+    title: '<i>Brick & Mortar</i>&nbsp;&nbsp;vs&nbsp;&nbsp;<i>Virtual Counterparts</i>',
     cols: [
       {
         id: 1,
@@ -42,7 +42,7 @@ export const content = {
   },
   benefits: {
     title: '<i>Advertising</i> is native to online business. Why not Brick & Mortar?',
-    subtitle: 'Buzzier is bringing the advertising revenue options of online platforms to brick & mortar business.',
+    // subtitle: 'Buzzier is bringing the advertising revenue options of online platforms to brick & mortar business.',
     cols: [
       {
         id: 1,
@@ -143,5 +143,10 @@ export const content = {
         ],
       },
     ],
+  },
+  countdown: {
+    title: 'Countdown to <i>live event</i>',
+    deadline: 'February 02 2022 15:00:00 GMT+0300',
+    helper: '30 units of equity available at $25,000',
   },
 };
