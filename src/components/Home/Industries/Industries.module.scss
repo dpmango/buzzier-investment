@@ -1,0 +1,94 @@
+.container {
+  position: relative;
+  padding: 2.4rem 0 5rem;
+  background: #f4f4f4;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.2rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+
+  text-decoration: underline;
+  font-style: normal;
+  text-decoration-color: $colorPrimary;
+}
+
+.description {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  color: $colorGray;
+  strong {
+    color: $fontColor;
+    text-decoration: underline;
+    text-decoration-color: $colorPrimary;
+    text-decoration-thickness: 3px;
+  }
+}
+
+.grid {
+  margin: 4rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem 1.5rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.colTitle {
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  color: $fontColor;
+  text-decoration: underline;
+  text-decoration-color: $colorPrimary;
+  text-decoration-thickness: 3px;
+}
+
+.colMenu {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  li {
+    display: flex;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #585753;
+    transition: color 0.25s $ease;
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}
+
+.linkIcon {
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: $colorPrimary;
+  color: white;
+  border-radius: 50%;
+  :global .svg-icon {
+    font-size: 0.7rem;
+  }
+}

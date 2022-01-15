@@ -46,7 +46,7 @@ export const content = {
     cols: [
       {
         id: 1,
-        title: 'Point-of-Purchase Advertising',
+        title: 'P-O-P Advertising',
         description: 'Advertisers alway want to be as close to point-of-purchase as possible. Buzzier enables it.',
       },
       {
@@ -90,6 +90,57 @@ export const content = {
         title:
           'Each box counts mobile devices within a set radius- we can tell the advertiser exactly how many people are seeing their ad in any location at any time.',
         iconId: 'iq',
+      },
+    ],
+  },
+  industries: {
+    title: 'Top Level Industries',
+    description:
+      'This technology has a huge range of applications across <strong>many sectors</strong>, including, but not limited to:',
+    cols: [
+      {
+        id: 1,
+        title: 'Retail',
+        links: [
+          { to: '#', label: 'Gyms & Health Clubs' },
+          { to: '#', label: 'Banks' },
+          { to: '#', label: 'Laundromats' },
+          { to: '#', label: 'Veterinary Clinics' },
+          { to: '#', label: 'Medical Clinics' },
+        ],
+      },
+      {
+        id: 2,
+        title: 'Hospitatlity ',
+        links: [
+          { to: '#', label: 'Hotels' },
+          { to: '#', label: 'Restaurants' },
+          { to: '#', label: 'Bars' },
+          { to: '#', label: 'Coffee Shops/Cafes' },
+          { to: '#', label: 'Breakrooms ' },
+        ],
+      },
+      {
+        id: 3,
+        title: 'Leisure',
+        links: [
+          { to: '#', label: 'Spas & Wellness' },
+          { to: '#', label: 'Hair & Nail Salons' },
+          { to: '#', label: 'Cinemas' },
+          { to: '#', label: 'Amusement Parks' },
+          { to: '#', label: 'Bowling Alleys' },
+        ],
+      },
+      {
+        id: 4,
+        title: 'Transportation',
+        links: [
+          { to: '#', label: 'Airlines/Airports' },
+          { to: '#', label: 'Taxis' },
+          { to: '#', label: 'Cruise Ships' },
+          { to: '#', label: 'Buses' },
+          { to: '#', label: 'Elevators' },
+        ],
       },
     ],
   },

@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import { useQuery } from '@hooks';
 import { UiStoreContext, SessionStoreContext } from '@store';
 
-import { HomeHero, HomeVideo, HomeFeatures, HomeBenefits, HomeHowItWorks } from '@c/Home';
+import { HomeHero, HomeVideo, HomeFeatures, HomeBenefits, HomeHowItWorks, HomeIndustries } from '@c/Home';
 import { content } from './Content.js';
 
 const HomePage = observer(() => {
@@ -23,6 +23,7 @@ const HomePage = observer(() => {
       <HomeFeatures {...content.features} />
       <HomeBenefits {...content.benefits} />
       <HomeHowItWorks {...content.howItWorks} />
+      <HomeIndustries {...content.industries} />
     </>
   );
 });
