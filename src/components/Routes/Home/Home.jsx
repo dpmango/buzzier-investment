@@ -6,7 +6,16 @@ import { Helmet } from 'react-helmet';
 import { useQuery } from '@hooks';
 import { UiStoreContext, SessionStoreContext } from '@store';
 
-import { HomeHero, HomeVideo, HomeFeatures, HomeBenefits, HomeHowItWorks, HomeIndustries, HomeTeam } from '@c/Home';
+import {
+  HomeHero,
+  HomeVideo,
+  HomeFeatures,
+  HomeBenefits,
+  HomeHowItWorks,
+  HomeIndustries,
+  HomeTeam,
+  HomeUploads,
+} from '@c/Home';
 import { EventCountdown, EventBanner } from '@c/Event';
 import { content } from './Content.js';
 
@@ -27,6 +36,7 @@ const HomePage = observer(() => {
       <HomeIndustries {...content.industries} />
 
       <HomeTeam {...content.team} />
+      <HomeUploads {...content.uploads} />
       <EventBanner {...content.eventBanner} />
       <EventCountdown {...content.countdown} />
     </>

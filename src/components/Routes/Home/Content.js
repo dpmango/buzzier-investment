@@ -173,6 +173,42 @@ export const content = {
       },
     ],
   },
+  uploads: {
+    videos: [
+      {
+        id: 1,
+        title: 'Ad Industry',
+        video: {
+          size: '370x245',
+          poster: '/img/videoPoster_2.png',
+          source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+        },
+      },
+      {
+        id: 2,
+        title: 'Business Model',
+        video: {
+          size: '370x245',
+          poster: '/img/videoPoster_2.png',
+          source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+        },
+      },
+      {
+        id: 3,
+        title: 'Technology',
+        video: {
+          size: '370x245',
+          poster: '/img/videoPoster_2.png',
+          source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+        },
+      },
+    ],
+    uploads: [
+      { id: 1, href: '#', title: 'Fact Sheet - Download', icon: 'download' },
+      { id: 1, href: '#', title: 'Fact Sheet - Download', icon: 'download' },
+      { id: 1, href: '#', title: 'Fact Sheet - Download', icon: 'download' },
+    ],
+  },
   countdown: {
     title: 'Countdown to <i>live event</i>',
     deadline: 'February 02 2022 15:00:00 GMT+0300',
