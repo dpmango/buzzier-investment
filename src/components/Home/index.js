@@ -1,1 +1,2 @@
-export { default as HomeIntro } from './Intro';
+export { default as HomeHero } from './Hero';
+export { default as HomeVideo } from './Video';

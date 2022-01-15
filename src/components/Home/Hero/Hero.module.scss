@@ -1,0 +1,43 @@
+.container {
+  position: relative;
+}
+
+.grid {
+  margin: 40px 0 70px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 500px 1fr;
+  grid-gap: 30px;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  color: $colorPrimary;
+  i {
+    color: $fontColor;
+    font-style: normal;
+    text-decoration: underline;
+  }
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  line-height: 140%;
+  letter-spacing: -0.025em;
+  color: $colorGray;
+}
+
+.image {
+  transform: translateX(12%);
+  img {
+    max-width: 100%;
+  }
+}

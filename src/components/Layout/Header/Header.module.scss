@@ -6,9 +6,15 @@
   will-change: transform;
   backface-visibility: hidden;
   &._scrolled {
-    transform: translate3d(0, -36px, 0);
+    transform: translate3d(0, -50px, 0);
+    border-bottom: 1px solid $borderColor;
     .wrapper {
-      padding-bottom: 16px;
+      padding-bottom: 10px;
+    }
+    .cta {
+      :global .btn {
+        font-size: 0.7rem;
+      }
     }
   }
 }
@@ -41,6 +47,7 @@
   flex: 0 0 auto;
   :global .btn {
     margin-right: 15px;
+    transition: 0.25s $ease;
     &:last-child {
       margin-right: 0;
     }

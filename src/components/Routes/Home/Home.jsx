@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { useQuery } from '@hooks';
 import { UiStoreContext, SessionStoreContext } from '@store';
 
-import { HomeIntro } from '@c/Home';
+import { HomeHero, HomeVideo } from '@c/Home';
 import { content } from './Content.js';
 
 const HomePage = observer(() => {
@@ -17,7 +17,8 @@ const HomePage = observer(() => {
         <title>Buzzier - Investment Page - dev</title>
       </Helmet>
 
-      <HomeIntro />
+      <HomeHero {...content.hero} />
+      <HomeVideo {...content.video} />
     </>
   );
 });
