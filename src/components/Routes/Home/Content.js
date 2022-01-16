@@ -205,8 +205,8 @@ export const content = {
     ],
     uploads: [
       { id: 1, href: '#', title: 'Fact Sheet - Download', icon: 'download' },
-      { id: 1, href: '#', title: 'Fact Sheet - Download', icon: 'download' },
-      { id: 1, href: '#', title: 'Fact Sheet - Download', icon: 'download' },
+      { id: 2, href: '#', title: 'Fact Sheet - Download', icon: 'download' },
+      { id: 3, href: '#', title: 'Fact Sheet - Download', icon: 'download' },
     ],
   },
   countdown: {

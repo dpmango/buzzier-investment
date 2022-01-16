@@ -2,8 +2,22 @@ import React, { useMemo, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cns from 'classnames';
 
-import { Button } from '@ui';
+import { Button, UiMap, UiMapMarker } from '@ui';
+import { getEnv } from '@helpers';
+
 import styles from './Countdown.module.scss';
+
+const mapProps = {
+  center: {
+    lat: 19.3275,
+    lng: -81.17158,
+  },
+  zoom: 5,
+  marker: {
+    id: 1,
+    center: { lat: 19.3275, lng: -81.17158 },
+  },
+};
 
 const Countdown = ({ className, title, deadline, helper }) => {
   const [tickerId, setTickerId] = useState(0);
@@ -72,6 +86,10 @@ const Countdown = ({ className, title, deadline, helper }) => {
         </div>
 
         <div className={styles.helperText}>{helper}</div>
+
+        <UiMap {...mapProps} className={styles.map}>
+          <UiMapMarker position={mapProps.marker.center} />
+        </UiMap>
       </div>
     </div>
   );

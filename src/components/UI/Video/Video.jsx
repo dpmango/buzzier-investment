@@ -77,7 +77,6 @@ const Video = ({ className, video, children }) => {
       percent = Math.round((Number(height) / Number(width)) * 100, 100);
     }
 
-    console.log(percent);
     return `${percent}%`;
   }, [video.size]);
 
