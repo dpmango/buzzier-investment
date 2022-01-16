@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useCallback } from 'react';
-import { observer } from 'mobx-react';
+import { observer } from 'mobx-react-lite';
 import { ToastProvider } from 'react-toast-notifications';
 import ReactTooltip from 'react-tooltip';
 

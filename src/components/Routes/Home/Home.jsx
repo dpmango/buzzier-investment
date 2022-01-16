@@ -1,5 +1,5 @@
 import React, { useContext, Profiler, useEffect } from 'react';
-import { observer } from 'mobx-react';
+import { observer } from 'mobx-react-lite';
 import { Helmet } from 'react-helmet';
 // import AOS from 'aos';
 
@@ -13,14 +13,17 @@ import {
   HomeBenefits,
   HomeHowItWorks,
   HomeIndustries,
+  HomeCore,
   HomeTeam,
   HomeUploads,
 } from '@c/Home';
 import { EventCountdown, EventBanner } from '@c/Event';
+import { AdminComponents } from '@c/Layout';
 import { content } from './Content.js';
 
 const HomePage = observer(() => {
   const query = useQuery();
+  const { hiddenComponents } = useContext(UiStoreContext);
 
   return (
     <>
@@ -28,17 +31,34 @@ const HomePage = observer(() => {
         <title>Buzzier - Investment Page - dev</title>
       </Helmet>
 
-      <HomeHero {...content.hero} />
-      <HomeVideo {...content.video} />
-      <HomeFeatures {...content.features} />
-      <HomeBenefits {...content.benefits} />
-      <HomeHowItWorks {...content.howItWorks} />
-      <HomeIndustries {...content.industries} />
+      {!hiddenComponents.includes('Hero') && <HomeHero {...content.hero} />}
+      {!hiddenComponents.includes('Video') && <HomeVideo {...content.video} />}
+      {!hiddenComponents.includes('Features') && <HomeFeatures {...content.features} />}
+      {!hiddenComponents.includes('Benefits') && <HomeBenefits {...content.benefits} />}
+      {!hiddenComponents.includes('HowItWorks') && <HomeHowItWorks {...content.howItWorks} />}
+      {!hiddenComponents.includes('Industries') && <HomeIndustries {...content.industries} />}
 
-      <HomeTeam {...content.team} />
-      <HomeUploads {...content.uploads} />
-      <EventBanner {...content.eventBanner} />
-      <EventCountdown {...content.countdown} />
+      {!hiddenComponents.includes('Core') && <HomeCore {...content.core} />}
+      {!hiddenComponents.includes('Team') && <HomeTeam {...content.team} />}
+      {!hiddenComponents.includes('Uploads') && <HomeUploads {...content.uploads} />}
+      {!hiddenComponents.includes('Banner') && <EventBanner {...content.eventBanner} />}
+      {!hiddenComponents.includes('Countdown') && <EventCountdown {...content.countdown} />}
+
+      <AdminComponents
+        components={[
+          HomeHero,
+          HomeVideo,
+          HomeFeatures,
+          HomeBenefits,
+          HomeHowItWorks,
+          HomeIndustries,
+          HomeCore,
+          HomeTeam,
+          HomeUploads,
+          EventBanner,
+          EventCountdown,
+        ]}
+      />
     </>
   );
 });

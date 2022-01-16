@@ -1,0 +1,76 @@
+.controls {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.controlsToggle {
+  width: 40px;
+  height: 40px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: rgba(black, 0.8)
+    url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjI0IiBoZWlnaHQ9IjIyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTI5LjAyMyAyMjMuNjA5SDk1LjUzN2E4LjMyIDguMzIgMCAwIDEtOC4yNzYtNy40NDRsLTIuNDgtMjMuMzQ2YTg0LjcwOSA4NC43MDkgMCAwIDEtMTAuMTIzLTQuMTk0TDU2LjQxNSAyMDMuMzhhOC4zMjMgOC4zMjMgMCAwIDEtMTEuMDk0LS41ODhsLTIzLjY4LTIzLjY4YTguMzE4IDguMzE4IDAgMCAxLS41ODgtMTEuMDkzbDE0Ljc2LTE4LjI2NmE4NC40NSA4NC40NSAwIDAgMS00LjE5OC0xMC4xMjNsLTIzLjM4Ni0yLjQ5NmE4LjMyMyA4LjMyMyAwIDAgMS03LjQ0NC04LjI3MVY5NS4zNzFhOC4zMiA4LjMyIDAgMCAxIDcuNDQ0LTguMjdsMjMuMzQ3LTIuNDhhODQuMzg5IDg0LjM4OSAwIDAgMSA0LjE5OS0xMC4xMjNsLTE0Ljc2LTE4LjI2NmE4LjMyIDguMzIgMCAwIDEgLjU4OC0xMS4wOTNsMjMuNjgtMjMuNjhhOC4zMiA4LjMyIDAgMCAxIDExLjA5My0uNTg4bDE4LjI2NiAxNC43NTVhODQuNzM3IDg0LjczNyAwIDAgMSAxMC4xMjMtNC4xOTRsMi40OC0yMy4zNDZBOC4zMiA4LjMyIDAgMCAxIDk1LjUzNi42MjVoMzMuNDg2YTguMzE5IDguMzE5IDAgMCAxIDguMjc2IDcuNDQ0bDIuNDc0IDIzLjM0N2E4NC44MTYgODQuODE2IDAgMCAxIDEwLjEyOSA0LjE5M2wxOC4yNi0xNC43NTVhOC4zMiA4LjMyIDAgMCAxIDExLjA5NC41ODhsMjMuNjc5IDIzLjY4YTguMzE3IDguMzE3IDAgMCAxIC41ODggMTEuMDk0bC0xNC43NiAxOC4yNjZhODUuMjkxIDg1LjI5MSAwIDAgMSA0LjE5OSAxMC4xMjNsMjMuMzQ3IDIuNDhhOC4zMTggOC4zMTggMCAwIDEgNy40MzggOC4yN3YzMy40OTJhOC4zMiA4LjMyIDAgMCAxLTcuNDE2IDguMjg3bC0yMy4zNDcgMi40NzlhODUuMTMgODUuMTMgMCAwIDEtNC4xOTkgMTAuMTIzbDE0Ljc2MSAxOC4yNjZhOC4zMiA4LjMyIDAgMCAxLS41ODggMTEuMDk0bC0yMy42OCAyMy42OTZhOC4zMjEgOC4zMjEgMCAwIDEtMTEuMDk0LjU4OGwtMTguMjYtMTQuNzU1YTg0Ljc4NiA4NC43ODYgMCAwIDEtMTAuMTI5IDQuMTk0bC0yLjQ3NCAyMy4zNDZhOC4zMTYgOC4zMTYgMCAwIDEtOC4yOTggNy40NDR6bS0yNi4wMTQtMTYuNjRoMTguNTIxbDIuMjY4LTIxLjM4OWE4LjMyIDguMzIgMCAwIDEgNi4xMzUtNy4xNjEgNjguMjE1IDY4LjIxNSAwIDAgMCAxNi43MjktNi45NSA4LjMxOCA4LjMxOCAwIDAgMSA5LjQzLjcyNmwxNi43MjkgMTMuNTE4IDEzLjA5Ny0xMy4wOTYtMTMuNTQtMTYuNjc5YTguMzI5IDguMzI5IDAgMCAxLTEuODM0LTQuNjAyIDguMzMyIDguMzMyIDAgMCAxIDEuMTA3LTQuODI4IDY3Ljk5MiA2Ny45OTIgMCAwIDAgNi45MjgtMTYuNzE4IDguMzIxIDguMzIxIDAgMCAxIDcuMTY3LTYuMTM1bDIxLjM4My0yLjI3NXYtMTguNTIxbC0yMS4zODMtMi4yNzRhOC4zMjMgOC4zMjMgMCAwIDEtNy4xNjctNi4xMzUgNjguMDI2IDY4LjAyNiAwIDAgMC02LjkyOC0xNi43MjMgOC4zMjMgOC4zMjMgMCAwIDEgLjcyNy05LjQzbDEzLjUxNy0xNi43My0xMy4wOTYtMTMuMDk2TDE1Ni4wNyA1MS45OWE4LjMyIDguMzIgMCAwIDEtOS40My43MjcgNjguMjEzIDY4LjIxMyAwIDAgMC0xNi43MTgtNi45MjggOC4zMjQgOC4zMjQgMCAwIDEtNi4xMzUtNy4xNjFsLTIuMjQ2LTIxLjM2MWgtMTguNTMybC0yLjI2OSAyMS4zODhhOC4zMjUgOC4zMjUgMCAwIDEtNi4xNCA3LjE2MSA2OC4xMTEgNjguMTExIDAgMCAwLTE2LjcwMiA2Ljk1IDguMzIgOC4zMiAwIDAgMS05LjQzLS43MjZsLTE2LjcxMy0xMy41NC0xMy4wOSAxMy4wOTYgMTMuNTIzIDE2LjczYTguMzIxIDguMzIxIDAgMCAxIC43MjEgOS40MyA2OC40NTYgNjguNDU2IDAgMCAwLTYuOTI4IDE2LjcxOCA4LjMyIDguMzIgMCAwIDEtNy4xNiA2LjEzNGwtMjEuMzkgMi4yNzV2MTguNTE1bDIxLjM5IDIuMjc0YTguMzIzIDguMzIzIDAgMCAxIDcuMTYgNi4xMzUgNjguNDU2IDY4LjQ1NiAwIDAgMCA2LjkyMyAxNi43MDIgOC4zMiA4LjMyIDAgMCAxLS43MjIgOS40M2wtMTMuNTE3IDE2LjcwMSAxMy4wOTYgMTMuMDk2IDE2LjczNS0xMy41MTdhOC4zMTYgOC4zMTYgMCAwIDEgOS40My0uNzI3IDY4LjEyMyA2OC4xMjMgMCAwIDAgMTYuNzEyIDYuOTI4IDguMzI2IDguMzI2IDAgMCAxIDYuMTQxIDcuMTYxbDIuMjMgMjEuMzg5eiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNMTEyLjI3NiAxNjIuNzk0YTUwLjY3NiA1MC42NzYgMCAxIDEgNTAuNjgyLTUwLjY3NiA1MC43MzMgNTAuNzMzIDAgMCAxLTUwLjY4MiA1MC42NzZ6bTAtODQuNzEyYTM0LjAzNSAzNC4wMzUgMCAxIDAgMzQuMDQxIDM0LjAzNiAzNC4wNzMgMzQuMDczIDAgMCAwLTM0LjA0MS0zNC4wMzZ6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==)
+    no-repeat center;
+  background-size: 60%;
+  &:hover {
+    .controlsInner {
+      transform: translate3d(0, -50%, 0);
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.controlsInner {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  list-style: none;
+  padding: 1rem 0.5rem;
+  margin: 0;
+  background: rgba(#000, 0.9);
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: white;
+  transform: translate3d(-100%, -50%, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s $ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  li {
+    position: relative;
+    display: block;
+    margin-bottom: 4px;
+    padding-top: 2px;
+    padding-left: 12px;
+    &::before {
+      display: inline-block;
+      content: ' ';
+      position: absolute;
+      top: 13px;
+      left: 5px;
+      width: 6px;
+      height: 6px;
+      background: $colorGreen;
+      border-radius: 50%;
+      transition: background 0.25s $ease;
+    }
+    &[data-active='true'] {
+      &::before {
+        background: $colorRed;
+      }
+    }
+  }
+  a {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    transition: opacity 0.25s $ease;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

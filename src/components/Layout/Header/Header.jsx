@@ -1,6 +1,6 @@
 import React, { useContext, useState, useRef, useCallback, useMemo, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { observer } from 'mobx-react';
+import { observer } from 'mobx-react-lite';
 import cns from 'classnames';
 import throttle from 'lodash/throttle';
 

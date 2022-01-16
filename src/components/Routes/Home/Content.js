@@ -144,6 +144,118 @@ export const content = {
       },
     ],
   },
+  core: {
+    title: '<strong>Core Features</strong> of the <i>Buzzier Platform</i>',
+    cols: [
+      {
+        id: 1,
+        title: 'Buzzier Website',
+        content: `
+          <p>The Buzzier website helps to generate qualified leads, improve lead conversion rate and increase awareness.</p>
+          <p>In addition to its marketing initiatives, it also serves as our storefront for the purchase of the Buzzier device.</p>
+          <p>Finally, Screen Owners and Device Owners can access their dashboard if they prefer this to the app.</p>
+        `,
+        iconId: 'website',
+      },
+      {
+        id: 2,
+        title: 'Buzzier App',
+        content: `
+          <p>Our mobile app enables the Screen Owner to activate the device and establish the correct content and advertising for the location.</p>
+          <p>Once live, the Screen Owner and Device Owner can watch their profit share accrue and manage their account.</p>
+        `,
+        iconId: 'app',
+      },
+      {
+        id: 3,
+        title: 'Buzzier TV Box',
+        content: `
+          <p>The Buzzier device is built on the open Android platform and is locked into kiosk mode, meaning it boots directly into the Buzzier app and cannot be used for any other purpose.</p>
+          <p>It immediately connects to our service based on the parameters of the activation.</p>
+          <p>We use a bluetooth beacon to start pinging the room and count the audience’s mobile devices.</p>
+        `,
+        iconId: 'tv',
+      },
+      {
+        id: 4,
+        title: 'ADAM - Content Management System',
+        content: `
+          <p>ADAM is our dedicated content management system enabling us to categorize, label and tag the video content to ensure all locations only stream content specific to that location and industry.</p>
+        `,
+        iconId: 'adam',
+      },
+      {
+        id: 5,
+        title: 'Buzzier API',
+        content: `
+          <p>Buzzier’s Application Programming Interface, is a software intermediary that allows all applications in the Buzzier ecosystem to talk to each other. </p>
+          <p>This also adds a layer of security to the network significantly lowering the vulnerability of the product as a whole.</p>
+        `,
+        iconId: 'api',
+      },
+      {
+        id: 6,
+        title: 'Content Delivery Network',
+        content: `
+          <p>Our CDN delivers content at top speed to users in different geographic locations by a process of replication. Our CDN provides web content services by duplicating content from other servers and directing it to users from the nearest data center.</p>
+          <p>This enables us to have a unique stream of content delivered to each location based on their specific parameters.</p>
+        `,
+        iconId: 'cdn',
+      },
+      {
+        id: 7,
+        title: 'Device Monitoring & Preventative Maintenance',
+        content: `
+          <p>Through our comprehensive monitoring system we are able to determine the health of our devices such as the bandwidth available, Wi-Fi signal strength, API requests latency and processor usage. This means we can address any problem on our network before a client is even made aware. </p>
+          <p>No unnecessary maintenance means improved reliability of the Buzzier network. This also improves productivity, reduces running costs, reduces  downtime and boosts asset performance.</p>
+        `,
+        iconId: 'monitoring',
+      },
+      {
+        id: 8,
+        title: 'Analytics Platform',
+        content: `
+          <p>Buzzier’s analytics platform lets us measure and understand audience participation on a location-by-location basis. </p>
+          <p>Advertisers can track their ROI and have full confidence in the chain of custody of their served advert.</p>
+        `,
+        iconId: 'analytics',
+      },
+      {
+        id: 9,
+        title: 'Audience Counter',
+        content: `
+          <p>Through our unique device authentication tool, we can count all the mobile IDs in the vicinity of the Buzzier TV Box.</p>
+          <p>This enables us to accurately determine the number of people that have been exposed to a commercial or piece of content.</p>
+        `,
+        iconId: 'audience',
+      },
+      {
+        id: 10,
+        title: 'Supply Side Platform',
+        content: `
+          <p>Buzzier’s Supply Side Platform (SSP) offers ad inventory space in real time by using Real Time Bidding (RTB) advertising technology. </p>
+          <p>Buzzier’s SSP is used for ad placement on screens using the Buzzier device. Placement will be specified by geography or industry.</p>
+        `,
+        iconId: 'ssp',
+      },
+      {
+        id: 11,
+        special: true,
+        content:
+          'In fact, the only part of this entire ecosystem that does not belong to us is platform that sends us the ads.',
+      },
+      {
+        id: 12,
+        className: 'bg-primary',
+        title: 'Demand Side Platform ',
+        content: `
+          <p>The (DSP) is a system that allows advertisers to purchase inventory on the Buzzier network in real time. Real Time Bidding for displaying their advertising on our network takes place within the ad exchange. </p>
+          <p>All advertisers compete in a bidding process where the highest bid wins, and the ad is sent to a specific TV box in a fraction of a second.</p>
+        `,
+        iconId: 'demand',
+      },
+    ],
+  },
   team: {
     title: 'The Team',
     cols: [

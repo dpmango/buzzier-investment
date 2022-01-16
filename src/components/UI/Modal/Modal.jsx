@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { observer } from 'mobx-react';
+import { observer } from 'mobx-react-lite';
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
 import cns from 'classnames';
