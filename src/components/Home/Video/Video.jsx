@@ -8,7 +8,7 @@ import styles from './Video.module.scss';
 
 const Video = ({ className, title, video }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <h3 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
 
@@ -19,7 +19,7 @@ const Video = ({ className, title, video }) => {
           </div>
         </UiVideo>
       </div>
-    </div>
+    </section>
   );
 };
 

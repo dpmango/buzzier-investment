@@ -25,7 +25,7 @@ const FeatureImages = {
 
 const Steps = ({ className, title, slides }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
         <Swiper
@@ -50,7 +50,7 @@ const Steps = ({ className, title, slides }) => {
             ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

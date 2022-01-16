@@ -7,7 +7,7 @@ import styles from './Uploads.module.scss';
 
 const Uploads = ({ className, videos, uploads }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <div className={styles.grid}>
           {videos &&
@@ -34,7 +34,7 @@ const Uploads = ({ className, videos, uploads }) => {
             ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

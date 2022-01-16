@@ -19,7 +19,7 @@ const Assets = {
 
 const HowItWorks = ({ className, title, cols }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <div className={styles.wrapper}>
           <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
@@ -37,7 +37,7 @@ const HowItWorks = ({ className, title, cols }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

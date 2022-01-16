@@ -12,7 +12,9 @@ import {
   HomeFeatures,
   HomeBenefits,
   HomeHowItWorks,
+  HomeBusinessModel,
   HomeIndustries,
+  HomeScope,
   HomeSteps,
   HomeWhyInvest,
   HomeCore,
@@ -38,7 +40,9 @@ const HomePage = observer(() => {
       {!hiddenComponents.includes('Features') && <HomeFeatures {...content.features} />}
       {!hiddenComponents.includes('Benefits') && <HomeBenefits {...content.benefits} />}
       {!hiddenComponents.includes('HowItWorks') && <HomeHowItWorks {...content.howItWorks} />}
+      {!hiddenComponents.includes('BusinessModel') && <HomeBusinessModel {...content.model} />}
       {!hiddenComponents.includes('Industries') && <HomeIndustries {...content.industries} />}
+      {!hiddenComponents.includes('Scope') && <HomeScope {...content.scope} />}
       {!hiddenComponents.includes('Steps') && <HomeSteps {...content.steps} />}
       {!hiddenComponents.includes('WhyInvest') && <HomeWhyInvest {...content.whyInvest} />}
 
@@ -55,7 +59,9 @@ const HomePage = observer(() => {
           'Features',
           'Benefits',
           'HowItWorks',
+          'BusinessModel',
           'Industries',
+          'Scope',
           'Steps',
           'WhyInvest',
           'Core',

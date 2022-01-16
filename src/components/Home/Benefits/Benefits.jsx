@@ -6,7 +6,7 @@ import styles from './Benefits.module.scss';
 
 const Benefits = ({ className, title, subtitle, cols }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
         {subtitle && <div className={styles.subtitle} dangerouslySetInnerHTML={{ __html: subtitle }} />}
@@ -22,7 +22,7 @@ const Benefits = ({ className, title, subtitle, cols }) => {
             ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

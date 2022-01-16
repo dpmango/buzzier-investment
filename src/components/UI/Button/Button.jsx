@@ -58,7 +58,11 @@ const Button = ({
   );
 
   if (type === 'link') {
-    return <Link {...props}>{children}</Link>;
+    return (
+      <Link className={classStyle} {...props}>
+        {children}
+      </Link>
+    );
   } else {
     return (
       <button className={classStyle} type={type || 'button'} {...props}>

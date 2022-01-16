@@ -7,7 +7,7 @@ import styles from './Team.module.scss';
 
 const Team = ({ className, title, cols }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
         <div className={styles.grid}>
@@ -33,7 +33,7 @@ const Team = ({ className, title, cols }) => {
 
         {/* {loading && ()} */}
       </div>
-    </div>
+    </section>
   );
 };
 

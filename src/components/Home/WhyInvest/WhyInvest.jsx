@@ -9,7 +9,7 @@ import ListCheckArrow from './assets/check-arrow.svg';
 
 const WhyInvest = ({ className, title, features, fact, videos }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
 
@@ -53,7 +53,7 @@ const WhyInvest = ({ className, title, features, fact, videos }) => {
           <Button>Learn more at our live event</Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

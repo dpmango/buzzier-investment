@@ -1,0 +1,43 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  padding: 4.2rem 0 3.6rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  white-space: normal;
+  i {
+    font-style: normal;
+    @include text-decor(3p);
+  }
+}
+
+.grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+
+.col {
+  position: relative;
+}
+
+.colContent {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  color: $colorGray;
+  max-width: 320px;
+}
+
+.cta {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: center;
+}

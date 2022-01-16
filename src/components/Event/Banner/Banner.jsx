@@ -9,7 +9,7 @@ import eventImage from './assets/liveEvent.svg';
 
 const Banner = ({ className, description, note }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.image}>
@@ -25,7 +25,7 @@ const Banner = ({ className, description, note }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

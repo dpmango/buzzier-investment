@@ -17,7 +17,7 @@ const FeatureImages = {
 
 const Features = ({ className, title, cols }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
         <div className={styles.grid}>
@@ -33,7 +33,7 @@ const Features = ({ className, title, cols }) => {
             ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

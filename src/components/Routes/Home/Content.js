@@ -93,6 +93,39 @@ export const content = {
       },
     ],
   },
+  model: {
+    title: 'Our business model',
+    subtitle: 'How does everyone make money?',
+    slides: [
+      {
+        id: 1,
+        title: 'System Owner - (Buzzier)',
+        content: `
+          <p>We provide the connection between advertisers and the Buzzier TV boxes that are in market.</p>
+          <p>Buzzier TV boxes can be monitored remotely for any issues and either repaired remotely or a new unit will be automatically sent as a replacement.</p>
+          <p>One third of ad revenue paid to Buzzier to run, manage and maintain the system.</p>
+          `,
+      },
+      {
+        id: 2,
+        title: 'Device Owner - (Distributor)',
+        content: `
+          <p>Device owners cover the purchase price of the Buzzier TV box and are responsible for placing it with a Screen Owner and expanding the Buzzier network.</p>
+          <p>One third of ad revenue paid to the Device Owner for their distribution and sourcing of suitable screens.</p>
+          <p>Device Owners are also encouraged to ensure their devices are always connected and screens are positioned in the most effective areas.</p>
+          `,
+      },
+      {
+        id: 3,
+        title: 'Screen Owner - (Business)',
+        content: `
+          <p>Screen owners provide the screen, location, internet connection and any associated electricity, etc. Likely to be the business owner at a location.</p>
+          <p>Installation is simple and takes only minutes.</p>
+          <p>One third of ad revenue paid to the Screen Owner for the use of their equipment and location.</p>
+          `,
+      },
+    ],
+  },
   industries: {
     title: 'Top Level Industries',
     description:
@@ -142,6 +175,14 @@ export const content = {
           { to: '#', label: 'Elevators' },
         ],
       },
+    ],
+  },
+  scope: {
+    title: '<i>Impulse Purchases</i>  &  <i>Passive Revenue  for  <i>Brick & Mortar Businesses</i>',
+    list: [
+      'Over 40% of customers make impulse purchases when prompted by digital signage.',
+      'Businesses generate ongoing passive revenue through advertising dollars.',
+      'Getting busier does not guarantee an increase in profits. Getting Buzzier does.',
     ],
   },
   steps: {

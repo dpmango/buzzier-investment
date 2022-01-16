@@ -7,7 +7,7 @@ import styles from './Industries.module.scss';
 
 const Industries = ({ className, title, description, cols }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
         <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />
@@ -36,7 +36,7 @@ const Industries = ({ className, title, description, cols }) => {
             ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

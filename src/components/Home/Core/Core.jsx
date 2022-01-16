@@ -43,7 +43,7 @@ const Core = ({ className, title, header, cols }) => {
   };
 
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <div className={styles.header}>
           <div className={styles.headerText}>
@@ -87,7 +87,7 @@ const Core = ({ className, title, header, cols }) => {
           <Button onClick={handleDownloadClick}>Download our pitch deck</Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

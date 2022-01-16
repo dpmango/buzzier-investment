@@ -6,7 +6,7 @@ import styles from './Hero.module.scss';
 
 const Hero = ({ className, title, description }) => {
   return (
-    <div className={cns(styles.container, className)}>
+    <section className={cns(styles.container, className)}>
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.content}>
@@ -18,7 +18,7 @@ const Hero = ({ className, title, description }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
