@@ -31,10 +31,10 @@ const AdminComponents = observer(({ components }) => {
         <div className={styles.controlsToggle}>
           <div className={styles.controlsInner}>
             {componentsNames &&
-              componentsNames.map((name) => (
+              componentsNames.map((name, idx) => (
                 <li key={name} data-active={hiddenComponents.includes(name)}>
                   <a href="#" onClick={(e) => handleClick(e, name)}>
-                    {name}
+                    {idx + 1} {name}
                   </a>
                 </li>
               ))}

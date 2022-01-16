@@ -9,8 +9,8 @@
   line-height: 120%;
   letter-spacing: -0.025em;
   i {
-    text-decoration: underline;
     font-style: normal;
+    @include text-decor(3px, $fontColor);
   }
 }
 
@@ -44,9 +44,7 @@
   line-height: 120%;
   letter-spacing: -0.025em;
   color: #010101;
-  text-decoration: underline;
-  text-decoration-color: $colorPrimary;
-  text-decoration-thickness: 4px;
+  @include text-decor(4px);
   // text-decoration-skip: edges;
 }
 

@@ -144,8 +144,52 @@ export const content = {
       },
     ],
   },
+  steps: {
+    title: 'Regardless of the sector, the <i>5 step process</i> remains the same:',
+    slides: [
+      {
+        id: 1,
+        title: 'Step 1',
+        iconId: 'box',
+        description:
+          'Purchase a Buzzier device from our centralized warehouse in China and it can be delivered anywhere internationally within 6 days. ',
+      },
+      {
+        id: 2,
+        title: 'Step 2',
+        iconId: 'qr',
+        description:
+          'Plug in the device & scan QR code to register. The Screen Owner simply plugs it in and follows the on screen instructions to have the device activated in 2 minutes. ',
+      },
+      {
+        id: 3,
+        title: 'Step 3',
+        iconId: 'connect',
+        description:
+          'Connect device directly to Buzzier’s app. Once activated the device connects with our servers and starts streaming appropriate content. ',
+      },
+      {
+        id: 4,
+        title: 'Step 4',
+        iconId: 'advert',
+        description: 'Adverts are automatically requested & displayed based on the device’s location and industry. ',
+      },
+      {
+        id: 5,
+        title: 'Step 5',
+        iconId: 'screen',
+        description:
+          'Revenues are automatically desposited to Buzzier and distributed to Screen Owners and Device Owners through our fully transparent dashboard.',
+      },
+    ],
+  },
   core: {
     title: '<strong>Core Features</strong> of the <i>Buzzier Platform</i>',
+    header: {
+      title: 'So what <i>exactly</i> am I investing in?',
+      subtitle:
+        'You are investing in an enterprise advertising technology made of the following component parts, <i>fully developed</i> and <i>proven in-market</i>',
+    },
     cols: [
       {
         id: 1,
@@ -242,7 +286,7 @@ export const content = {
         id: 11,
         special: true,
         content:
-          'In fact, the only part of this entire ecosystem that does not belong to us is platform that sends us the ads.',
+          'In fact, the <i>only</i> part of this entire ecosystem that does not belong to us is platform that sends us the ads.',
       },
       {
         id: 12,

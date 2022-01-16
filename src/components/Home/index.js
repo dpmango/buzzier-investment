@@ -4,6 +4,7 @@ export { default as HomeFeatures } from './Features';
 export { default as HomeBenefits } from './Benefits';
 export { default as HomeHowItWorks } from './HowItWorks';
 export { default as HomeIndustries } from './Industries';
+export { default as HomeSteps } from './Steps';
 export { default as HomeCore } from './Core';
 export { default as HomeTeam } from './Team';
 export { default as HomeUploads } from './Uploads';

@@ -21,6 +21,11 @@
   text-overflow: ellipsis
   white-space: nowrap
 
+=text-decor($size: 3px, $color: $colorPrimary)
+  text-decoration: underline;
+  text-decoration-color: $color;
+  text-decoration-thickness: $size;
+
 // retina
 =retina
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)

@@ -23,7 +23,7 @@
   i {
     color: $fontColor;
     font-style: normal;
-    text-decoration: underline;
+    @include text-decor(4px, $fontColor);
   }
 }
 

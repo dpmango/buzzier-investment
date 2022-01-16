@@ -13,6 +13,7 @@ import {
   HomeBenefits,
   HomeHowItWorks,
   HomeIndustries,
+  HomeSteps,
   HomeCore,
   HomeTeam,
   HomeUploads,
@@ -37,6 +38,7 @@ const HomePage = observer(() => {
       {!hiddenComponents.includes('Benefits') && <HomeBenefits {...content.benefits} />}
       {!hiddenComponents.includes('HowItWorks') && <HomeHowItWorks {...content.howItWorks} />}
       {!hiddenComponents.includes('Industries') && <HomeIndustries {...content.industries} />}
+      {!hiddenComponents.includes('Steps') && <HomeSteps {...content.steps} />}
 
       {!hiddenComponents.includes('Core') && <HomeCore {...content.core} />}
       {!hiddenComponents.includes('Team') && <HomeTeam {...content.team} />}
@@ -52,6 +54,7 @@ const HomePage = observer(() => {
           HomeBenefits,
           HomeHowItWorks,
           HomeIndustries,
+          HomeSteps,
           HomeCore,
           HomeTeam,
           HomeUploads,

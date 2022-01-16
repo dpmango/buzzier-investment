@@ -5,7 +5,64 @@
   color: white;
 }
 
+.header {
+  display: flex;
+  padding: 6rem 0 5rem;
+  border-bottom: 1px solid rgba(#fff, 0.2);
+}
+
+.headerText {
+  position: relative;
+  flex: 0 1 auto;
+  padding-right: 0;
+}
+
+.headerImage {
+  position: relative;
+  flex: 0 0 270px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 100%;
+  }
+}
+
+.headerImgBase {
+  position: relative;
+  font-size: 0;
+}
+
+.headerImgArrow {
+  position: absolute;
+  top: 90%;
+  right: 0%;
+}
+
+.headerTitle {
+  font-weight: bold;
+  font-size: 2.2rem;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  i {
+    font-style: normal;
+    @include text-decor(3px);
+  }
+}
+
+.headerSubtitle {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.75rem;
+  color: #d4d4d6;
+  i {
+    font-style: normal;
+    @include text-decor(3px);
+  }
+}
+
 .title {
+  margin-top: 3.6rem;
   font-weight: bold;
   font-size: 2.2rem;
   line-height: 120%;
@@ -15,9 +72,7 @@
     color: $colorPrimary;
   }
   i {
-    text-decoration: underline;
-    text-decoration-color: $colorPrimary;
-    text-decoration-thickness: 3px;
+    @include text-decor(3px);
     font-style: normal;
   }
 }
@@ -26,21 +81,23 @@
   margin: 3.7rem 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2rem 1.5rem;
+  grid-gap: 1.5rem;
 }
 
 .col {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   text-align: center;
   background: #292930;
   color: white;
   border-radius: 0.4rem;
-  padding: 2rem 2.2rem;
+  padding: 3rem 2.2rem;
 }
 
 .colImage {
-  min-height: 72px;
+  min-height: 80px;
   flex: 0 0 auto;
   font-size: 0;
   img,
@@ -50,7 +107,7 @@
 }
 
 .colTitle {
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0 0;
   font-weight: bold;
   font-size: 0.85rem;
   line-height: 1;
@@ -60,7 +117,7 @@
 .colContent {
   margin: 0.5rem 0;
   font-size: 0.6rem;
-  line-height: 1rem;
+  line-height: 1.3;
   opacity: 0.8;
   p {
     margin: 0;
@@ -71,7 +128,49 @@
 }
 
 .special {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.specialText {
+  margin: auto 0;
+  padding: 2rem 2rem 3rem 0;
   font-size: 1.4rem;
   line-height: 1.75rem;
   color: #d4d4d6;
+  i {
+    font-style: normal;
+    @include text-decor(3px);
+  }
+}
+
+.specialBottom,
+.specialTop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.specialBottom {
+  left: -1rem;
+  width: calc(100% + 2.5rem);
+  bottom: 0;
+}
+.specialTop {
+  width: calc(100% + 50%);
+  left: -50%;
+  top: 0;
+}
+
+.cta {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
 }

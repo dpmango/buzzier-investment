@@ -14,9 +14,7 @@
   color: #fff;
   i {
     font-style: normal;
-    text-decoration: underline;
-    text-decoration-color: $colorPrimary;
-    text-decoration-thickness: 3px;
+    @include text-decor(3px);
   }
 }
 
