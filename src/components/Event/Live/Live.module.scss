@@ -1,0 +1,116 @@
+.container {
+  padding: 4.5rem 0 3.5rem;
+  background: black;
+  color: white;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.9rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.02em;
+  i {
+    font-style: normal;
+    @include text-decor();
+  }
+}
+
+.subtitle {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.02em;
+  color: $colorPrimary;
+}
+
+.headLogo {
+  img,
+  svg {
+    max-width: 100%;
+  }
+}
+
+.grid {
+  margin-top: 4.5rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 1rem 2rem 0;
+  &::after {
+    display: inline-block;
+    content: ' ';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(white, 0.2);
+  }
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.colTitle {
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: -0.02em;
+  color: #fff;
+  @include text-decor(3px);
+}
+
+.colDescription {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  line-height: 130%;
+  color: #e4e7ec;
+  max-width: 192px;
+}
+
+.colLink {
+  margin-top: auto;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  padding-right: 1.5rem;
+  background: url('./../../../assets/icons/arrow-right.svg') no-repeat right 85%;
+  background-size: 14px 14px;
+  color: #fff;
+  transition: color 0.25s $ease;
+  &::after {
+    display: inline-block;
+    content: ' ';
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  u {
+    @include text-decor();
+  }
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
+.cta {
+  margin-top: 4.5rem;
+  display: flex;
+  justify-content: center;
+}

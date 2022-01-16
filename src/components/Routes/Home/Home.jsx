@@ -21,7 +21,7 @@ import {
   HomeTeam,
   HomeUploads,
 } from '@c/Home';
-import { EventCountdown, EventBanner } from '@c/Event';
+import { EventCountdown, EventBanner, EventLive } from '@c/Event';
 import { AdminComponents } from '@c/Layout';
 import { content } from './Content.js';
 
@@ -32,7 +32,7 @@ const HomePage = observer(() => {
   return (
     <>
       <Helmet>
-        <title>Buzzier - Investment Page - dev</title>
+        <title>Buzzier - Invest</title>
       </Helmet>
 
       {!hiddenComponents.includes('Hero') && <HomeHero {...content.hero} />}
@@ -45,12 +45,12 @@ const HomePage = observer(() => {
       {!hiddenComponents.includes('Scope') && <HomeScope {...content.scope} />}
       {!hiddenComponents.includes('Steps') && <HomeSteps {...content.steps} />}
       {!hiddenComponents.includes('WhyInvest') && <HomeWhyInvest {...content.whyInvest} />}
-
+      {!hiddenComponents.includes('Live') && <EventLive {...content.eventLive} />}
       {!hiddenComponents.includes('Core') && <HomeCore {...content.core} />}
       {!hiddenComponents.includes('Team') && <HomeTeam {...content.team} />}
       {!hiddenComponents.includes('Uploads') && <HomeUploads {...content.uploads} />}
-      {!hiddenComponents.includes('Banner') && <EventBanner {...content.eventBanner} />}
-      {!hiddenComponents.includes('Countdown') && <EventCountdown {...content.countdown} />}
+      {!hiddenComponents.includes('EventBanner') && <EventBanner {...content.eventBanner} />}
+      {!hiddenComponents.includes('EventCountdown') && <EventCountdown {...content.countdown} />}
 
       <AdminComponents
         components={[
@@ -64,11 +64,12 @@ const HomePage = observer(() => {
           'Scope',
           'Steps',
           'WhyInvest',
+          'EventLive',
           'Core',
           'Team',
           'Uploads',
-          'Banner',
-          'Countdown',
+          'EventBanner',
+          'EventCountdown',
         ]}
       />
     </>
