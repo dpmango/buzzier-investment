@@ -11,10 +11,11 @@ import styles from './Map.module.scss';
 import { googleMapSkin } from './gmap-skin';
 
 const mapOptions = {
-  // panControl: false,
-  // mapTypeControl: false,
-  // fullSizeControl: false,
-  disableDefaultUI: true,
+  panControl: false,
+  mapTypeControl: false,
+  fullscreenControl: false,
+  streetViewControl: false,
+  // disableDefaultUI: true,
   scrollwheel: false,
   styles: googleMapSkin,
 };
