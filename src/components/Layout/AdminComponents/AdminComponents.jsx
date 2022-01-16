@@ -17,10 +17,6 @@ const AdminComponents = observer(({ components }) => {
     uiContext.setHiddenComponents(name);
   }, []);
 
-  const componentsNames = useMemo(() => {
-    return components.map((c) => c.name) || [];
-  }, [components]);
-
   // useEffect(() => {
   //   document.documentElement.classList = hiddenComponents.map((x) => `hidden-${x}`).join('::');
   // }, [hiddenComponents]);
@@ -30,8 +26,8 @@ const AdminComponents = observer(({ components }) => {
       <div className={styles.controls}>
         <div className={styles.controlsToggle}>
           <div className={styles.controlsInner}>
-            {componentsNames &&
-              componentsNames.map((name, idx) => (
+            {components &&
+              components.map((name, idx) => (
                 <li key={name} data-active={hiddenComponents.includes(name)}>
                   <a href="#" onClick={(e) => handleClick(e, name)}>
                     {idx + 1} {name}

@@ -183,6 +183,43 @@ export const content = {
       },
     ],
   },
+  whyInvest: {
+    title: '<i>Why Invest?</i>',
+    fact: {
+      label: 'FUN FACT!',
+      title: '*This advertising sector is growing <i>+16% per annum.</i> TV, Radio & Publications by -1.5%',
+    },
+    features: [
+      {
+        id: 1,
+        title: 'Platform',
+        list: ['Fully developed platform', 'We are in market', 'Revenue is already being generated'],
+      },
+      {
+        id: 2,
+        title: 'Industry',
+        list: ['Fastest growing advertising sector', 'Most lucrative advertising sector', 'Ready for disruption'],
+      },
+    ],
+    videos: [
+      {
+        id: 1,
+        video: {
+          size: '370x245',
+          poster: '/img/videoPoster_2.png',
+          source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+        },
+      },
+      {
+        id: 1,
+        video: {
+          size: '370x245',
+          poster: '/img/videoPoster_2.png',
+          source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+        },
+      },
+    ],
+  },
   core: {
     title: '<strong>Core Features</strong> of the <i>Buzzier Platform</i>',
     header: {

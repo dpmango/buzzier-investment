@@ -14,6 +14,7 @@ import {
   HomeHowItWorks,
   HomeIndustries,
   HomeSteps,
+  HomeWhyInvest,
   HomeCore,
   HomeTeam,
   HomeUploads,
@@ -39,6 +40,7 @@ const HomePage = observer(() => {
       {!hiddenComponents.includes('HowItWorks') && <HomeHowItWorks {...content.howItWorks} />}
       {!hiddenComponents.includes('Industries') && <HomeIndustries {...content.industries} />}
       {!hiddenComponents.includes('Steps') && <HomeSteps {...content.steps} />}
+      {!hiddenComponents.includes('WhyInvest') && <HomeWhyInvest {...content.whyInvest} />}
 
       {!hiddenComponents.includes('Core') && <HomeCore {...content.core} />}
       {!hiddenComponents.includes('Team') && <HomeTeam {...content.team} />}
@@ -48,18 +50,19 @@ const HomePage = observer(() => {
 
       <AdminComponents
         components={[
-          HomeHero,
-          HomeVideo,
-          HomeFeatures,
-          HomeBenefits,
-          HomeHowItWorks,
-          HomeIndustries,
-          HomeSteps,
-          HomeCore,
-          HomeTeam,
-          HomeUploads,
-          EventBanner,
-          EventCountdown,
+          'Hero',
+          'Video',
+          'Features',
+          'Benefits',
+          'HowItWorks',
+          'Industries',
+          'Steps',
+          'WhyInvest',
+          'Core',
+          'Team',
+          'Uploads',
+          'Banner',
+          'Countdown',
         ]}
       />
     </>
