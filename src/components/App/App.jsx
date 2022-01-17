@@ -23,11 +23,11 @@ const App = observer(() => {
 
   return (
     <>
-      {/* <ToastProvider autoDismiss={true} placement="top-right" autoDismissTimeout={10000} components={{ Toast: Toast }}> */}
-      <Routes />
-      {/* </ToastProvider> */}
+      <ToastProvider autoDismiss={true} placement="top-right" autoDismissTimeout={10000} components={{ Toast: Toast }}>
+        <Routes />
+      </ToastProvider>
 
-      <ReactTooltip effect="solid" backgroundColor="#D0AF83" textColor="#FFFFFF" />
+      <ReactTooltip effect="solid" backgroundColor="#B69538" textColor="#FFFFFF" />
     </>
   );
 });

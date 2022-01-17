@@ -14,6 +14,13 @@ export const content = {
       caption: 'How do we make money for you?',
     },
   },
+  calculator: {
+    title: 'Investment Calculator',
+    fact: {
+      label: 'FUN FACT!',
+      title: '*This advertising sector <i>converts 4x</i> the rate of TV, Radio & Publications combined!',
+    },
+  },
   features: {
     title: '<i>Brick & Mortar</i>&nbsp;&nbsp;vs&nbsp;&nbsp;<i>Virtual Counterparts</i>',
     cols: [

@@ -19,6 +19,10 @@ export const formatPrice = (num, digits) => {
   return '';
 };
 
+export const numberWithCommas = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+};
+
 export const priceShort = (num, digits) => {
   const si = [
     { value: 1, symbol: '' },

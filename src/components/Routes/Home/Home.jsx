@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import { useQuery } from '@hooks';
 import { UiStoreContext, SessionStoreContext } from '@store';
 
+import { CalculatorPreview } from '@c/Calculator';
 import {
   HomeHero,
   HomeVideo,
@@ -37,6 +38,7 @@ const HomePage = observer(() => {
 
       {!hiddenComponents.includes('Hero') && <HomeHero {...content.hero} />}
       {!hiddenComponents.includes('Video') && <HomeVideo {...content.video} />}
+      {!hiddenComponents.includes('Calculator') && <CalculatorPreview {...content.calculator} />}
       {!hiddenComponents.includes('Features') && <HomeFeatures {...content.features} />}
       {!hiddenComponents.includes('Benefits') && <HomeBenefits {...content.benefits} />}
       {!hiddenComponents.includes('HowItWorks') && <HomeHowItWorks {...content.howItWorks} />}
@@ -45,7 +47,8 @@ const HomePage = observer(() => {
       {!hiddenComponents.includes('Scope') && <HomeScope {...content.scope} />}
       {!hiddenComponents.includes('Steps') && <HomeSteps {...content.steps} />}
       {!hiddenComponents.includes('WhyInvest') && <HomeWhyInvest {...content.whyInvest} />}
-      {!hiddenComponents.includes('Live') && <EventLive {...content.eventLive} />}
+      {!hiddenComponents.includes('EventLive') && <EventLive {...content.eventLive} />}
+      {!hiddenComponents.includes('Calculator') && <CalculatorPreview {...content.calculator} />}
       {!hiddenComponents.includes('Core') && <HomeCore {...content.core} />}
       {!hiddenComponents.includes('Team') && <HomeTeam {...content.team} />}
       {!hiddenComponents.includes('Uploads') && <HomeUploads {...content.uploads} />}
@@ -56,6 +59,7 @@ const HomePage = observer(() => {
         components={[
           'Hero',
           'Video',
+          'Calculator',
           'Features',
           'Benefits',
           'HowItWorks',

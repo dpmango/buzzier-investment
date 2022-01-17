@@ -9,6 +9,5 @@ import { BrowserInfo, VersionCheck, History } from '@services';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-new VersionCheck();
 // new BrowserInfo();
 // new History();
