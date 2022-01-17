@@ -5,6 +5,10 @@ import cns from 'classnames';
 import { SvgIcon, RangeSlider, Button } from '@ui';
 import { numberWithCommas } from '@helpers';
 import styles from './CalculatorPreview.module.scss';
+import HeadDecorArrowSvg from './assets/decor-arrow.svg';
+
+const InvestmentStep = 5000;
+const maxInvestmentValue = 100 * 1000;
 
 const CalculatorPreview = ({ className, title, fact }) => {
   const [investment, setInvestment] = useState(25000);
@@ -18,11 +22,29 @@ const CalculatorPreview = ({ className, title, fact }) => {
 
   const calculatedRoi = useCallback(
     (years) => {
-      const calc = investment + ((cost * locations) / selloutRate) * years;
+      const interest = 0.5;
+      const calc = investment + (((cost * locations) / selloutRate) * years) / interest;
 
       return numberWithCommas(Math.round(calc));
     },
     [investment, locations, cost, selloutRate]
+  );
+
+  const plusMinusClick = useCallback(
+    (type) => {
+      let newValue = investment;
+
+      if (type === 'plus') {
+        newValue += InvestmentStep;
+      } else if (type === 'minus') {
+        newValue -= InvestmentStep;
+      }
+
+      if (newValue > 0 && newValue < maxInvestmentValue) {
+        setInvestment(newValue);
+      }
+    },
+    [investment, setInvestment]
   );
 
   return (
@@ -32,7 +54,20 @@ const CalculatorPreview = ({ className, title, fact }) => {
 
         <div className={styles.box}>
           <div className={styles.head}>
-            <h1 className={styles.headTitle}>To determine your potential ROI, adjust investment </h1>
+            <h1 className={styles.headTitle}>
+              To determine your potential ROI, <i>adjust investment</i>
+              <img src={HeadDecorArrowSvg} className={styles.headDecor} />
+            </h1>
+
+            <div className={styles.plusminus}>
+              <label className={styles.minus} onClick={() => plusMinusClick('minus')}>
+                <SvgIcon name="minus" />
+              </label>
+              <span>${numberWithCommas(investment)}</span>
+              <label className={styles.plus} onClick={() => plusMinusClick('plus')}>
+                <SvgIcon name="plus" />
+              </label>
+            </div>
           </div>
 
           <div className={cns('row', styles.grid)}>
