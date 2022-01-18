@@ -52,7 +52,7 @@
   font-size: 0;
   img,
   svg {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -88,4 +88,52 @@
   letter-spacing: -0.025em;
   color: $colorGray;
   transition: height 0.25s $ease, opacity 0.25s $ease;
+}
+
+@include r($lg) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include r($md) {
+  .container {
+    padding: 4rem 0;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .col {
+    max-width: 420px;
+    &:hover {
+      .colContent {
+        margin-top: -7rem;
+      }
+      .extra {
+        height: 7rem;
+      }
+    }
+  }
+}
+
+@include r(414) {
+  .col {
+    &:hover {
+      .colContent {
+        margin-top: -8rem;
+      }
+      .extra {
+        height: 8rem;
+      }
+    }
+  }
+  .colContent {
+    margin-top: -8rem;
+  }
+  .extra {
+    opacity: 1;
+    height: 8rem;
+  }
 }
