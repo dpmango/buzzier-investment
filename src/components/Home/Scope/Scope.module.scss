@@ -41,3 +41,14 @@
   display: flex;
   justify-content: center;
 }
+
+@include r($md) {
+  .container {
+    padding: 3rem 0;
+  }
+  .grid {
+    margin-top: 3rem;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+}

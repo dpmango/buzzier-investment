@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Pagination } from 'swiper';
 
 import { SvgIcon } from '@ui';
+import { useWindowSize } from '@hooks';
 
 import styles from './Steps.module.scss';
 import 'swiper/swiper.scss';
@@ -24,6 +25,8 @@ const FeatureImages = {
 };
 
 const Steps = ({ className, title, slides }) => {
+  const { width } = useWindowSize();
+
   return (
     <section className={cns(styles.container, className)}>
       <div className="container">
@@ -32,9 +35,9 @@ const Steps = ({ className, title, slides }) => {
           className={styles.slider}
           modules={[Pagination]}
           pagination={{ clickable: true }}
-          centeredSlides={true}
+          centeredSlides={width > 992}
           slidesPerView={'auto'}
-          spaceBetween={50}>
+          spaceBetween={width <= 992 ? 0 : 50}>
           {slides &&
             slides.length &&
             slides.map((slide) => (

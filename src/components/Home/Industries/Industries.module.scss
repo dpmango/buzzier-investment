@@ -89,3 +89,32 @@
     font-size: 0.7rem;
   }
 }
+
+@include r($lg) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include r($md) {
+  .container {
+    padding: 2.4rem 0 4rem;
+  }
+
+  .grid {
+    margin-top: 2rem;
+    grid-gap: 1.5rem;
+  }
+  .description {
+    margin-top: 2rem;
+  }
+  .colMenu {
+    margin-top: 1rem;
+  }
+}
+
+@include r($sm) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -61,6 +61,7 @@
 
 .slide {
   flex: 0 0 $col8;
+  width: $col8;
   height: auto !important;
   display: flex;
   align-items: center;
@@ -93,5 +94,50 @@
   img,
   svg {
     max-width: 100%;
+  }
+}
+
+@include r($lg) {
+  .slider {
+    :global .swiper-wrapper {
+      padding-top: 0;
+      padding-bottom: 3.5rem;
+      overflow: visible;
+    }
+    :global .swiper-slide-active {
+      margin-top: -0;
+      margin-bottom: -0;
+    }
+  }
+
+  .slide {
+    flex-basis: $col10;
+    width: $col10;
+    padding: 2rem 2rem 2.5rem 3rem;
+  }
+  .slideImage {
+    flex-basis: 130px;
+  }
+}
+
+@include r($md) {
+  .container {
+    padding: 3rem 0;
+  }
+
+  .slider {
+    margin-top: 2.5rem;
+  }
+  .slide {
+    flex-direction: column;
+    flex-basis: $col12;
+    width: 100%;
+    padding: 2rem 2rem 2.5rem 3rem;
+  }
+  .slideImage {
+    flex-basis: auto;
+  }
+  .slideTitle {
+    margin-top: 1.5rem;
   }
 }
