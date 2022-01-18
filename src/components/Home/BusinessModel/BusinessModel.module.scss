@@ -11,6 +11,7 @@
 
 .title {
   margin-right: 4rem;
+  margin-bottom: 1rem;
   font-weight: bold;
   font-size: 2.2rem;
   line-height: 120%;
@@ -19,6 +20,7 @@
 }
 
 .subtitle {
+  margin-bottom: 1rem;
   font-size: 1.8rem;
   line-height: 140%;
   letter-spacing: -0.025em;
@@ -26,7 +28,7 @@
 }
 
 .grid {
-  margin: 5rem 0 0 -4rem;
+  margin: 4rem 0 0 -4rem;
   display: flex;
 }
 
@@ -133,7 +135,7 @@
     flex-basis: 360px;
   }
   .grid {
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-left: 0;
   }
   .slider {
@@ -149,6 +151,9 @@
 @include r($md) {
   .container {
     padding-bottom: 3rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
   }
   .grid {
     display: block;

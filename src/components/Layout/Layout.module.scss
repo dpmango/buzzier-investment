@@ -28,3 +28,15 @@
     padding-top: 72px;
   }
 }
+
+@include r($md) {
+  .main {
+    padding-top: 65px;
+  }
+}
+
+@include r(414) {
+  .main {
+    padding-top: 62px;
+  }
+}

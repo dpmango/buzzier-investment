@@ -132,3 +132,45 @@
   display: flex;
   justify-content: center;
 }
+
+@include r($xl) {
+  .features {
+    grid-gap: 1.5rem;
+  }
+  .featureCol {
+    padding: 2rem 2rem;
+  }
+
+  .videos {
+    margin-top: 1.5rem;
+    grid-gap: 1.5rem;
+  }
+}
+
+@include r($lg) {
+  .featureTitle {
+    font-size: 1.4rem;
+  }
+  .featureList {
+    li {
+      font-size: 1rem;
+      img {
+        max-width: 32px;
+      }
+    }
+  }
+}
+
+@include r($md) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .videos {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    margin-top: 2rem;
+  }
+}

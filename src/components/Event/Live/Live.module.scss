@@ -114,3 +114,99 @@
   display: flex;
   justify-content: center;
 }
+
+@include r($lg) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .col {
+    padding: 0 1rem 2rem 0;
+    &::after {
+      display: inline-block;
+      content: ' ';
+      position: absolute;
+      top: auto;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+    }
+    &:last-child {
+      &::after {
+        display: block;
+      }
+    }
+  }
+  .head {
+    flex-wrap: wrap;
+  }
+  .headLeft,
+  .headRight {
+    flex: 0 0 50%;
+    width: 50%;
+    order: 2;
+  }
+  .headLeft {
+    padding-right: 1rem;
+  }
+  .headRight {
+    padding-left: 1rem;
+  }
+  .headLogo {
+    margin-bottom: 2rem;
+    width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+    order: 1;
+    img {
+      max-width: 260px;
+    }
+  }
+}
+
+@include r($md) {
+  .container {
+    padding: 3rem 0;
+  }
+
+  .headLeft {
+    padding-right: 0.75rem;
+  }
+  .headRight {
+    padding-left: 0.75rem;
+  }
+
+  .grid {
+    margin-top: 2rem;
+    grid-gap: 1.5rem;
+  }
+
+  .cta {
+    margin-top: 3rem;
+  }
+}
+
+@include r($sm) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .headLeft,
+  .headRight {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .headLogo {
+    text-align: left;
+    img {
+      max-width: 210px;
+    }
+  }
+  .headLeft {
+    padding-right: 0;
+  }
+  .headRight {
+    margin-top: 1.5rem;
+    padding-left: 0;
+  }
+}
