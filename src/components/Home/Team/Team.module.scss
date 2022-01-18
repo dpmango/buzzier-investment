@@ -10,7 +10,7 @@
   letter-spacing: -0.025em;
   text-align: center;
   i {
-    text-decoration: underline;
+    @include text-decor();
     font-style: normal;
   }
 }

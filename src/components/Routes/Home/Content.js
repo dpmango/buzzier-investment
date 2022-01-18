@@ -185,7 +185,7 @@ export const content = {
     ],
   },
   scope: {
-    title: '<i>Impulse Purchases</i>  &  <i>Passive Revenue  for  <i>Brick & Mortar Businesses</i>',
+    title: '<i>Impulse Purchases</i>&nbsp;&amp;&nbsp;<i>Passive Revenue</i>  for  <i>Brick &amp; Mortar Businesses</i>',
     list: [
       'Over 40% of customers make impulse purchases when prompted by digital signage.',
       'Businesses generate ongoing passive revenue through advertising dollars.',

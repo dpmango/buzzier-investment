@@ -5,11 +5,12 @@
 }
 
 .title {
+  display: inline-block;
   font-weight: bold;
   font-size: 2.2rem;
   line-height: 120%;
   letter-spacing: -0.025em;
-  text-decoration: underline;
+  @include text-decor();
   font-style: normal;
   text-decoration-color: $colorPrimary;
 }
@@ -39,14 +40,13 @@
 }
 
 .colTitle {
+  align-self: flex-start;
   font-weight: bold;
   font-size: 1.3rem;
   line-height: 120%;
   letter-spacing: -0.025em;
   color: $fontColor;
-  text-decoration: underline;
-  text-decoration-color: $colorPrimary;
-  text-decoration-thickness: 3px;
+  @include text-decor(3px, $colorPrimary, 'short');
 }
 
 .colMenu {

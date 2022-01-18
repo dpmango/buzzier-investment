@@ -14,7 +14,7 @@
   letter-spacing: -0.025em;
   color: $colorPrimary;
   i {
-    text-decoration: underline;
+    @include text-decor(3px, #ffffff);
     font-style: normal;
     font-weight: 700;
     color: white;
@@ -71,6 +71,7 @@
 }
 
 .slideTitle {
+  display: inline-block;
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 120%;

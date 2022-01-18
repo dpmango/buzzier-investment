@@ -33,7 +33,7 @@
   letter-spacing: -0.025em;
   i {
     font-style: normal;
-    @include text-decor(3px);
+    @include text-decor(3px, $colorPrimary, 'short');
   }
 }
 .headDecor {

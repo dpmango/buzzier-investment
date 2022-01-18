@@ -13,6 +13,6 @@
   text-align: center;
   letter-spacing: -0.025em;
   strong {
-    @include text-decor(3px);
+    @include text-decor(3px, $colorPrimary, 'short');
   }
 }
