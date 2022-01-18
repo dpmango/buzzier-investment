@@ -21,6 +21,19 @@
   border-radius: 0.5rem;
 }
 
+.videoCaption {
+  cursor: pointer;
+  pointer-events: all;
+  img {
+    transition: transform 0.25s $ease;
+  }
+  &:hover {
+    img {
+      transform: scale(0.8);
+    }
+  }
+}
+
 .videoCaptionTitle {
   margin-top: 1.5rem;
   font-weight: bold;

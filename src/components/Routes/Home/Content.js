@@ -68,6 +68,13 @@ export const content = {
           'A minimum of 50% of online advertising is fraudentally billed. We guarantee 100% of the ads on Buzzier.',
       },
     ],
+    more: {
+      title: 'Buzzier is bringing the advertising revenue options of online platforms to brick & mortar business.',
+      link: {
+        to: '#',
+        label: 'Learn more',
+      },
+    },
   },
   howItWorks: {
     title: 'How it works:',
@@ -259,7 +266,7 @@ export const content = {
         },
       },
       {
-        id: 1,
+        id: 2,
         video: {
           size: '370x245',
           poster: '/img/videoPoster_2.png',

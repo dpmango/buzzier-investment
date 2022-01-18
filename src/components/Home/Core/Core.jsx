@@ -63,23 +63,25 @@ const Core = ({ className, title, header, cols }) => {
           {cols &&
             cols.length &&
             cols.map((col) => (
-              <>
-                {col.special ? (
-                  <div key={col.id} className={styles.special}>
-                    <img className={styles.specialTop} src={SpecialTop} />
-                    <div className={styles.specialText} dangerouslySetInnerHTML={{ __html: col.content }} />
-                    <img className={styles.specialBottom} src={SpecialBottom} />
-                  </div>
-                ) : (
-                  <div className={cns(styles.col, col.className)} key={col.id}>
-                    <div className={styles.colImage}>
-                      <img src={CoreImages[col.iconId]} />
-                    </div>
-                    <div className={styles.colTitle} dangerouslySetInnerHTML={{ __html: col.title }} />
-                    <div className={styles.colContent} dangerouslySetInnerHTML={{ __html: col.content }} />
-                  </div>
-                )}
-              </>
+              <div key={col.id} className={col.special ? styles.special : cns(styles.col, col.className)}>
+                <>
+                  {col.special ? (
+                    <>
+                      <img className={styles.specialTop} src={SpecialTop} />
+                      <div className={styles.specialText} dangerouslySetInnerHTML={{ __html: col.content }} />
+                      <img className={styles.specialBottom} src={SpecialBottom} />
+                    </>
+                  ) : (
+                    <>
+                      <div className={styles.colImage}>
+                        <img src={CoreImages[col.iconId]} />
+                      </div>
+                      <div className={styles.colTitle} dangerouslySetInnerHTML={{ __html: col.title }} />
+                      <div className={styles.colContent} dangerouslySetInnerHTML={{ __html: col.content }} />
+                    </>
+                  )}
+                </>
+              </div>
             ))}
         </div>
 

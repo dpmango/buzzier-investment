@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cns from 'classnames';
 
 import { Button, UiVideo } from '@ui';
+import { HomeFact } from '@c/Home';
 
 import styles from './WhyInvest.module.scss';
 import ListCheckArrow from './assets/check-arrow.svg';
@@ -44,10 +45,7 @@ const WhyInvest = ({ className, title, features, fact, videos }) => {
             ))}
         </div>
 
-        <div className={styles.fact}>
-          <div className={styles.factLabel}>{fact.label}</div>
-          <div className={styles.factContent} dangerouslySetInnerHTML={{ __html: fact.title }} />
-        </div>
+        <HomeFact className={styles.fact} {...fact} />
 
         <div className={styles.cta}>
           <Button>Learn more at our live event</Button>

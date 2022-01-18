@@ -235,6 +235,10 @@
 
 .actionsCol {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 0 1rem;
   &::after {
     display: inline-block;
@@ -284,39 +288,6 @@
 
 .fact {
   margin-top: 2.6rem;
-  position: relative;
-  background: #fff;
-  border: 2px solid #bfbfbf;
-  border-radius: 0.5rem;
-  padding: 2.8rem 3.2rem;
-}
-
-.factLabel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.5rem 1rem 0.5rem 2rem;
-  font-weight: bold;
-  font-size: 0.9rem;
-  line-height: 120%;
-
-  /* identical to box height, or 22px */
-  letter-spacing: -0.025em;
-  color: #fff;
-  background: $colorPrimary;
-  border-radius: 0 0 10px 0;
-}
-
-.factContent {
-  font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 120%;
-  text-align: center;
-  letter-spacing: -0.025em;
-  i {
-    font-style: normal;
-    @include text-decor(3px);
-  }
 }
 
 .plusminus {

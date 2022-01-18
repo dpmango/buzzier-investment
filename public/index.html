@@ -22,10 +22,23 @@
         GOOGLE_API: '%REACT_APP_GOOGLE_API%',
         APP_UPDATE_INTERVAL_MINUTES: 30,
       };
-    </script>
+    </script>                          
   </head>
 
   <body>
     <div id="root"></div>
+
+    <!-- TruConversion for buzzier.com -->
+    <script type="text/javascript">
+      var _tip = _tip || [];
+      (function(d,s,id){
+          var js, tjs = d.getElementsByTagName(s)[0];
+          if(d.getElementById(id)) { return; }
+          js = d.createElement(s); js.id = id;
+          js.async = true;
+          js.src = d.location.protocol + '//app.truconversion.com/ti-js/20893/43f43.js';
+          tjs.parentNode.insertBefore(js, tjs);
+      }(document, 'script', 'ti-js'));
+    </script>
   </body>
 </html>

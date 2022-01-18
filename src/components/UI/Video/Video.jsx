@@ -152,7 +152,9 @@ const Video = ({ className, video, children }) => {
         </div>
       </div>
 
-      <div className={styles.videoCaption}>{children}</div>
+      <div className={cns(styles.videoCaption, !children && styles._childfree)} onClick={handlePlayPauseClick}>
+        {children}
+      </div>
     </div>
   );
 };

@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import cns from 'classnames';
 
+import { Button } from '@ui';
 import styles from './Benefits.module.scss';
 
-const Benefits = ({ className, title, subtitle, cols }) => {
+const Benefits = ({ className, title, subtitle, cols, more }) => {
   return (
     <section className={cns(styles.container, className)}>
       <div className="container">
@@ -20,6 +21,13 @@ const Benefits = ({ className, title, subtitle, cols }) => {
                 <div className={styles.colDescription}>{col.description}</div>
               </div>
             ))}
+        </div>
+
+        <div className={styles.more}>
+          <div className={styles.moreTitle}>{more.title}</div>
+          <Button type="link" to={more.link.to} className={styles.moreCta}>
+            {more.link.label}
+          </Button>
         </div>
       </div>
     </section>

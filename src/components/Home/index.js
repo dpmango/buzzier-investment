@@ -11,3 +11,4 @@ export { default as HomeWhyInvest } from './WhyInvest';
 export { default as HomeCore } from './Core';
 export { default as HomeTeam } from './Team';
 export { default as HomeUploads } from './Uploads';
+export { default as HomeFact } from './Fact';

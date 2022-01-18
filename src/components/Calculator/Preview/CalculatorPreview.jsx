@@ -6,6 +6,7 @@ import { SvgIcon, RangeSlider, Button } from '@ui';
 import { numberWithCommas } from '@helpers';
 import styles from './CalculatorPreview.module.scss';
 import HeadDecorArrowSvg from './assets/decor-arrow.svg';
+import { HomeFact } from 'components/Home';
 
 const InvestmentStep = 5000;
 const maxInvestmentValue = 100 * 1000;
@@ -147,10 +148,7 @@ const CalculatorPreview = ({ className, title, fact }) => {
           </div>
         </div>
 
-        <div className={styles.fact}>
-          <div className={styles.factLabel}>{fact.label}</div>
-          <div className={styles.factContent} dangerouslySetInnerHTML={{ __html: fact.title }} />
-        </div>
+        <HomeFact className={styles.fact} {...fact} />
       </div>
     </section>
   );
