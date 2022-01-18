@@ -37,7 +37,8 @@ const Steps = ({ className, title, slides }) => {
           pagination={{ clickable: true }}
           centeredSlides={width > 992}
           slidesPerView={'auto'}
-          spaceBetween={width <= 992 ? 0 : 50}>
+          loop={true}
+          spaceBetween={0}>
           {slides &&
             slides.length &&
             slides.map((slide) => (

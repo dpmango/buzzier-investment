@@ -115,11 +115,13 @@ const Video = ({ className, video, children }) => {
     videoRef.current.addEventListener('timeupdate', timeUpdateEvent);
 
     return () => {
-      videoRef.current.removeEventListener('loadedmetadata', loadedMetaDataEvent);
-      videoRef.current.removeEventListener('play', playPauseEvent);
-      videoRef.current.removeEventListener('pause', playPauseEvent);
-      videoRef.current.removeEventListener('volumechange', volumeChangeEvent);
-      videoRef.current.removeEventListener('timeupdate', timeUpdateEvent);
+      try {
+        videoRef.current.removeEventListener('loadedmetadata', loadedMetaDataEvent);
+        videoRef.current.removeEventListener('play', playPauseEvent);
+        videoRef.current.removeEventListener('pause', playPauseEvent);
+        videoRef.current.removeEventListener('volumechange', volumeChangeEvent);
+        videoRef.current.removeEventListener('timeupdate', timeUpdateEvent);
+      } catch {}
     };
   }, [videoRef.current, progressRef.current]);
 

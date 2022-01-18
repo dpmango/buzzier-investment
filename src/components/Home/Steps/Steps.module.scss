@@ -68,6 +68,8 @@
   background: #fcfcfc;
   border-radius: 10px;
   padding: 2.5rem 3rem 2.5rem 4rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 
 .slideTitle {
@@ -115,6 +117,8 @@
     flex-basis: $col10;
     width: $col10;
     padding: 2rem 2rem 2.5rem 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .slideImage {
     flex-basis: 130px;

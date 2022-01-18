@@ -18,10 +18,11 @@ const Banner = ({ className, description, note }) => {
           <div className={styles.content}>
             <h4 className={styles.title} dangerouslySetInnerHTML={{ __html: description }} />
             <p className={styles.note}>{note}</p>
-
-            <Button className={styles.cta} theme="primary">
-              Reserve your space now
-            </Button>
+            <div className={styles.cta}>
+              <Button className={styles} theme="primary">
+                Reserve your space now
+              </Button>
+            </div>
           </div>
         </div>
       </div>

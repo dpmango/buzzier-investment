@@ -103,6 +103,8 @@
     top: 50%;
   }
   u {
+    font-style: normal;
+    text-decoration: none;
     @include text-decor(3px, $colorPrimary, 'short');
   }
   &:hover {
