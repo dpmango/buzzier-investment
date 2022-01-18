@@ -51,3 +51,47 @@
     max-width: 100%;
   }
 }
+
+@include r($xl) {
+  .grid {
+    max-width: 680px;
+  }
+}
+@include r($lg) {
+  .wrapper {
+    display: block;
+  }
+  .grid {
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+}
+
+@include r($md) {
+  .container {
+    padding: 3rem 0;
+    background-image: none;
+  }
+
+  .col {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .colTitle {
+    margin: 0 auto;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .colImage {
+    flex-basis: auto;
+    margin-bottom: -0.5rem;
+    padding-right: 0;
+    img,
+    svg {
+      transform: scale(0.75);
+      transform-origin: center top;
+    }
+  }
+}

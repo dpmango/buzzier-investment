@@ -29,6 +29,7 @@
 
 .logo {
   flex: 0 0 auto;
+  margin-top: 10px;
   margin-right: 20px;
   font-size: 0;
   img,
@@ -38,7 +39,7 @@
 }
 
 .hamburger {
-  flex: 0 0 60px;
+  flex: 0 0 36px;
   display: none;
   align-items: center;
 }
@@ -57,53 +58,49 @@
 @include r($xl) {
   .header {
     &._scrolled {
-      transform: translate3d(0, -20px, 0);
+      transform: translate3d(0, -0.5rem, 0);
       .wrapper {
-        padding-bottom: 10px;
+        padding-bottom: 1rem;
       }
     }
   }
+
   .wrapper {
-    justify-content: flex-start;
-    padding: 30px 0 30px;
+    padding: 1.5rem 0 1.5rem;
+  }
+  .cta {
+    :global .btn {
+      font-size: 0.7rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+@include r($lg) {
+  .header {
+    &._scrolled {
+      .wrapper {
+        padding-bottom: 0.8rem;
+      }
+    }
+  }
+
+  .wrapper {
+    padding: 1rem 0 1rem;
   }
   .logo {
-    margin-left: 20px;
-    margin-right: 0;
+    margin-top: 0.2rem;
+    img,
+    svg {
+      max-width: 220px;
+    }
   }
   .cta {
     display: none;
   }
-}
-
-@include r($md) {
-  .wrapper {
-    padding: 28px 0 26px;
-  }
   .hamburger {
-    flex-basis: 46px;
-    :global .hamburger {
-      transform: scale(0.6);
-      transform-origin: left center;
-    }
-  }
-  .logo {
-    margin-left: 0;
-    img,
-    svg {
-      max-width: 270px;
-      max-height: 28px;
-    }
-  }
-}
-
-@include r($mobile-s) {
-  .logo {
-    img,
-    svg {
-      max-width: 220px;
-      max-height: 28px;
-    }
+    display: flex;
   }
 }
 
@@ -179,6 +176,12 @@
   padding-top: 12px;
   border-top: 1px solid $borderColor;
   margin-top: auto;
+  :global .btn {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .menuNested {

@@ -85,8 +85,11 @@ const Header = observer(({ className }) => {
           </div>
 
           <div className={styles.menuCta}>
-            <Button theme="accent" block>
-              Login
+            <Button theme="black" block>
+              Download our pitch deck
+            </Button>
+            <Button theme="primary" block>
+              Join our live event
             </Button>
           </div>
         </div>

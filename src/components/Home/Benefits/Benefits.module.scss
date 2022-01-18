@@ -43,9 +43,7 @@
   font-size: 1.6rem;
   line-height: 120%;
   letter-spacing: -0.025em;
-  color: #010101;
   @include text-decor(4px);
-  // text-decoration-skip: edges;
 }
 
 .colDescription {
@@ -56,12 +54,29 @@
   color: $colorGray;
 }
 
-.colImage {
-  flex: 0 0 130px;
-  padding-right: 1rem;
-  font-size: 0;
-  img,
-  svg {
-    max-width: 100%;
+@include r($xl) {
+  .col {
+    padding: 2rem 2rem;
+  }
+}
+
+@include r($lg) {
+  .grid {
+    margin-top: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include r($md) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .container {
+    padding: 3rem 0;
+  }
+
+  .colDescription {
+    max-width: 460px;
   }
 }

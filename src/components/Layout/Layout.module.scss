@@ -16,3 +16,15 @@
   flex: 1 0 auto;
   padding-top: 170px;
 }
+
+@include r($xl) {
+  .main {
+    padding-top: 102px;
+  }
+}
+
+@include r($lg) {
+  .main {
+    padding-top: 72px;
+  }
+}

@@ -7,7 +7,7 @@
   display: grid;
   place-items: center;
   grid-template-columns: 500px 1fr;
-  grid-gap: 30px;
+  grid-gap: 1.5rem;
 }
 
 .content {
@@ -40,5 +40,36 @@
   margin-left: -20%;
   img {
     max-width: 100%;
+  }
+}
+
+@include r($xl) {
+  .grid {
+    grid-template-columns: 400px 1fr;
+  }
+}
+
+@include r($lg) {
+  .grid {
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    order: 2;
+    max-width: 420px;
+  }
+
+  .image {
+    order: 1;
+    margin-left: 0;
+    transform: none;
+    max-width: 460px;
+  }
+}
+
+@include r($md) {
+  .grid {
+    margin-bottom: 3rem;
   }
 }

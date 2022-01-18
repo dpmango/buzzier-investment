@@ -27,3 +27,38 @@
   font-size: 1.8rem;
   line-height: 2.3rem;
 }
+
+@include r($lg) {
+  .videoCaption {
+    img {
+      max-width: 100px;
+    }
+  }
+
+  .videoCaptionTitle {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+}
+
+@include r($md) {
+  .container {
+    padding: 3rem 0;
+  }
+}
+
+@include r($sm) {
+  .video {
+    margin-left: -30px;
+    margin-right: -30px;
+    border-radius: 0;
+  }
+  .videoCaption {
+    img {
+      max-width: 60px;
+    }
+  }
+  .videoCaptionTitle {
+    margin-top: 1rem;
+  }
+}

@@ -49,3 +49,39 @@
     max-width: 100%;
   }
 }
+
+@include r($lg) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include r($md) {
+  .container {
+    padding: 3.5rem 0 4rem;
+    grid-gap: 1rem;
+  }
+  .grid {
+    margin-top: 3rem;
+    grid-template-columns: 1fr;
+  }
+  .col {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .colTitle {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 360px;
+  }
+  .colImage {
+    flex-basis: auto;
+    margin-bottom: -0.5rem;
+    padding-right: 0;
+    img,
+    svg {
+      transform: scale(0.7);
+      transform-origin: center top;
+    }
+  }
+}
