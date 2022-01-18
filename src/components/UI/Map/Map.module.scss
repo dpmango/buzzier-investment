@@ -1,3 +1,46 @@
 .container {
   position: relative;
 }
+
+:global .map-popup {
+  color: white;
+  background: #3d3d46;
+  border-radius: 10px;
+  padding: 1.5rem;
+  .map-popup-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 120%;
+  }
+  p {
+    margin: 0.5rem 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 125%;
+  }
+}
+
+:global .gm-style .gm-style-iw-c {
+  padding: 0;
+  background: transparent;
+  .gm-style-iw-d {
+    overflow: visible !important;
+  }
+  button {
+    top: 0 !important;
+    right: 0 !important;
+    filter: invert(1);
+  }
+}
+
+:global .gm-style .gm-style-iw-t::after {
+  background: #3d3d46;
+  box-shadow: none;
+  content: '';
+  height: 15px;
+  left: -93px;
+  position: absolute;
+  top: -160px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 15px;
+}
