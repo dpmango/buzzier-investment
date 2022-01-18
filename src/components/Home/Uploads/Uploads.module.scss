@@ -40,3 +40,30 @@
 .video {
   width: 100%;
 }
+
+@include r($lg) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    &._uploads {
+      grid-template-columns: 1fr;
+      .col {
+        max-width: 420px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include r($md) {
+  .container {
+    padding-top: 3rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .col {
+    max-width: 420px;
+    width: 100%;
+  }
+}

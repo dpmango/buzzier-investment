@@ -100,3 +100,81 @@
 // .placemark {
 
 // }
+
+@include r($hd) {
+  .colValue {
+    min-height: 3.5rem;
+    font-size: 5rem;
+  }
+  .colLabel {
+    font-size: 1.6rem;
+    min-height: 3.5rem;
+  }
+}
+
+@include r($xl) {
+  .container {
+    padding: 6rem 0;
+    background-size: contain;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .map {
+    margin-top: 7rem;
+  }
+}
+
+@include r($lg) {
+  .container {
+    padding: 4rem 0;
+  }
+  .grid {
+    margin-bottom: 3rem;
+  }
+  .cta {
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+  .helperText {
+    margin-top: 3rem;
+  }
+
+  .map {
+    margin-top: 5rem;
+  }
+}
+
+@include r($md) {
+  .container {
+    padding: 2rem 0 0 0;
+  }
+  .colLabel {
+    margin-left: 100px;
+  }
+  .map {
+    margin-left: -30px;
+    margin-right: -30px;
+    border-radius: 0;
+  }
+}
+
+@include r($sm) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .colValue {
+    font-size: 4rem;
+    min-height: 3rem;
+  }
+  .colLabel {
+    margin-left: 80px;
+    min-height: 3rem;
+  }
+}

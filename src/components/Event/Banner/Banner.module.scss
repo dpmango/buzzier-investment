@@ -41,3 +41,44 @@
   margin-top: -2rem;
   float: right;
 }
+
+@include r($xl) {
+  .cta {
+    margin-top: 0;
+  }
+}
+
+@include r($lg) {
+  .grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .image {
+    padding-right: 0;
+    transform: translateX(0.5rem);
+  }
+  .content {
+    text-align: center;
+  }
+  .cta {
+    margin-top: 1.5rem;
+    float: none;
+  }
+}
+
+@include r($md) {
+  .container {
+    padding: 3rem 0;
+  }
+
+  .image {
+    padding-right: 0;
+    transform: scale(0.7) translateX(0.5rem);
+    margin-bottom: -15%;
+    transform-origin: center top;
+    img,
+    svg {
+      max-width: 100%;
+    }
+  }
+}
