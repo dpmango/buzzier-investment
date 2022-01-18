@@ -16,12 +16,12 @@
     width: 100%;
     background: white;
     font-family: $baseFont;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
     color: $fontColor;
     border: 1px solid $borderColor;
     border-radius: 5px;
-    padding: 14px 15px 13px;
+    padding: 10px 15px 10px;
     backface-visibility: hidden;
     transition: border 0.25s $ease, color 0.25s $ease, background 0.25s $ease;
     &::placeholder {
@@ -85,11 +85,11 @@
 
 .label {
   display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-  margin-bottom: 16px;
-  color: $colorPrimary;
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  color: #d8d8da;
 }
 
 .error {

@@ -1,13 +1,16 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useContext } from 'react';
 import PropTypes from 'prop-types';
 import cns from 'classnames';
 
 import { Button } from '@ui';
+import { UiStoreContext } from 'store';
 
 import styles from './Banner.module.scss';
 import eventImage from './assets/liveEvent.svg';
 
 const Banner = ({ className, description, note }) => {
+  const uiContext = useContext(UiStoreContext);
+
   return (
     <section className={cns(styles.container, className)}>
       <div className="container">
@@ -19,7 +22,7 @@ const Banner = ({ className, description, note }) => {
             <h4 className={styles.title} dangerouslySetInnerHTML={{ __html: description }} />
             <p className={styles.note}>{note}</p>
             <div className={styles.cta}>
-              <Button className={styles} theme="primary">
+              <Button theme="primary" onClick={() => uiContext.setModal('eventSignup')}>
                 Reserve your space now
               </Button>
             </div>

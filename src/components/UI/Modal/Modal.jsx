@@ -13,8 +13,8 @@ import styles2 from './Modal.scss';
 const sharedStyles = {
   content: {
     position: 'absolute',
-    background: 'white',
-    borderRadius: '5px',
+    background: '#3D3D46',
+    borderRadius: '10px',
     padding: 0,
     overflowY: 'auto',
     maxHeight: 'calc(100% - 16px)',
@@ -29,7 +29,7 @@ const sharedStyles = {
 const mainStyles = {
   content: {
     width: 'calc(100% - 16px)',
-    maxWidth: '922px',
+    maxWidth: '1170px',
     top: '50%',
     left: '50%',
     right: 'auto',
@@ -42,20 +42,7 @@ const mainStyles = {
 const narrowStyles = {
   content: {
     width: 'calc(100% - 16px)',
-    maxWidth: '496px',
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    transform: 'translate(-50%, -50%)',
-    margin: '0px auto',
-  },
-};
-
-const thanksStyles = {
-  content: {
-    width: 'calc(100% - 16px)',
-    maxWidth: '384px',
+    maxWidth: '868px',
     top: '50%',
     left: '50%',
     right: 'auto',
@@ -70,19 +57,16 @@ Modal.setAppElement('#root');
 const Variants = {
   MAIN: 'main',
   NARROW: 'narrow',
-  THANKS: 'thanks',
 };
 
 const VariantStyles = {
   [Variants.MAIN]: mainStyles,
   [Variants.NARROW]: narrowStyles,
-  [Variants.THANKS]: thanksStyles,
 };
 
 const VariantClasses = {
   [Variants.MAIN]: '',
   [Variants.NARROW]: styles._narrow,
-  [Variants.THANKS]: styles._thanks,
 };
 
 const Modifiers = {
@@ -126,14 +110,11 @@ const ModalComponent = observer(({ variant, modifier, name, mobTitle, children }
       onRequestClose={closeModal}
       closeTimeoutMS={300}
       style={CSSinJSstyles}
-      // preventScroll={true}
+      preventScroll={true}
       contentLabel="Modal">
       <div className={cns(styles.container, variant && VariantClasses[variant], modifier && ModifierClasses[modifier])}>
         <div className={cns('close', styles.close)} onClick={closeModal}>
-          <SvgIcon name="arrow-left" />
-          <span>Назад</span>
           <SvgIcon name="close" />
-          {mobTitle && <div className={styles.mobTitle} dangerouslySetInnerHTML={{ __html: mobTitle }}></div>}
         </div>
 
         <div className={cns(styles.content, modifier && ModifierClasses[modifier])}>{children}</div>
@@ -146,7 +127,6 @@ ModalComponent.propTypes = {
   variant: PropTypes.string,
   modifier: PropTypes.string,
   name: PropTypes.string.isRequired,
-  mobTitle: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
 
