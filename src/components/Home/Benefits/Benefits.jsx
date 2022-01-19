@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import cns from 'classnames';
 
 import { Button } from '@ui';
+import { UiStoreContext } from 'store';
 import styles from './Benefits.module.scss';
 
 const Benefits = ({ className, title, subtitle, cols, more }) => {
+  const uiContext = useContext(UiStoreContext);
+
   return (
     <section className={cns(styles.container, className)}>
       <div className="container">
@@ -25,7 +28,11 @@ const Benefits = ({ className, title, subtitle, cols, more }) => {
 
         <div className={styles.more}>
           <div className={styles.moreTitle}>{more.title}</div>
-          <Button type="link" to={more.link.to} className={styles.moreCta}>
+          <Button
+            type="link"
+            to={more.link.to}
+            className={styles.moreCta}
+            onClick={() => uiContext.setModal('eventSignup')}>
             {more.link.label}
           </Button>
         </div>

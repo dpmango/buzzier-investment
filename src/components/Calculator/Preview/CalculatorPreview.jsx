@@ -1,9 +1,11 @@
-import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import React, { useState, useMemo, useEffect, useCallback, useContext } from 'react';
 import PropTypes from 'prop-types';
 import cns from 'classnames';
 
 import { SvgIcon, RangeSlider, Button } from '@ui';
+import { UiStoreContext } from '@store';
 import { numberWithCommas } from '@helpers';
+
 import styles from './CalculatorPreview.module.scss';
 import HeadDecorArrowSvg from './assets/decor-arrow.svg';
 import { HomeFact } from 'components/Home';
@@ -16,6 +18,8 @@ const CalculatorPreview = ({ className, title, fact }) => {
   const [locations, setLocations] = useState(40000);
   const [cost, setCost] = useState(35);
   const [selloutRate, setSelloutRate] = useState(50);
+
+  const uiContext = useContext(UiStoreContext);
 
   const displayCost = useMemo(() => {
     return (cost / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -139,11 +143,11 @@ const CalculatorPreview = ({ className, title, fact }) => {
           <div className={styles.actions}>
             <div className={styles.actionsCol}>
               <div className={styles.actionLabel}>Join us to discuss this investment opportunity</div>
-              <Button>Join our live event</Button>
+              <Button onClick={() => uiContext.setModal('eventSignup')}>Join our live event</Button>
             </div>
             <div className={styles.actionsCol}>
               <div className={styles.actionLabel}>To better understand the calculations presented</div>
-              <Button>Review our assumptions</Button>
+              <Button onClick={() => uiContext.setModal('assumptions')}>Review our assumptions</Button>
             </div>
           </div>
         </div>

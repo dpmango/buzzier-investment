@@ -19,6 +19,8 @@ const Header = observer(({ className }) => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
 
+  const uiContext = useContext(UiStoreContext);
+
   const handleScroll = useCallback(
     throttle((e) => {
       // const nearFooter = window.scrollY + window.innerHeight > document.body.scrollHeight - 375;
@@ -62,7 +64,9 @@ const Header = observer(({ className }) => {
 
             <div className={styles.cta}>
               <Button theme="black">Download our pitch deck</Button>
-              <Button theme="primary">Join our live event</Button>
+              <Button theme="primary" onClick={() => uiContext.setModal('eventSignup')}>
+                Join our live event
+              </Button>
             </div>
 
             <div className={styles.hamburger}>
@@ -88,7 +92,7 @@ const Header = observer(({ className }) => {
             <Button theme="black" block>
               Download our pitch deck
             </Button>
-            <Button theme="primary" block>
+            <Button theme="primary" block onClick={() => uiContext.setModal('eventSignup')}>
               Join our live event
             </Button>
           </div>

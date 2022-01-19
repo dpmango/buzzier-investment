@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import cns from 'classnames';
 
 import { Button } from '@ui';
+import { UiStoreContext } from 'store';
 import styles from './Team.module.scss';
 
 const Team = ({ className, title, cols }) => {
+  const uiContext = useContext(UiStoreContext);
+
   return (
     <section className={cns(styles.container, className)}>
       <div className="container">
@@ -28,7 +31,7 @@ const Team = ({ className, title, cols }) => {
         </div>
 
         <div className={styles.cta}>
-          <Button to="/event">Learn more at our live event</Button>
+          <Button onClick={() => uiContext.setModal('eventSignup')}>Learn more at our live event</Button>
         </div>
 
         {/* {loading && ()} */}

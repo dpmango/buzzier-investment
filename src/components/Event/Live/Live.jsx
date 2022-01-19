@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom';
 import cns from 'classnames';
 
 import { Button } from '@ui';
+import { UiStoreContext } from 'store';
 
 import styles from './Live.module.scss';
 import EventLiveLogo from './assets/event-live-logo.svg';
 
 const Live = ({ className, left, right, cols }) => {
   const [slideIndex, setSlideIndex] = useState(1);
+
+  const uiContext = useContext(UiStoreContext);
 
   return (
     <section className={cns(styles.container, className)}>
@@ -43,7 +46,7 @@ const Live = ({ className, left, right, cols }) => {
         </div>
 
         <div className={styles.cta}>
-          <Button type="link" to="/event">
+          <Button type="link" to="/event" onClick={() => uiContext.setModal('eventSignup')}>
             Talk to our team at our live event
           </Button>
         </div>

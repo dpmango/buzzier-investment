@@ -110,6 +110,10 @@ export const UiMapMarker = (options) => {
           anchor: marker,
         });
       });
+
+      infowindow.open({
+        anchor: marker,
+      });
     }
 
     return () => {

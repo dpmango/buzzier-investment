@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import cns from 'classnames';
 
 import { Button, UiVideo } from '@ui';
+import { UiStoreContext } from 'store';
 import { HomeFact } from '@c/Home';
 
 import styles from './WhyInvest.module.scss';
 import ListCheckArrow from './assets/check-arrow.svg';
 
 const WhyInvest = ({ className, title, features, fact, videos }) => {
+  const uiContext = useContext(UiStoreContext);
+
   return (
     <section className={cns(styles.container, className)}>
       <div className="container">
@@ -48,7 +51,7 @@ const WhyInvest = ({ className, title, features, fact, videos }) => {
         <HomeFact className={styles.fact} {...fact} />
 
         <div className={styles.cta}>
-          <Button>Learn more at our live event</Button>
+          <Button onClick={() => uiContext.setModal('eventSignup')}>Learn more at our live event</Button>
         </div>
       </div>
     </section>

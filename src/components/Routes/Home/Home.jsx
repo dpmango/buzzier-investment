@@ -23,7 +23,7 @@ import {
   HomeUploads,
 } from '@c/Home';
 import { EventCountdown, EventBanner, EventLive } from '@c/Event';
-import { EventSignupModal } from '@c/Modal';
+import { EventSignupModal, AssumptionsModal } from '@c/Modal';
 import { AdminComponents } from '@c/Layout';
 import { content } from './Content.js';
 
@@ -57,6 +57,7 @@ const HomePage = observer(() => {
       {!hiddenComponents.includes('EventCountdown') && <EventCountdown {...content.countdown} />}
 
       <EventSignupModal />
+      <AssumptionsModal />
 
       <AdminComponents
         components={[

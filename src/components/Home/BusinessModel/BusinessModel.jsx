@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Pagination } from 'swiper';
 
 import { Button } from '@ui';
+import { UiStoreContext } from 'store';
 
 import styles from './BusinessModel.module.scss';
 import { ReactComponent as WheelSvg } from './assets/wheel.svg';
@@ -13,6 +14,8 @@ import 'swiper/modules/pagination/pagination.scss';
 
 const BusinessModel = ({ className, title, subtitle, slides }) => {
   const [slideIndex, setSlideIndex] = useState(1);
+
+  const uiContext = useContext(UiStoreContext);
 
   return (
     <section className={cns(styles.container, className)}>
@@ -48,7 +51,7 @@ const BusinessModel = ({ className, title, subtitle, slides }) => {
         </div>
 
         <div className={styles.cta}>
-          <Button type="link" to="/event">
+          <Button type="link" to="/event" onClick={() => uiContext.setModal('eventSignup')}>
             Talk to our team at our live event
           </Button>
         </div>
