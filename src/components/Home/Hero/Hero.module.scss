@@ -1,5 +1,6 @@
 .container {
   position: relative;
+  overflow: visible;
 }
 
 .grid {
@@ -36,11 +37,31 @@
 }
 
 .image {
-  transform: translateX(13%);
+  padding: 3rem 0 6rem;
+  position: relative;
+  transform: translateX(12%);
   margin-left: -20%;
+  :global .parallax-inner {
+    will-change: transform;
+  }
   img {
     max-width: 100%;
   }
+  figure {
+    margin: 0;
+  }
+}
+
+.imageBox {
+  display: flex;
+  padding-right: 4rem;
+  justify-content: flex-end;
+}
+
+.imageRemote {
+  position: absolute;
+  top: -20%;
+  right: -5%;
 }
 
 @include r($xl) {
@@ -61,15 +82,28 @@
   }
 
   .image {
+    padding-bottom: 3rem;
     order: 1;
     margin-left: 0;
     transform: none;
     max-width: 460px;
+  }
+
+  .imageRemote {
+    max-width: 220px;
+    right: 0;
   }
 }
 
 @include r($md) {
   .grid {
     margin-bottom: 3rem;
+  }
+}
+
+@include r(460) {
+  .imageRemote {
+    // top: 0;
+    max-width: 150px;
   }
 }

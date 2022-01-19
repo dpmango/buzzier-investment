@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cns from 'classnames';
+import { Parallax } from 'react-scroll-parallax';
 
 import styles from './Hero.module.scss';
 
@@ -13,8 +14,14 @@ const Hero = ({ className, title, description }) => {
             <h1 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
             <p className={styles.description}>{description}</p>
           </div>
+
           <div className={styles.image}>
-            <img src="/img/heroImage.png" srcSet="/img/heroImage@2x.png 2x" alt="buzziner image" />
+            <Parallax className={styles.imageBox} y={[0, 20]} tagOuter="figure">
+              <img src="/img/heroImageBox.png" srcSet="/img/heroImageBox@2x.png 2x" alt="buzziner image" />
+            </Parallax>
+            <Parallax className={styles.imageRemote} y={[0, 50]} tagOuter="figure">
+              <img src="/img/heroImageRemote.png" srcSet="/img/heroImageRemote@2x.png 2x" alt="buzziner image" />
+            </Parallax>
           </div>
         </div>
       </div>

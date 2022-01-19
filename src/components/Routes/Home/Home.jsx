@@ -2,6 +2,7 @@ import React, { useContext, Profiler, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import { Helmet } from 'react-helmet';
 // import AOS from 'aos';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import { useQuery } from '@hooks';
 import { UiStoreContext, SessionStoreContext } from '@store';
@@ -37,24 +38,26 @@ const HomePage = observer(() => {
         <title>Buzzier - Invest</title>
       </Helmet>
 
-      {!hiddenComponents.includes('Hero') && <HomeHero {...content.hero} />}
-      {!hiddenComponents.includes('Video') && <HomeVideo {...content.video} />}
-      {!hiddenComponents.includes('Calculator') && <CalculatorPreview {...content.calculator} />}
-      {!hiddenComponents.includes('Features') && <HomeFeatures {...content.features} />}
-      {!hiddenComponents.includes('Benefits') && <HomeBenefits {...content.benefits} />}
-      {!hiddenComponents.includes('HowItWorks') && <HomeHowItWorks {...content.howItWorks} />}
-      {!hiddenComponents.includes('BusinessModel') && <HomeBusinessModel {...content.model} />}
-      {!hiddenComponents.includes('Industries') && <HomeIndustries {...content.industries} />}
-      {!hiddenComponents.includes('Scope') && <HomeScope {...content.scope} />}
-      {!hiddenComponents.includes('Steps') && <HomeSteps {...content.steps} />}
-      {!hiddenComponents.includes('WhyInvest') && <HomeWhyInvest {...content.whyInvest} />}
-      {!hiddenComponents.includes('EventLive') && <EventLive {...content.eventLive} />}
-      {!hiddenComponents.includes('Calculator') && <CalculatorPreview {...content.calculator} />}
-      {!hiddenComponents.includes('Core') && <HomeCore {...content.core} />}
-      {!hiddenComponents.includes('Team') && <HomeTeam {...content.team} />}
-      {!hiddenComponents.includes('Uploads') && <HomeUploads {...content.uploads} />}
-      {!hiddenComponents.includes('EventBanner') && <EventBanner {...content.eventBanner} />}
-      {!hiddenComponents.includes('EventCountdown') && <EventCountdown {...content.countdown} />}
+      <ParallaxProvider>
+        {!hiddenComponents.includes('Hero') && <HomeHero {...content.hero} />}
+        {!hiddenComponents.includes('Video') && <HomeVideo {...content.video} />}
+        {!hiddenComponents.includes('Calculator') && <CalculatorPreview {...content.calculator} />}
+        {!hiddenComponents.includes('Features') && <HomeFeatures {...content.features} />}
+        {!hiddenComponents.includes('Benefits') && <HomeBenefits {...content.benefits} />}
+        {!hiddenComponents.includes('HowItWorks') && <HomeHowItWorks {...content.howItWorks} />}
+        {!hiddenComponents.includes('BusinessModel') && <HomeBusinessModel {...content.model} />}
+        {!hiddenComponents.includes('Industries') && <HomeIndustries {...content.industries} />}
+        {!hiddenComponents.includes('Scope') && <HomeScope {...content.scope} />}
+        {!hiddenComponents.includes('Steps') && <HomeSteps {...content.steps} />}
+        {!hiddenComponents.includes('WhyInvest') && <HomeWhyInvest {...content.whyInvest} />}
+        {!hiddenComponents.includes('EventLive') && <EventLive {...content.eventLive} />}
+        {!hiddenComponents.includes('Calculator') && <CalculatorPreview {...content.calculator} />}
+        {!hiddenComponents.includes('Core') && <HomeCore {...content.core} />}
+        {!hiddenComponents.includes('Team') && <HomeTeam {...content.team} />}
+        {!hiddenComponents.includes('Uploads') && <HomeUploads {...content.uploads} />}
+        {!hiddenComponents.includes('EventBanner') && <EventBanner {...content.eventBanner} />}
+        {!hiddenComponents.includes('EventCountdown') && <EventCountdown {...content.countdown} />}
+      </ParallaxProvider>
 
       <EventSignupModal />
       <AssumptionsModal />
