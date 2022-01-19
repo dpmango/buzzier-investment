@@ -72,14 +72,16 @@ const VariantClasses = {
 const Modifiers = {
   DEFAULT: 'default',
   FULL: 'fullheight',
+  WHITE: 'white',
 };
 
 const ModifierClasses = {
   [Modifiers.DEFAULT]: null,
   [Modifiers.FULL]: styles._full,
+  [Modifiers.WHITE]: styles._white,
 };
 
-const ModalComponent = observer(({ variant, modifier, name, mobTitle, children }) => {
+const ModalComponent = observer(({ variant, modifier, name, className, mobTitle, children }) => {
   const uiContext = useContext(UiStoreContext);
 
   const afterOpenModal = () => {};
@@ -104,7 +106,7 @@ const ModalComponent = observer(({ variant, modifier, name, mobTitle, children }
 
   return (
     <Modal
-      className={`ReactModal__Content--${variant}`}
+      className={cns(`ReactModal__Content--${variant}`, modifier && `modifier-${modifier}`)}
       isOpen={uiContext.activeModal === name}
       onAfterOpen={afterOpenModal}
       onRequestClose={closeModal}
@@ -112,7 +114,13 @@ const ModalComponent = observer(({ variant, modifier, name, mobTitle, children }
       style={CSSinJSstyles}
       preventScroll={true}
       contentLabel="Modal">
-      <div className={cns(styles.container, variant && VariantClasses[variant], modifier && ModifierClasses[modifier])}>
+      <div
+        className={cns(
+          styles.container,
+          variant && VariantClasses[variant],
+          modifier && ModifierClasses[modifier],
+          className
+        )}>
         <div className={cns('close', styles.close)} onClick={closeModal}>
           <SvgIcon name="close" />
         </div>
@@ -124,6 +132,7 @@ const ModalComponent = observer(({ variant, modifier, name, mobTitle, children }
 });
 
 ModalComponent.propTypes = {
+  className: PropTypes.string,
   variant: PropTypes.string,
   modifier: PropTypes.string,
   name: PropTypes.string.isRequired,

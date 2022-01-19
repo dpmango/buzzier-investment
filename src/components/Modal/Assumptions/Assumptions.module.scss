@@ -1,12 +1,9 @@
 .container {
   position: relative;
-  background: white;
-  color: $fontColor;
+  // background: white;
+  // color: $fontColor;
   margin: -3.5rem -4.5rem -3rem;
   padding: 2.5rem 2.5rem 3rem;
-  :global .close {
-    color: $fontColor;
-  }
 }
 
 .section {
@@ -37,6 +34,16 @@
   margin-bottom: 0.5rem;
   background: #fff;
   border: 1px solid #efefef;
+  margin-left: -1px;
+  font-size: 0;
+  &:nth-child(odd) {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  &:nth-child(even) {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
 }
 
 .rowLabel {
@@ -48,10 +55,32 @@
 }
 
 .rowValue {
-  font-size: 18px;
+  font-size: 0.9rem;
   line-height: 1.6;
   flex: 0 0 35%;
   background: #f9fafb;
   border-left: 1px solid #efefef;
   padding: 0.5rem 1rem;
+}
+
+@include r($lg) {
+  .container {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@include r($md) {
+  .row {
+    flex-basis: 100%;
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .rowLabel,
+  .rowValue {
+    font-size: 1rem;
+  }
 }

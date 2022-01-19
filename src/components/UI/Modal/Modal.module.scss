@@ -2,6 +2,14 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  &._white {
+    .close {
+      color: #b8b8b8;
+      &:hover {
+        color: $colorPrimary;
+      }
+    }
+  }
 }
 
 .close {

@@ -11,7 +11,7 @@ const Assumptions = ({ className }) => {
   const uiContext = useContext(UiStoreContext);
 
   return (
-    <Modal name="assumptions">
+    <Modal name="assumptions" modifier="white" className={(styles.modal, className)}>
       <div className={cns(styles.container, className)}>
         <div className={styles.section}>
           <div className={styles.sectionTitle}>Assumptions</div>

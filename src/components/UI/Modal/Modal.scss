@@ -22,6 +22,9 @@
   &--before-close {
     opacity: 0;
   }
+  &.modifier-white {
+    background: white !important;
+  }
 }
 
 body {
