@@ -46,7 +46,7 @@ const Live = ({ className, left, right, cols }) => {
         </div>
 
         <div className={styles.cta}>
-          <Button type="link" to="/event" onClick={() => uiContext.setModal('eventSignup')}>
+          <Button type="link" onClick={() => uiContext.setModal('eventSignup')}>
             Talk to our team at our live event
           </Button>
         </div>
