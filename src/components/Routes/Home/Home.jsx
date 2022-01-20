@@ -35,7 +35,7 @@ const HomePage = observer(() => {
   return (
     <>
       <Helmet>
-        <title>Buzzier - Invest</title>
+        <title>Buzzier</title>
       </Helmet>
 
       <ParallaxProvider>

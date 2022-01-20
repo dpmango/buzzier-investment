@@ -77,7 +77,7 @@ export const content = {
     },
   },
   howItWorks: {
-    title: 'How it works:',
+    title: 'How it works',
     cols: [
       {
         id: 1,
