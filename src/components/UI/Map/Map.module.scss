@@ -6,12 +6,16 @@
   color: white;
   background: #3d3d46;
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
+  font-family: 'Circular Std', serif;
+
   .map-popup-title {
     font-weight: bold;
     font-size: 1.3rem;
     line-height: 120%;
+    font-family: 'Circular Std', serif;
   }
+
   p {
     margin: 0.5rem 0;
     font-weight: 500;
@@ -24,9 +28,11 @@
   padding: 0;
   background: transparent;
   border-radius: 10px;
+
   .gm-style-iw-d {
     overflow: visible !important;
   }
+
   button {
     top: 0 !important;
     right: 0 !important;
@@ -39,9 +45,9 @@
   box-shadow: none;
   content: '';
   height: 15px;
-  left: -93px;
+  left: -100px;
   position: absolute;
-  top: -160px;
-  transform: translate(-50%, -50%) rotate(-45deg);
+  top: -170px;
+  transform: rotate(-45deg);
   width: 15px;
 }
