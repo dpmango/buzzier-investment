@@ -128,7 +128,7 @@ const Video = ({ className, video, children }) => {
   return (
     <div className={cns(styles.video, playState && styles[playState], className)}>
       <div className={styles.videoBody} style={{ paddingBottom: aspectRatio }}>
-        <video poster={video.poster} muted ref={videoRef}>
+        <video poster={video.poster} ref={videoRef}>
           <source src={video.source} />
         </video>
       </div>

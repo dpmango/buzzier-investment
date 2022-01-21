@@ -9,8 +9,9 @@ export const content = {
     title:
       'Buzzier brings the online <strong>advertising revenue</strong> opportunities <strong>to brick & mortar business</strong>',
     video: {
-      poster: '/img/videoPoster.png',
-      source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+      poster: '/img/into.jpg',
+      source:
+        'https://player.vimeo.com/progressive_redirect/playback/668585198/rendition/720p/720p.mp4?loc=external&signature=2407fcfd0d0e0c034f92db68cdd11cb045473650f9d17597877ed864ecfa206c',
       caption: 'How do we make money for you?',
     },
   },
@@ -171,7 +172,7 @@ export const content = {
           { to: '#', label: 'Restaurants' },
           { to: '#', label: 'Bars' },
           { to: '#', label: 'Coffee Shops/Cafes' },
-          { to: '#', label: 'Breakrooms ' },
+          { to: '#', label: 'Breakrooms' },
         ],
       },
       {
@@ -268,16 +269,18 @@ export const content = {
         id: 1,
         video: {
           size: '370x245',
-          poster: '/img/videoPoster_2.png',
-          source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+          poster: '/img/into.jpg',
+          source:
+            'https://player.vimeo.com/progressive_redirect/playback/668583515/rendition/720p/720p.mp4?loc=external&signature=99ab512f2ae2c30cf9f61c841e4096ab0a95d4cbd46bfe8b2e51f5ce7df60497',
         },
       },
       {
         id: 2,
         video: {
           size: '370x245',
-          poster: '/img/videoPoster_2.png',
-          source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+          poster: '/img/into.jpg',
+          source:
+            'https://player.vimeo.com/progressive_redirect/playback/668584354/rendition/720p/720p.mp4?loc=external&signature=03518bfd9ee371771694d141636441b85c85dc5022c609f847f9fce00ea473d1',
         },
       },
     ],
@@ -289,14 +292,14 @@ export const content = {
     },
     right: {
       title: 'Content is <i>streaming</i>',
-      subtitle: '<u>23,000 Content Segments</u>',
+      subtitle: '<u>1,490,024 Content Segments</u>',
     },
     cols: [
       {
         id: 1,
         title: '100%',
         description:
-          'Devices installed by screen owners using the easy install instructions,  with zero requests for assistance.',
+          'Devices installed by screen owners using the easy install instructions, with zero requests for assistance.',
         link: {
           to: '#',
           label: 'Join our <u>live event</u>',
@@ -484,8 +487,9 @@ export const content = {
         title: 'Ad Industry',
         video: {
           size: '370x245',
-          poster: '/img/videoPoster_2.png',
-          source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+          poster: '/img/into.jpg',
+          source:
+            'https://player.vimeo.com/progressive_redirect/playback/668584354/rendition/720p/720p.mp4?loc=external&signature=03518bfd9ee371771694d141636441b85c85dc5022c609f847f9fce00ea473d1',
         },
       },
       {
@@ -493,8 +497,9 @@ export const content = {
         title: 'Business Model',
         video: {
           size: '370x245',
-          poster: '/img/videoPoster_2.png',
-          source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+          poster: '/img/into.jpg',
+          source:
+            'https://player.vimeo.com/progressive_redirect/playback/668582482/rendition/720p/720p.mp4?loc=external&signature=454858f8b058d080e1ab348d9d34b4574e5377423b2af42141cc9a8819b3c2c7',
         },
       },
       {
@@ -502,8 +507,9 @@ export const content = {
         title: 'Technology',
         video: {
           size: '370x245',
-          poster: '/img/videoPoster_2.png',
-          source: 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4',
+          poster: '/img/into.jpg',
+          source:
+            'https://player.vimeo.com/progressive_redirect/playback/668583515/rendition/720p/720p.mp4?loc=external&signature=99ab512f2ae2c30cf9f61c841e4096ab0a95d4cbd46bfe8b2e51f5ce7df60497',
         },
       },
     ],
