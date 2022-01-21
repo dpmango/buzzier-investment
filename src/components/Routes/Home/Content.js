@@ -21,6 +21,13 @@ export const content = {
       title: '*This advertising sector <i>converts 4x</i> the rate of TV, Radio & Publications combined!',
     },
   },
+  calculator1: {
+    title: 'Investment Calculator',
+    fact: {
+      label: 'FUN FACT!',
+      title: '*By <i>investing</i> in this opportunity you can drink <i>old fashioneds</i> with impunity!',
+    },
+  },
   features: {
     title: '<i>Brick & Mortar</i>&nbsp;&nbsp;vs&nbsp;&nbsp;<i>Virtual Counterparts</i>',
     cols: [
@@ -54,7 +61,7 @@ export const content = {
       {
         id: 1,
         title: 'P-O-P Advertising',
-        description: 'Advertisers alway want to be as close to point-of-purchase as possible. Buzzier enables it.',
+        description: 'Advertisers always want to be as close to point-of-purchase as possible. Buzzier enables it.',
       },
       {
         id: 2,
@@ -65,7 +72,7 @@ export const content = {
         id: 3,
         title: 'Proof-of-Play',
         description:
-          'A minimum of 50% of online advertising is fraudentally billed. We guarantee 100% of the ads on Buzzier.',
+          'A minimum of 50% of online advertising is fraudulently billed. We guarantee 100% of the ads on Buzzier.',
       },
     ],
     more: {
@@ -102,7 +109,7 @@ export const content = {
       {
         id: 5,
         title:
-          'Each box counts mobile devices within a set radius- we can tell the advertiser exactly how many people are seeing their ad in any location at any time.',
+          'Each box counts mobile devices within a set radius - we can tell the advertiser exactly how many people are seeing their ad in any location at any time.',
         iconId: 'iq',
       },
     ],
@@ -158,7 +165,7 @@ export const content = {
       },
       {
         id: 2,
-        title: 'Hospitatlity ',
+        title: 'Hospitality ',
         links: [
           { to: '#', label: 'Hotels' },
           { to: '#', label: 'Restaurants' },
@@ -234,7 +241,7 @@ export const content = {
         title: 'Step 5',
         iconId: 'screen',
         description:
-          'Revenues are automatically desposited to Buzzier and distributed to Screen Owners and Device Owners through our fully transparent dashboard.',
+          'Revenues are automatically deposited to Buzzier and distributed to Screen Owners and Device Owners through our fully transparent dashboard.',
       },
     ],
   },

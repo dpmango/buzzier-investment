@@ -19,7 +19,7 @@ const EventSignup = ({ className }) => {
   const { addToast } = useToasts();
 
   const [units, setUnits] = useState('');
-  const [checkedSubscribe, setCheckedSubscribe] = useState(false);
+  const [checkedSubscribe, setCheckedSubscribe] = useState(true);
   const [loading, setLoading] = useState(false);
 
   const uiContext = useContext(UiStoreContext);
@@ -155,7 +155,7 @@ const EventSignup = ({ className }) => {
 
               <div className={styles.checkbox}>
                 <Checkbox isChecked={checkedSubscribe} onChange={() => setCheckedSubscribe(!checkedSubscribe)}>
-                  Would you like to receive future emails with updates on the progress of Buzzier?
+                  Would you like to receive future emails with updates on Cayman based investment opportunities?
                 </Checkbox>
               </div>
 

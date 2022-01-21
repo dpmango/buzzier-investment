@@ -51,7 +51,7 @@ const HomePage = observer(() => {
         {!hiddenComponents.includes('Steps') && <HomeSteps {...content.steps} />}
         {!hiddenComponents.includes('WhyInvest') && <HomeWhyInvest {...content.whyInvest} />}
         {!hiddenComponents.includes('EventLive') && <EventLive {...content.eventLive} />}
-        {!hiddenComponents.includes('Calculator') && <CalculatorPreview {...content.calculator} />}
+        {!hiddenComponents.includes('Calculator') && <CalculatorPreview {...content.calculator1} />}
         {!hiddenComponents.includes('Core') && <HomeCore {...content.core} />}
         {!hiddenComponents.includes('Team') && <HomeTeam {...content.team} />}
         {!hiddenComponents.includes('Uploads') && <HomeUploads {...content.uploads} />}
@@ -62,7 +62,7 @@ const HomePage = observer(() => {
       <EventSignupModal />
       <AssumptionsModal />
 
-      <AdminComponents
+      {/*<AdminComponents
         components={[
           'Hero',
           'Video',
@@ -82,7 +82,7 @@ const HomePage = observer(() => {
           'EventBanner',
           'EventCountdown',
         ]}
-      />
+      />*/}
     </>
   );
 });

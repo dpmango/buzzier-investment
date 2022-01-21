@@ -38,7 +38,7 @@
     &__option {
       font-weight: normal;
       font-size: 16px;
-      line-height: (19 / 16);
+      line-height: calc(19 / 16);
       padding: 14px 16px;
       white-space: nowrap;
       overflow: hidden;
