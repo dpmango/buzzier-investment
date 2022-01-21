@@ -165,7 +165,7 @@ export const content = {
       },
       {
         id: 2,
-        title: 'Hospitality ',
+        title: 'Hospitality',
         links: [
           { to: '#', label: 'Hotels' },
           { to: '#', label: 'Restaurants' },

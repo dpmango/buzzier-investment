@@ -38,15 +38,16 @@ const Assumptions = ({ className }) => {
 
         <div className={styles.section}>
           <div className={styles.sectionTitle}>Limitations of offer</div>
+          <p className={styles.totalShares}>Total shares issued = 50,000,000</p>
 
           <div className={styles.sectionGrid}>
             <div className={styles.row}>
               <span className={styles.rowLabel}>Min shareholding</span>
-              <span className={styles.rowValue}>0.792%</span>
+              <span className={styles.rowValue}>46,729 shares</span>
             </div>
             <div className={styles.row}>
-              <span className={styles.rowLabel}>Weeks worked per year</span>
-              <span className={styles.rowValue}>4.75%</span>
+              <span className={styles.rowLabel}>Max shareholding</span>
+              <span className={styles.rowValue}>1,401,869 shares</span>
             </div>
             <div className={styles.row}>
               <span className={styles.rowLabel}>Min share purchase</span>
