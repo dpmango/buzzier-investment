@@ -27,13 +27,13 @@ const EventSignup = ({ className }) => {
   const handleValidation = (values) => {
     const errors = {};
     if (!values.name) {
-      errors.name = 'Enter First Name';
+      errors.name = 'Please enter your name';
     } else if (!values.surname) {
-      errors.surname = 'Enter Last Name';
+      errors.surname = 'Please enter your last name';
     } else if (!values.email) {
-      errors.email = 'Enter email';
+      errors.email = 'Please enter your email';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-      errors.email = 'Invalid email address';
+      errors.email = 'Please enter a valid email';
     }
     return errors;
   };
@@ -102,11 +102,11 @@ const EventSignup = ({ className }) => {
                     />
                   )}
                 </Field>
-                <Field type="email" name="email">
+                <Field type="text" name="email">
                   {({ field, form: { setFieldValue }, meta }) => (
                     <Input
                       label="Email address"
-                      type="email"
+                      type="text"
                       placeholder=""
                       value={field.value}
                       error={meta.touched && meta.error}
