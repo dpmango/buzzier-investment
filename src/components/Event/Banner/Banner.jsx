@@ -20,11 +20,13 @@ const Banner = ({ className, description, note }) => {
           </div>
           <div className={styles.content}>
             <h4 className={styles.title} dangerouslySetInnerHTML={{ __html: description }} />
-            <p className={styles.note}>{note}</p>
-            <div className={styles.cta}>
-              <Button theme="primary" onClick={() => uiContext.setModal('eventSignup')}>
-                Reserve your space now
-              </Button>
+            <div className={styles.noteBlock}>
+              <p className={styles.note}>{note}</p>
+              <div className={styles.cta}>
+                <Button theme="primary" onClick={() => uiContext.setModal('eventSignup')}>
+                  Reserve your space now
+                </Button>
+              </div>
             </div>
           </div>
         </div>

@@ -59,7 +59,7 @@
 .more {
   margin-top: 2rem;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   grid-template-columns: 2fr 1fr;
 }
 
@@ -71,7 +71,7 @@
 
 .moreCta {
   justify-content: center;
-  max-width: 360px;
+  max-width: 100%;
 }
 
 @include r($xl) {

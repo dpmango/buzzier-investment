@@ -37,6 +37,12 @@
   letter-spacing: -0.025em;
 }
 
+.noteBlock {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
 .cta {
   float: right;
   margin-top: 0;
