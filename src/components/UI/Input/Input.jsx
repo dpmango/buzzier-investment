@@ -112,7 +112,7 @@ Input.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   modifier: PropTypes.string,
   variant: PropTypes.string,
-  error: PropTypes.oneOfType([PropTypes.string, PropTypes.boolean]),
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   showError: PropTypes.bool,
   onChange: PropTypes.func,
   mask: PropTypes.string,

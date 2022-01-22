@@ -1,6 +1,5 @@
-import React, { useState, useMemo, useEffect, useCallback, useContext } from 'react';
-import PropTypes from 'prop-types';
 import cns from 'classnames';
+import React, { useState, useMemo, useCallback, useContext } from 'react';
 
 import { SvgIcon, RangeSlider, Button } from '@ui';
 import { UiStoreContext } from '@store';
@@ -44,8 +43,6 @@ const CalculatorPreview = ({ className, title, fact }) => {
   );
 
   function roi(count, locations, adCost, selloutRate) {
-    console.log(count, locations, adCost, selloutRate);
-
     let v1 = locations;
     let v2 = adCost / 100;
     let v3 = selloutRate;
@@ -116,7 +113,7 @@ const CalculatorPreview = ({ className, title, fact }) => {
     let roi3 = dy[2] * owned;
     let roi4 = dy[3] * owned;
     let roi5 = dy[4] * owned;
-    console.log(roi3, roi3 + roi4 + roi5);
+
     return [roi3, roi3 + roi4 + roi5];
   }
 
@@ -170,7 +167,13 @@ const CalculatorPreview = ({ className, title, fact }) => {
                   Active Locations
                 </div>
                 <div className={styles.sectionContent}>
-                  <RangeSlider value={locations} min={1000} step={100} max={100000} onChange={(v) => setLocations(v)} />
+                  <RangeSlider
+                    value={locations}
+                    min={15000}
+                    step={100}
+                    max={100000}
+                    onChange={(v) => setLocations(v)}
+                  />
                 </div>
                 <div className={styles.sectionNote} data-tip="More locations impact income">
                   <SvgIcon name="question" />
@@ -198,7 +201,7 @@ const CalculatorPreview = ({ className, title, fact }) => {
                   Sellout rate
                 </div>
                 <div className={styles.sectionContent}>
-                  <RangeSlider value={selloutRate} min={10} max={90} onChange={(v) => setSelloutRate(v)} />
+                  <RangeSlider value={selloutRate} min={20} max={100} onChange={(v) => setSelloutRate(v)} />
                 </div>
                 <div className={styles.sectionNote} data-tip="Estimation">
                   <SvgIcon name="question" />
