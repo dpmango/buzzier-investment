@@ -22,13 +22,19 @@
 }
 
 .subtitle {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   font-size: 0.9rem;
   line-height: 2.2rem;
   letter-spacing: -0.02em;
   color: $colorPrimary;
 }
-
+.headLeft,
+.headRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .headLogo {
   img,
   svg {

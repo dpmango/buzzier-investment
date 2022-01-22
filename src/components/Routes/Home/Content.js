@@ -292,7 +292,7 @@ export const content = {
     },
     right: {
       title: 'Content is <i>streaming</i>',
-      subtitle: '<u>1,490,024 Content Segments</u>',
+      subtitle: '<u>1,490,024 content segments</u>',
     },
     cols: [
       {
