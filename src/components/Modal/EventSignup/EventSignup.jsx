@@ -16,8 +16,6 @@ const formInitial = {
 };
 
 const EventSignup = ({ className }) => {
-  const { addToast } = useToasts();
-
   const [units, setUnits] = useState('');
   const [checkedSubscribe, setCheckedSubscribe] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -38,26 +36,28 @@ const EventSignup = ({ className }) => {
     return errors;
   };
 
-  const handleSubmit = useCallback(async (values, { resetForm }) => {
-    setLoading(true);
+  const handleSubmit = useCallback(
+    async (values, { resetForm }) => {
+      setLoading(true);
 
-    addToast('Should signup', { appearance: 'success' });
-    uiContext.setModal('eventSignupThanks');
-    // await callbackContext
-    //   .submitForm({
-    //     type: 'Help',
-    //     payload: Object.keys(values).map((key) => ({ id: key, content: values[key] })),
-    //   })
-    //   .then((_res) => {
-    //     resetForm();
-    //     uiContext.setModal('callbacksuccess');
-    //   })
-    //   .catch((_error) => {
-    //     addToast('Ошибка при отправке', { appearance: 'error' });
-    //   });
+      let data = {};
+      data.first_name = values.name;
+      data.last_name = values.surname;
+      data.full_name = values.name + ' ' + values.surname;
+      data.email = values.email;
+      data.units = units;
+      data.subscribe = 'yes';
 
-    setLoading(false);
-  }, []);
+      const url = 'https://api2.buzz.fit/v1/buzzier/subscribe';
+      const body = { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) };
+      fetch(url, body).then((data) => {
+        uiContext.setModal('eventSignupThanks');
+      });
+
+      setLoading(false);
+    },
+    [units]
+  );
 
   return (
     <>
