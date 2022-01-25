@@ -63,7 +63,7 @@ const Header = observer(({ className }) => {
             </Link>
 
             <div className={styles.cta}>
-              <Button theme="black">Download our pitch deck</Button>
+              <Button theme="black">Pitch deck</Button>
               <Button theme="primary" onClick={() => uiContext.setModal('eventSignup')}>
                 Join our live event
               </Button>

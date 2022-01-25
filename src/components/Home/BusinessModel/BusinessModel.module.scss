@@ -30,6 +30,7 @@
 .grid {
   margin: 4rem 0 0 -4rem;
   display: flex;
+  align-items: center;
 }
 
 .wheel {
@@ -92,7 +93,7 @@
   height: auto !important;
   background: #f1f1f1;
   border-radius: 0.8rem;
-  padding: 3rem 2.2rem 4.8rem 320px;
+  padding: 2.2rem 2.2rem 4.5rem 320px;
 }
 
 .slideTitle {

@@ -43,7 +43,7 @@ const BusinessModel = ({ className, title, subtitle, slides }) => {
               slides.map((slide) => (
                 <SwiperSlide className={styles.slide} key={slide.id}>
                   <div className={styles.slideTitle}>{slide.title}</div>
-                  <div className={styles.slideContent} dangerouslySetInnerHTML={{ __html: slide.content }} />
+                  <div dangerouslySetInnerHTML={{ __html: slide.content }} />
                 </SwiperSlide>
               ))}
           </Swiper>
