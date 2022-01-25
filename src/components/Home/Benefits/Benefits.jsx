@@ -28,11 +28,7 @@ const Benefits = ({ className, title, subtitle, cols, more }) => {
 
         <div className={styles.more}>
           <div className={styles.moreTitle}>{more.title}</div>
-          <Button
-            type="link"
-            to={more.link.to}
-            className={styles.moreCta}
-            onClick={() => uiContext.setModal('eventSignup')}>
+          <Button className={styles.moreCta} onClick={() => uiContext.setModal('eventSignup')}>
             {more.link.label}
           </Button>
         </div>

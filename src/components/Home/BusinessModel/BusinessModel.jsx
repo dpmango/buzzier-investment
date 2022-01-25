@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import PropTypes from 'prop-types';
 import cns from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { Pagination } from 'swiper';
@@ -51,9 +50,7 @@ const BusinessModel = ({ className, title, subtitle, slides }) => {
         </div>
 
         <div className={styles.cta}>
-          <Button type="link" onClick={() => uiContext.setModal('eventSignup')}>
-            Talk to our team at our live event
-          </Button>
+          <Button onClick={() => uiContext.setModal('eventSignup')}>Talk to our team at our live event</Button>
         </div>
       </div>
     </section>

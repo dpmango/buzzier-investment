@@ -5,39 +5,39 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Buzzier"
-    />
+    <meta name="description" content="Buzzier" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
     <title>Buzzier</title>
-
     <script>
       window.REACT_ENV = {
-        GATEWAY_URL: '%REACT_APP_GATEWAY_URL%',
+        GATEWAY_URL: "%REACT_APP_GATEWAY_URL%",
         API_TIMEOUT: 10000,
         API_RETRY_DELAY: 1500,
-        GOOGLE_API: '%REACT_APP_GOOGLE_API%',
-        APP_UPDATE_INTERVAL_MINUTES: 30,
+        GOOGLE_API: "%REACT_APP_GOOGLE_API%",
+        APP_UPDATE_INTERVAL_MINUTES: 30
       };
-    </script>                          
+    </script>
   </head>
-
   <body>
     <div id="root"></div>
     <!-- TruConversion for buzzier.com -->
     <script type="text/javascript">
       var _tip = _tip || [];
-      (function(d,s,id){
-          var js, tjs = d.getElementsByTagName(s)[0];
-          if(d.getElementById(id)) { return; }
-          js = d.createElement(s); js.id = id;
+      const hostname = window.location.hostname;
+      if (hostname === "buzzier.com") {
+        (function( d, s, id ) {
+          var js, tjs = d.getElementsByTagName( s )[0];
+          if (d.getElementById( id )) {
+            return;
+          }
+          js = d.createElement( s );
+          js.id = id;
           js.async = true;
-          js.src = d.location.protocol + '//app.truconversion.com/ti-js/20893/43f43.js';
-          tjs.parentNode.insertBefore(js, tjs);
-      }(document, 'script', 'ti-js'));
+          js.src = d.location.protocol + "//app.truconversion.com/ti-js/20893/43f43.js";
+          tjs.parentNode.insertBefore( js, tjs );
+        }( document, "script", "ti-js" ));
+      }
     </script>
   </body>
 </html>

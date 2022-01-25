@@ -38,6 +38,10 @@ const EventSignup = ({ className }) => {
 
   const handleSubmit = useCallback(
     async (values, { resetForm }) => {
+      if (loading) {
+        return;
+      }
+
       setLoading(true);
 
       let data = {};
@@ -53,9 +57,8 @@ const EventSignup = ({ className }) => {
       fetch(url, body).then((data) => {
         setUnits('');
         uiContext.setModal('eventSignupThanks');
+        setLoading(false);
       });
-
-      setLoading(false);
     },
     [units]
   );

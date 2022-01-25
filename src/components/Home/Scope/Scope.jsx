@@ -24,9 +24,7 @@ const Scope = ({ className, title, list }) => {
         </div>
 
         <div className={styles.cta}>
-          <Button type="link" onClick={() => uiContext.setModal('eventSignup')}>
-            Learn more at our live event
-          </Button>
+          <Button onClick={() => uiContext.setModal('eventSignup')}>Learn more at our live event</Button>
         </div>
       </div>
     </section>
