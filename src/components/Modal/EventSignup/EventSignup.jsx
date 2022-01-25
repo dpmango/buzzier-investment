@@ -180,7 +180,8 @@ const EventSignup = ({ className }) => {
 
       <Modal name="eventSignupThanks" variant="narrow" className={className}>
         <div className={styles.thanksText}>
-          Thank you for your submission, if you would like to request a PPM, additional information will be required.
+          Thank you for you submission. Should you wish to participate, a PPM will be sent to you 24 hours before the
+          event.
         </div>
       </Modal>
     </>

@@ -6,8 +6,7 @@ export const content = {
       'Buzzier’s TV Box is the key that unlocks billions of dollars of advertising revenue for brick and mortar businesses, by turning any screen to a digital billboard.',
   },
   video: {
-    title:
-      'Buzzier brings the online <strong>advertising revenue</strong> opportunities <strong>to brick & mortar business</strong>',
+    title: 'Participate in <i>Cayman</i> based company.',
     video: {
       poster: '/img/into.jpg',
       source:
@@ -268,6 +267,7 @@ export const content = {
       {
         id: 1,
         video: {
+          title: 'Our Platform',
           size: '370x245',
           poster: '/img/into.jpg',
           source:
@@ -277,6 +277,7 @@ export const content = {
       {
         id: 2,
         video: {
+          title: 'Our Industry',
           size: '370x245',
           poster: '/img/into.jpg',
           source:
@@ -521,12 +522,12 @@ export const content = {
   },
   countdown: {
     title: 'Countdown to <i>live event</i>',
-    deadline: 'February 07 2022 05:30:00 GMT-0500',
+    deadline: 'February 08 2022 05:30:00 GMT-0500',
     helper: '30 units of equity available at $25,000',
   },
   eventBanner: {
     description:
-      'We are hosting a LIVE event for potential investors on the 7th of February at 5:30 pm. You can meet the team and we will provide a summary of the business, a demonstration of the technology and have an open Q&A session. Attendance can be in-person* or online,  but will be by invitation only.',
+      'We are hosting a LIVE event for potential investors on the 8th of February at 5:30 pm. You can meet the team and we will provide a summary of the business, a demonstration of the technology and have an open Q&A session. Attendance can be in-person* or online,  but will be by invitation only.',
     note: '*Venue will be announced upon interest in attending',
   },
 };

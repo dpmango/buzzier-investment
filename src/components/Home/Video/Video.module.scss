@@ -21,6 +21,11 @@
   border-radius: 0.5rem;
 }
 
+i {
+  font-style: normal;
+  @include text-decor(3px, $fontColor);
+}
+
 .videoCaption {
   cursor: pointer;
   pointer-events: all;

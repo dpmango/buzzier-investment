@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
 import cns from 'classnames';
 
 import { Button, UiVideo } from '@ui';
@@ -43,6 +42,7 @@ const WhyInvest = ({ className, title, features, fact, videos }) => {
               <div className={styles.video} key={video.id}>
                 <div className={styles.colMedia}>
                   <UiVideo video={video.video} />
+                  <div className={styles.colTitle}>{video.video.title}</div>
                 </div>
               </div>
             ))}

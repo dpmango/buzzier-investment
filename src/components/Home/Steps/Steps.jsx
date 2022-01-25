@@ -1,12 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cns from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import { Pagination } from 'swiper';
-
-import { SvgIcon } from '@ui';
+import { Keyboard, Pagination, Mousewheel } from 'swiper';
 import { useWindowSize } from '@hooks';
-
 import styles from './Steps.module.scss';
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
@@ -26,14 +22,15 @@ const FeatureImages = {
 
 const Steps = ({ className, title, slides }) => {
   const { width } = useWindowSize();
-
   return (
     <section className={cns(styles.container, className)}>
       <div className="container">
         <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
         <Swiper
+          keyboard={{ enabled: true }}
+          mousewheel={{ enabled: true }}
           className={styles.slider}
-          modules={[Pagination]}
+          modules={[Pagination, Keyboard, Mousewheel]}
           pagination={{ clickable: true }}
           centeredSlides={width > 992}
           slidesPerView={'auto'}

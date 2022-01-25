@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import cns from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import { Pagination } from 'swiper';
+import { Pagination, Keyboard, Mousewheel } from 'swiper';
 
 import { Button } from '@ui';
 import { UiStoreContext } from 'store';
@@ -13,7 +13,6 @@ import 'swiper/modules/pagination/pagination.scss';
 
 const BusinessModel = ({ className, title, subtitle, slides }) => {
   const [slideIndex, setSlideIndex] = useState(1);
-
   const uiContext = useContext(UiStoreContext);
 
   return (
@@ -29,11 +28,14 @@ const BusinessModel = ({ className, title, subtitle, slides }) => {
             <WheelSvg />
           </div>
           <Swiper
+            keyboard={{ enabled: true }}
+            mousewheel={{ enabled: true }}
             className={styles.slider}
-            modules={[Pagination]}
+            modules={[Pagination, Keyboard, Mousewheel]}
             pagination={{ clickable: true }}
             centeredSlides={true}
             slidesPerView={'auto'}
+            loop={true}
             spaceBetween={0}
             onSlideChange={(swiper) => {
               setSlideIndex(swiper.realIndex + 1);
