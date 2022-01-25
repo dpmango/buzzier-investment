@@ -56,8 +56,7 @@ export const content = {
     ],
   },
   benefits: {
-    title: '<i>Advertising</i> is native to online business. Why not Brick & Mortar?',
-    // subtitle: 'Buzzier is bringing the advertising revenue options of online platforms to brick & mortar business.',
+    title: '<i>Advertising</i> is ubiquitous in online business. Why not Brick & Mortar?',
     cols: [
       {
         id: 1,
@@ -99,7 +98,7 @@ export const content = {
       },
       {
         id: 3,
-        title: 'The screen owner plugs it in and connects to WiFi.',
+        title: 'The screen owner plugs it in and connects to Wi-Fi.',
         iconId: 'qr',
       },
       {
@@ -110,7 +109,7 @@ export const content = {
       {
         id: 5,
         title:
-          'Each box counts mobile devices within a set radius - we can tell the advertiser exactly how many people are seeing their ad in any location at any time.',
+          'Each box counts mobile devices within a set radius which allows us to tell the advertiser exactly how many people are seeing their ad in any location at any time.',
         iconId: 'iq',
       },
     ],
@@ -135,6 +134,7 @@ export const content = {
           <p>Device owners cover the purchase price of the Buzzier TV box and are responsible for placing it with a Screen Owner and expanding the Buzzier network.</p>
           <p>One third of ad revenue paid to the Device Owner for their distribution and sourcing of suitable screens.</p>
           <p>Device Owners are also encouraged to ensure their devices are always connected and screens are positioned in the most effective areas.</p>
+          <p>Minimum expected return on investment would be 2000% year-on-year.</p>
           `,
       },
       {
@@ -144,6 +144,7 @@ export const content = {
           <p>Screen owners provide the screen, location, internet connection and any associated electricity, etc. Likely to be the business owner at a location.</p>
           <p>Installation is simple and takes only minutes.</p>
           <p>One third of ad revenue paid to the Screen Owner for the use of their equipment and location.</p>
+          <p>They should be generating an expected minimum of $2000 in profit.</p>
           `,
       },
     ],
@@ -214,8 +215,7 @@ export const content = {
         id: 1,
         title: 'Step 1',
         iconId: 'box',
-        description:
-          'Purchase a Buzzier device from our centralized warehouse in China and it can be delivered anywhere internationally within 6 days. ',
+        description: 'Purchase a Buzzier device. Receive it in within 6 days.',
       },
       {
         id: 2,
@@ -373,9 +373,9 @@ export const content = {
       },
       {
         id: 4,
-        title: 'ADAM - Content Management System',
+        title: 'Content Management System',
         content: `
-          <p>ADAM is our dedicated content management system enabling us to categorize, label and tag the video content to ensure all locations only stream content specific to that location and industry.</p>
+          <p>Our dedicated content management system enabling us to categorize, label and tag the video content to ensure all locations only stream content specific to that location and industry.</p>
         `,
         iconId: 'adam',
       },

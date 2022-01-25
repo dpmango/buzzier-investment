@@ -51,6 +51,7 @@ const EventSignup = ({ className }) => {
       const url = 'https://api2.buzz.fit/v1/buzzier/subscribe';
       const body = { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) };
       fetch(url, body).then((data) => {
+        setUnits('');
         uiContext.setModal('eventSignupThanks');
       });
 
@@ -121,7 +122,7 @@ const EventSignup = ({ className }) => {
 
               <div className={styles.units}>
                 <div className={styles.unitsLabel}>
-                  Are you interested in investing in Buzzier at US$25k per unit? If so, how many units would you be
+                  Are you interested in investing in Buzzier at US $25k per unit? If so, how many units would you be
                   interested in?
                 </div>
                 <div className={styles.unitsRow}>
@@ -147,6 +148,12 @@ const EventSignup = ({ className }) => {
                     More than 6 Units
                   </Checkbox>
                 </div>
+                {units !== '0' && units !== '' && (
+                  <div className={styles.unitsHint}>
+                    <div className={styles.unitsHintLeft}>Want to get a jump start?</div>
+                    <div>ⓘ You will be the first in line to reserve a purchase share</div>
+                  </div>
+                )}
                 <div className={styles.unitsNote}>
                   ⓘ This information is entirely for the purposes of gauging interest and will not be used for any other
                   purpose.

@@ -38,7 +38,6 @@ const Assumptions = ({ className }) => {
 
         <div className={styles.section}>
           <div className={styles.sectionTitle}>Limitations of offer</div>
-          <p className={styles.totalShares}>Total shares issued = 50,000,000</p>
 
           <div className={styles.sectionGrid}>
             <div className={styles.row}>
@@ -58,6 +57,9 @@ const Assumptions = ({ className }) => {
               <span className={styles.rowValue}>$750,000</span>
             </div>
           </div>
+          <p className={styles.totalShares}>
+            Total shares issued = <strong>50,000,000</strong> at a company valuation at <strong>$25,000,000</strong>.
+          </p>
         </div>
       </div>
     </Modal>

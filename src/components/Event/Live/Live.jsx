@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import cns from 'classnames';
 
@@ -15,9 +14,19 @@ const Live = ({ className, left, right, cols }) => {
   let diffTime = Math.abs(new Date().valueOf() - new Date(start).valueOf());
   let weeks = diffTime / (24 * 60 * 60 * 1000 * 7);
   let days = (weeks % 1) * 7;
-  let hours = (weeks % 1) * 24;
-  [weeks, days, hours] = [Math.floor(weeks), Math.floor(days), Math.ceil(hours)];
+  let hours = (days % 1) * 24;
+  [weeks, days, hours] = [Math.floor(weeks), Math.floor(days), Math.floor(hours)];
   let elapsed = weeks + ' weeks | ' + days + ' days | ' + hours + ' hours';
+
+  const [segments, setSegments] = useState(1566024);
+  const min = 1;
+  const max = 3;
+  // 1.6k daily
+  useEffect(() => {
+    setInterval(() => {
+      setSegments((segments) => segments + Math.floor(Math.random() * (max - min + 1)) + min);
+    }, 1000 * 10);
+  }, []);
 
   return (
     <section className={cns(styles.container, className)}>
@@ -30,10 +39,16 @@ const Live = ({ className, left, right, cols }) => {
           <div className={styles.headLogo}>
             <img src={EventLiveLogo} alt="live event logo" />
           </div>
-
           <div className={styles.headRight}>
             <h3 className={styles.title} dangerouslySetInnerHTML={{ __html: right.title }} />
-            {right.subtitle && <div className={styles.subtitle} dangerouslySetInnerHTML={{ __html: right.subtitle }} />}
+            {right.subtitle && (
+              <div
+                className={styles.subtitle}
+                dangerouslySetInnerHTML={{
+                  __html: new Intl.NumberFormat('en-GB').format(segments) + ' content segments',
+                }}
+              />
+            )}
           </div>
         </div>
 

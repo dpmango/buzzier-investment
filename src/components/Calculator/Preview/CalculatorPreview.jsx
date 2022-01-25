@@ -175,7 +175,9 @@ const CalculatorPreview = ({ className, title, fact }) => {
                     onChange={(v) => setLocations(v)}
                   />
                 </div>
-                <div className={styles.sectionNote} data-tip="More locations impact income">
+                <div
+                  className={styles.sectionNote}
+                  data-tip="If we can penetrate 1% of the market in US in 5 years this would equate to getting one screen.">
                   <SvgIcon name="question" />
                 </div>
               </div>
@@ -187,9 +189,11 @@ const CalculatorPreview = ({ className, title, fact }) => {
                   Ad cost
                 </div>
                 <div className={styles.sectionContent}>
-                  <RangeSlider value={cost} min={20} step={1} max={40} onChange={(v) => setCost(v)} />
+                  <RangeSlider value={cost} min={35} step={1} max={70} onChange={(v) => setCost(v)} />
                 </div>
-                <div className={styles.sectionNote} data-tip="Cost per location">
+                <div
+                  className={styles.sectionNote}
+                  data-tip="Cost per minute for targeted advertising in this sector starts at $0.35">
                   <SvgIcon name="question" />
                 </div>
               </div>
@@ -203,7 +207,7 @@ const CalculatorPreview = ({ className, title, fact }) => {
                 <div className={styles.sectionContent}>
                   <RangeSlider value={selloutRate} min={20} max={100} onChange={(v) => setSelloutRate(v)} />
                 </div>
-                <div className={styles.sectionNote} data-tip="Estimation">
+                <div className={styles.sectionNote} data-tip="Available ad hours purchased by advertisers.">
                   <SvgIcon name="question" />
                 </div>
               </div>
