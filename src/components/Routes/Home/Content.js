@@ -441,7 +441,7 @@ export const content = {
       },
       {
         id: 12,
-        className: 'bg-primary',
+        className: 'bg-dark',
         title: 'Demand Side Platform ',
         content: `
           <p>The (DSP) is a system that allows advertisers to purchase inventory on the Buzzier network in real time. Real Time Bidding for displaying their advertising on our network takes place within the ad exchange. </p>

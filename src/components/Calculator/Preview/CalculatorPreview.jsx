@@ -15,14 +15,15 @@ const minInvestmentValue = 25 * 1000;
 
 const CalculatorPreview = ({ className, title, fact }) => {
   const [investment, setInvestment] = useState(25000);
-  const [locations, setLocations] = useState(40000);
+  const [locations, setLocations] = useState(38675);
   const [cost, setCost] = useState(35);
-  const [selloutRate, setSelloutRate] = useState(50);
+  const [selloutRate, setSelloutRate] = useState(80);
 
   const uiContext = useContext(UiStoreContext);
 
   const displayCost = useMemo(() => {
-    return (cost / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    let c = (cost / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return c.length > 3 ? c : c + '0';
   }, [cost]);
 
   const calculatedRoi = useCallback(
@@ -136,6 +137,9 @@ const CalculatorPreview = ({ className, title, fact }) => {
     [investment, setInvestment]
   );
 
+  let locationPercentage = (locations / 38675) * 0.5;
+  locationPercentage = locationPercentage.toFixed(2) + '%';
+
   return (
     <section className={cns(styles.container, className)}>
       <div className="container">
@@ -169,15 +173,15 @@ const CalculatorPreview = ({ className, title, fact }) => {
                 <div className={styles.sectionContent}>
                   <RangeSlider
                     value={locations}
-                    min={15000}
-                    step={100}
-                    max={100000}
+                    min={19400}
+                    step={1000}
+                    max={154700}
                     onChange={(v) => setLocations(v)}
                   />
                 </div>
                 <div
                   className={styles.sectionNote}
-                  data-tip="If we can penetrate 1% of the market in US in 5 years this would equate to getting one screen.">
+                  data-tip={locationPercentage + ' of addressable locations in the US'}>
                   <SvgIcon name="question" />
                 </div>
               </div>
@@ -189,11 +193,9 @@ const CalculatorPreview = ({ className, title, fact }) => {
                   Ad cost
                 </div>
                 <div className={styles.sectionContent}>
-                  <RangeSlider value={cost} min={35} step={1} max={70} onChange={(v) => setCost(v)} />
+                  <RangeSlider value={cost} min={30} step={1} max={45} onChange={(v) => setCost(v)} />
                 </div>
-                <div
-                  className={styles.sectionNote}
-                  data-tip="Cost per minute for targeted advertising in this sector starts at $0.35">
+                <div className={styles.sectionNote} data-tip="Median range per ad play is 30¢ to 45¢">
                   <SvgIcon name="question" />
                 </div>
               </div>
@@ -205,9 +207,11 @@ const CalculatorPreview = ({ className, title, fact }) => {
                   Sellout rate
                 </div>
                 <div className={styles.sectionContent}>
-                  <RangeSlider value={selloutRate} min={20} max={100} onChange={(v) => setSelloutRate(v)} />
+                  <RangeSlider value={selloutRate} min={69} max={92} onChange={(v) => setSelloutRate(v)} />
                 </div>
-                <div className={styles.sectionNote} data-tip="Available ad hours purchased by advertisers.">
+                <div
+                  className={styles.sectionNote}
+                  data-tip="The industry boosts 69% - 92% fill rate which is the percentage of available inventory sold. In latest results outdoor advertising increased 125% in Q2 2021. 61% was in our sector">
                   <SvgIcon name="question" />
                 </div>
               </div>

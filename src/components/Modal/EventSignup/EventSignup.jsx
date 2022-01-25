@@ -154,7 +154,7 @@ const EventSignup = ({ className }) => {
                 {units !== '0' && units !== '' && (
                   <div className={styles.unitsHint}>
                     <div className={styles.unitsHintLeft}>Want to get a jump start?</div>
-                    <div>ⓘ You will be the first in line to reserve a purchase share</div>
+                    <div>ⓘ You will be the first in line to reserve a share purchase</div>
                   </div>
                 )}
                 <div className={styles.unitsNote}>
