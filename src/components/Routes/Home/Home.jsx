@@ -28,7 +28,7 @@ const HomePage = observer(() => {
   const uiContext = useContext(UiStoreContext);
   const hiddenComponents = uiContext.hiddenComponents;
 
-  if (location.hash.replace('#', '') === 'register') {
+  if (location.pathname.includes('register')) {
     uiContext.setModal('eventSignup');
   }
 

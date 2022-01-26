@@ -457,7 +457,7 @@ export const content = {
     cols: [
       {
         id: 1,
-        image: '/img/team-ian.jpg',
+        image: '/img/t1.jpg',
         title: 'Ian',
         position: 'CEO',
         extra:
@@ -466,7 +466,7 @@ export const content = {
       },
       {
         id: 2,
-        image: '/img/team-andrei.jpg',
+        image: '/img/t3.jpg',
         title: 'Andrei',
         position: 'Our CTO and principal architect',
         extra:
@@ -475,7 +475,7 @@ export const content = {
       },
       {
         id: 3,
-        image: '/img/team-conor.jpg',
+        image: '/img/t2.jpg',
         title: 'Conor',
         position: 'Board of Directors',
         extra:
