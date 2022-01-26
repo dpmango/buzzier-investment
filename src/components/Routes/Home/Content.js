@@ -461,7 +461,8 @@ export const content = {
         title: 'Ian',
         position: 'CEO',
         extra:
-          'Finally we have Conor on our Board of Directors, one of the most influential people in connected TV and digital-out-of-home advertising and currently the Vice President of Business Development at Axciom.',
+          'Over the past 20 years Ian has founded, developed and operated a string of successful marketing and new media enterprises, working with the world’s top brands such as Pfizer, Lilly, o2 Telefonica, Heineken, Vodafone and Diageo. ' +
+          'Seeing a huge opportunity in the digital out-of-home advertising sector, Ian’s expertise has led him to creating Buzzier.',
       },
       {
         id: 2,
@@ -469,7 +470,8 @@ export const content = {
         title: 'Andrei',
         position: 'Our CTO and principal architect',
         extra:
-          'Finally we have Conor on our Board of Directors, one of the most influential people in connected TV and digital-out-of-home advertising and currently the Vice President of Business Development at Axciom.',
+          'Andrei studied rocket science, aerospace engineering, computer science and web development. Over the past 13 years Andrei has been worked in every facet of online advertising. ' +
+          "Most recently he was head of development at Great Jakes, an internationally renowned web development firm for the world's most prestigious law firms.",
       },
       {
         id: 3,
@@ -477,7 +479,8 @@ export const content = {
         title: 'Conor',
         position: 'Board of Directors',
         extra:
-          'Finally we have Conor on our Board of Directors, one of the most influential people in connected TV and digital-out-of-home advertising and currently the Vice President of Business Development at Axciom.',
+          'As senior director at Acxiom, Conor has global responsibility for commercial strategy, product roadmap, and revenue growth for their Advanced TV business. ' +
+          'He is also tasked with identifying new and innovative ways for Acxiom and their partners to collaborate and garner support for these innovations. Previously Conor was at Nielsen in various roles including Digital Client Solutions for Disney Co.',
       },
     ],
   },

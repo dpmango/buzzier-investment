@@ -38,9 +38,12 @@
   background: #f1f1f1;
   &:hover {
     .colContent {
-      margin-top: -10rem;
+      overflow-y: scroll;
+      margin-top: -75%;
+      height: 100%;
     }
     .extra {
+      font-size: 0.9rem;
       opacity: 1;
       height: 10rem;
     }
