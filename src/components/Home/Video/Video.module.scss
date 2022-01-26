@@ -12,6 +12,10 @@
   strong {
     color: $colorPrimary;
   }
+  i {
+    font-style: normal;
+    @include text-decor(3px, $fontColor);
+  }
 }
 
 .video {
@@ -19,11 +23,6 @@
   overflow: hidden;
   margin-top: 1.75rem;
   border-radius: 0.5rem;
-}
-
-i {
-  font-style: normal;
-  @include text-decor(3px, $fontColor);
 }
 
 .videoCaption {
