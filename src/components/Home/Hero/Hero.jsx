@@ -17,10 +17,10 @@ const Hero = ({ className, title, description }) => {
 
           <div className={styles.image}>
             <Parallax className={styles.imageBox} y={[0, 20]} tagOuter="figure">
-              <img src="/img/heroImageBox.png" srcSet="/img/heroImageBox@2x.png 2x" alt="buzziner image" />
+              <img src="/img/heroImageBox.png" srcSet="/img/heroImageBox@2x.png 2x" alt="Buzzier" />
             </Parallax>
             <Parallax className={styles.imageRemote} y={[0, 50]} tagOuter="figure">
-              <img src="/img/heroImageRemote.png" srcSet="/img/heroImageRemote@2x.png 2x" alt="buzziner image" />
+              <img src="/img/heroImageRemote.png" srcSet="/img/heroImageRemote@2x.png 2x" alt="Buzzier" />
             </Parallax>
           </div>
         </div>

@@ -9,6 +9,7 @@
   line-height: 120%;
   letter-spacing: -0.025em;
   text-align: center;
+
   i {
     @include text-decor();
     font-style: normal;
@@ -36,12 +37,18 @@
   border-radius: 10px;
   padding: 0;
   background: #f1f1f1;
+
+  .extra {
+    font-size: 0.9rem;
+  }
+
   &:hover {
     .colContent {
       overflow-y: scroll;
       margin-top: -75%;
       height: 100%;
     }
+
     .extra {
       font-size: 0.9rem;
       opacity: 1;
@@ -53,6 +60,7 @@
 .colImage {
   flex: 0 0 auto;
   font-size: 0;
+
   img,
   svg {
     width: 100%;
@@ -64,6 +72,7 @@
   background: rgba(241, 241, 241, 0.9);
   transition: margin 0.25s $ease;
 }
+
 .colTitle {
   font-weight: bold;
   font-size: 1.5rem;
@@ -110,10 +119,12 @@
 
   .col {
     max-width: 420px;
+
     &:hover {
       .colContent {
         margin-top: -7rem;
       }
+
       .extra {
         height: 7rem;
       }
@@ -127,6 +138,7 @@
       .colContent {
         margin-top: -8rem;
       }
+
       .extra {
         height: 8rem;
       }

@@ -87,6 +87,7 @@ const ModalComponent = observer(({ variant, modifier, name, className, mobTitle,
   const afterOpenModal = () => {};
 
   const closeModal = () => {
+    history.replaceState(null, null, ' ');
     uiContext.resetModal();
   };
 

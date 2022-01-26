@@ -1,11 +1,8 @@
 import React, { useContext, Profiler, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import { Helmet } from 'react-helmet';
-// import AOS from 'aos';
 import { ParallaxProvider } from 'react-scroll-parallax';
-
-import { useQuery } from '@hooks';
-import { UiStoreContext, SessionStoreContext } from '@store';
+import { UiStoreContext } from '@store';
 
 import { CalculatorPreview } from '@c/Calculator';
 import {
@@ -25,12 +22,15 @@ import {
 } from '@c/Home';
 import { EventCountdown, EventBanner, EventLive } from '@c/Event';
 import { EventSignupModal, AssumptionsModal } from '@c/Modal';
-import { AdminComponents } from '@c/Layout';
 import { content } from './Content.js';
 
 const HomePage = observer(() => {
-  const query = useQuery();
-  const { hiddenComponents } = useContext(UiStoreContext);
+  const uiContext = useContext(UiStoreContext);
+  const hiddenComponents = uiContext.hiddenComponents;
+
+  if (location.hash.replace('#', '') === 'register') {
+    uiContext.setModal('eventSignup');
+  }
 
   return (
     <>
@@ -61,28 +61,6 @@ const HomePage = observer(() => {
 
       <EventSignupModal />
       <AssumptionsModal />
-
-      {/*<AdminComponents
-        components={[
-          'Hero',
-          'Video',
-          'Calculator',
-          'Features',
-          'Benefits',
-          'HowItWorks',
-          'BusinessModel',
-          'Industries',
-          'Scope',
-          'Steps',
-          'WhyInvest',
-          'EventLive',
-          'Core',
-          'Team',
-          'Uploads',
-          'EventBanner',
-          'EventCountdown',
-        ]}
-      />*/}
     </>
   );
 });
