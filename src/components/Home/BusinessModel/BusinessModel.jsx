@@ -19,7 +19,9 @@ const BusinessModel = ({ className, title, subtitle, slides }) => {
     <section className={cns(styles.container, className)}>
       <div className="container">
         <div className={styles.head}>
-          <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
+          <h2 className={styles.title}>
+            <i dangerouslySetInnerHTML={{ __html: title }} />
+          </h2>
           {subtitle && <div className={styles.subtitle} dangerouslySetInnerHTML={{ __html: subtitle }} />}
         </div>
 

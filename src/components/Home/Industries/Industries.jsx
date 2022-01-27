@@ -9,7 +9,9 @@ const Industries = ({ className, title, description, cols }) => {
   return (
     <section className={cns(styles.container, className)}>
       <div className="container">
-        <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
+        <h2 className={styles.title}>
+          <i dangerouslySetInnerHTML={{ __html: title }} />
+        </h2>
         <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />
 
         <div className={styles.grid}>
@@ -23,9 +25,9 @@ const Industries = ({ className, title, description, cols }) => {
                     col.links.map((link, idx) => (
                       <li key={idx}>
                         <a href={link.to} onClick={(e) => e.preventDefault()}>
-                          <i className={styles.linkIcon}>
+                          <span className={styles.linkIcon}>
                             <SvgIcon name="arrow-right" />
-                          </i>
+                          </span>
 
                           <span>{link.label}</span>
                         </a>

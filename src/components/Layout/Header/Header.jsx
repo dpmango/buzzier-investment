@@ -53,6 +53,29 @@ const Header = observer(({ className }) => {
     )
   );
 
+  // line-break detection (DOM based) for underlines
+  const fixUnderlines = () => {
+    const iElements = document.querySelectorAll('i');
+
+    Array.from(iElements).map((el) => {
+      const elHeight = el.offsetHeight;
+      const elFontSize = parseInt(window.getComputedStyle(el).fontSize);
+      const ratio = elHeight / elFontSize;
+
+      if (ratio >= 2) {
+        el.setAttribute('data-multiline', true);
+      } else {
+        el.setAttribute('data-multiline', false);
+      }
+    });
+  };
+
+  useEffect(() => {
+    fixUnderlines();
+    setTimeout(fixUnderlines, 1000); // bcause of swap styles
+    setTimeout(fixUnderlines, 2000);
+  }, [width]);
+
   return (
     <>
       <header className={cns(styles.header, scrolled && styles._scrolled, className)} ref={headerRef}>
