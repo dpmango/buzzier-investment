@@ -41,7 +41,12 @@ const WhyInvest = ({ className, title, features, fact, videos }) => {
             videos.map((video) => (
               <div className={styles.video} key={video.id}>
                 <div className={styles.colMedia}>
-                  <UiVideo video={video.video} />
+                  <UiVideo video={video.video}>
+                    <div className={styles.videoCaption}>
+                      <img src="/img/videoCaptionDecor.svg" />
+                      <div className={styles.videoCaptionTitle}>{video.video.caption}</div>
+                    </div>
+                  </UiVideo>
                   <div className={styles.colTitle}>{video.video.title}</div>
                 </div>
               </div>

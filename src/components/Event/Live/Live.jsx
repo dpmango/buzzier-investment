@@ -58,9 +58,15 @@ const Live = ({ className, left, right, cols }) => {
               <div className={styles.col} key={col.id}>
                 <div className={styles.colTitle}>{col.title}</div>
                 <div className={styles.colDescription}>{col.description}</div>
-                <Link className={styles.colLink} to={col.link.to}>
-                  <span dangerouslySetInnerHTML={{ __html: col.link.label }} />
-                </Link>
+                {col.link.type === 1 ? (
+                  <Link className={styles.colLink} to={col.link.to}>
+                    <span dangerouslySetInnerHTML={{ __html: col.link.label }} />
+                  </Link>
+                ) : (
+                  <a target={col.link.target} className={styles.colLink} href={col.link.to}>
+                    <span dangerouslySetInnerHTML={{ __html: col.link.label }} />
+                  </a>
+                )}
               </div>
             ))}
         </div>

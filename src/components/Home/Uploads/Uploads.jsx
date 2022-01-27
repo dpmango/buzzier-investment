@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cns from 'classnames';
 
 import { Button, UiVideo } from '@ui';
@@ -15,7 +14,12 @@ const Uploads = ({ className, videos, uploads }) => {
             videos.map((video) => (
               <div className={styles.col} key={video.id}>
                 <div className={styles.colMedia}>
-                  <UiVideo className={styles.video} video={video.video} />
+                  <UiVideo className={styles.video} video={video.video}>
+                    <div className={styles.videoCaption}>
+                      <img src="/img/videoCaptionDecor.svg" />
+                      <div className={styles.videoCaptionTitle}>{video.video.caption}</div>
+                    </div>
+                  </UiVideo>
                 </div>
                 <div className={styles.colTitle}>{video.title}</div>
               </div>
@@ -27,7 +31,12 @@ const Uploads = ({ className, videos, uploads }) => {
             uploads.length &&
             uploads.map((upload) => (
               <div className={styles.col} key={upload.id}>
-                <Button to={upload.href} iconRight={upload.icon}>
+                <Button
+                  onClick={() => {
+                    window.open(upload.href);
+                  }}
+                  to={upload.href}
+                  iconRight={upload.icon}>
                   {upload.title}
                 </Button>
               </div>

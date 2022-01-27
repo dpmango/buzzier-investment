@@ -99,6 +99,28 @@
   border-radius: 0.5rem;
 }
 
+.videoCaptionTitle {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 2.3rem;
+}
+
+.videoCaption {
+  cursor: pointer;
+  pointer-events: all;
+
+  img {
+    width: 60px;
+    transition: transform 0.25s $ease;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
 // FACT
 .fact {
   margin-top: 2.6rem;
