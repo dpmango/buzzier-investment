@@ -269,7 +269,7 @@ export const content = {
         video: {
           title: 'Our Platform',
           size: '370x245',
-          poster: '/img/into.jpg',
+          poster: '/img/how.jpg',
           caption: 'How it works?',
           source:
             'https://player.vimeo.com/progressive_redirect/playback/670640828/rendition/720p/720p.mp4?loc=external&signature=181476d957b383ef6f13e0c63f8ff1103590ed855d89adc7fbe12402271c75ea',
@@ -280,7 +280,7 @@ export const content = {
         video: {
           title: 'Our Industry',
           size: '370x245',
-          poster: '/img/into.jpg',
+          poster: '/img/why.jpg',
           caption: 'Why this opportunity?',
           source:
             'https://player.vimeo.com/progressive_redirect/playback/670642028/rendition/720p/720p.mp4?loc=external&signature=6baaf77ee7c4e0e4c370ccaa87b196eeb5d28f0a82a256941d814f29c204ca86',
@@ -500,7 +500,7 @@ export const content = {
         video: {
           caption: 'Ad Industry',
           size: '370x245',
-          poster: '/img/into.jpg',
+          poster: '/img/ai.jpg',
           source:
             'https://player.vimeo.com/progressive_redirect/playback/670642028/rendition/720p/720p.mp4?loc=external&signature=6baaf77ee7c4e0e4c370ccaa87b196eeb5d28f0a82a256941d814f29c204ca86',
         },
@@ -511,7 +511,7 @@ export const content = {
         video: {
           caption: 'Business Model',
           size: '370x245',
-          poster: '/img/into.jpg',
+          poster: '/img/bm.jpg',
           source:
             'https://player.vimeo.com/progressive_redirect/playback/670639599/rendition/720p/720p.mp4?loc=external&signature=dcdd47592e00d8b486bee5c04892b2e89ba851d7c6f2c7bdab571bf4a89205ef',
         },
@@ -522,7 +522,7 @@ export const content = {
         video: {
           caption: 'Technology',
           size: '370x245',
-          poster: '/img/into.jpg',
+          poster: '/img/tech.jpg',
           source:
             'https://player.vimeo.com/progressive_redirect/playback/670640828/rendition/720p/720p.mp4?loc=external&signature=181476d957b383ef6f13e0c63f8ff1103590ed855d89adc7fbe12402271c75ea',
         },
