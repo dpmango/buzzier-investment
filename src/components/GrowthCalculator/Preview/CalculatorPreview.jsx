@@ -3,6 +3,7 @@ import { numberWithCommas } from '@helpers';
 import { RangeSlider, SvgIcon } from '@ui';
 import styles from './CalculatorPreview.module.scss';
 import React, { useCallback, useState } from 'react';
+import * as ReactDOMServer from 'react-dom/server';
 
 const CalculatorPreview = ({ className }) => {
   const [cost, setCost] = useState(10);
@@ -19,8 +20,50 @@ const CalculatorPreview = ({ className }) => {
   }, [locations, cost]);
 
   function roi(locationRevenue, devicesNumber) {
-    return (locationRevenue / 3) * 5 * devicesNumber - devicesNumber * 199;
+    return (locationRevenue / 3) * 5 * devicesNumber - devicesNumber * 189;
   }
+
+  const hint1 = (
+    <>
+      <p>
+        The revenue potential of any location is depended on three key factors. What type of business it is, its
+        geographical location and whether it is in an urban or rural setting.
+      </p>
+      <p>
+        The average local store in the United States could generate approximately $6000/year vs a medical office that
+        could generate as much as $25,000/year in revenue.
+      </p>
+    </>
+  );
+
+  const hint2 = (
+    <>
+      <p>ROI is calculated over a 5 year term times the amount of devices in market less the device cost.</p>
+    </>
+  );
+  const hint3 = (
+    <div className={styles.mtableW}>
+      <div className={styles.mtableHint}>The distributor can have a network starting with as little as one device.</div>
+      <table cellPadding={0} cellSpacing={0} className={styles.mtable}>
+        <tr>
+          <td>Distributor</td>
+          <td>Cost</td>
+          <td>Investment</td>
+          <td>5 Year ROI</td>
+        </tr>
+        {[10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map((v) => {
+          return (
+            <tr key={'d_' + v}>
+              <td>{v}</td>
+              <td>${199 - v}.00</td>
+              <td>${numberWithCommas((199 - v) * v)}.00</td>
+              <td>${numberWithCommas((6000 / 3) * 5 * v - (199 - v) * v)}.00</td>
+            </tr>
+          );
+        })}
+      </table>
+    </div>
+  );
 
   return (
     <section className={cns(styles.container, className)}>
@@ -48,7 +91,7 @@ const CalculatorPreview = ({ className }) => {
                   <span>${numberWithCommas(25000)}</span>
                   Medical Office
                 </div>
-                <div className={styles.sectionNote} data-tip={'of addressable locations in the US'}>
+                <div className={styles.sectionNote} data-html={true} data-tip={ReactDOMServer.renderToString(hint1)}>
                   <SvgIcon name="question" />
                 </div>
               </div>
@@ -65,7 +108,7 @@ const CalculatorPreview = ({ className }) => {
                 <div className={styles.sectionContent}>
                   <RangeSlider value={cost} min={10} step={1} max={100} onChange={(v) => setCost(v)} />
                 </div>
-                <div className={styles.sectionNote} data-tip="Median range per ad play is 30¢ to 45¢">
+                <div className={styles.sectionNote} data-html={true} data-tip={ReactDOMServer.renderToString(hint3)}>
                   <SvgIcon name="question" />
                 </div>
               </div>
@@ -80,9 +123,7 @@ const CalculatorPreview = ({ className }) => {
                   </div>
                   <div className={styles.sectionValue}>${calculatedRoi()}</div>
                 </div>
-                <div
-                  className={styles.sectionNote}
-                  data-tip="The industry boosts 69% - 92% fill rate which is the percentage of available inventory sold. In latest results outdoor advertising increased 125% in Q2 2021. 61% was in our sector">
+                <div className={styles.sectionNote} data-html={true} data-tip={ReactDOMServer.renderToString(hint2)}>
                   <SvgIcon name="question" />
                 </div>
               </div>
