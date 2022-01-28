@@ -81,7 +81,7 @@
 
 .chart {
   background: #28282c;
-  padding: 3rem 2rem calc(2rem + 30px);
+  padding: 3rem 2rem calc(2rem + 10px);
   border-radius: 10px;
 }
 
@@ -89,6 +89,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &:hover {
+    .overlay {
+      transform: translateY(0);
+    }
+  }
+}
+
+.returnLabel {
+  font-size: 0.8rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-top: 80px;
 }
 
 .overlay {
@@ -99,6 +113,11 @@
   padding: 2rem;
   transform: translateY(100%);
   transition: transform 0.25s;
+
+  span {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
 }
 
 .ylabel {
@@ -199,10 +218,6 @@
 
   &:hover {
     background: #baa362;
-
-    .overlay {
-      transform: translateY(0);
-    }
   }
 }
 

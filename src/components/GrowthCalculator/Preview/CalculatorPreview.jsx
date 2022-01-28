@@ -5,8 +5,14 @@ import styles from './CalculatorPreview.module.scss';
 import React, { useCallback, useState } from 'react';
 
 const CalculatorPreview = ({ className }) => {
-  const [locations, setLocations] = useState(6000);
   const [cost, setCost] = useState(10);
+  const [hint, setHint] = useState(
+    <p>
+      <span>77.9%</span> of US businesses would see a <span>24.12%</span> uptick in profit through the installation in
+      the Buzzier service.
+    </p>
+  );
+  const [locations, setLocations] = useState(6000);
 
   const calculatedRoi = useCallback(() => {
     return numberWithCommas(Math.round(roi(locations, cost)));
@@ -118,17 +124,51 @@ const CalculatorPreview = ({ className }) => {
                   </div>
                   <div className={styles.chartWrapper}>
                     <div className={styles.bars}>
-                      <div className={styles.block1}>
-                        <div className={styles.overlay}>
-                          <p>
-                            77.9% of US businesses would see a 24.12% uptick in profit through the installation in the
-                            Buzzier service.
-                          </p>
-                        </div>
+                      <div
+                        className={styles.block1}
+                        onMouseEnter={() => {
+                          setHint(
+                            <p>
+                              <span>77.9%</span> of US businesses would see a <span>24.12%</span> uptick in profit
+                              through the installation of the Buzzier service.
+                            </p>
+                          );
+                        }}>
+                        <div className={styles.overlay}>{hint}</div>
                       </div>
-                      <div className={styles.block2} />
-                      <div className={styles.block3} />
-                      <div className={styles.block4} />
+                      <div
+                        className={styles.block2}
+                        onMouseEnter={() => {
+                          setHint(
+                            <p>
+                              <span>15%</span> of US businesses would see a <span>2.54%</span> uptick in profit through
+                              the installation of the Buzzier service.
+                            </p>
+                          );
+                        }}
+                      />
+                      <div
+                        className={styles.block3}
+                        onMouseEnter={() => {
+                          setHint(
+                            <p>
+                              <span>5%</span> of US businesses would see a <span>1.3%</span> uptick in profit through
+                              the installation of the Buzzier service.
+                            </p>
+                          );
+                        }}
+                      />
+                      <div
+                        className={styles.block4}
+                        onMouseEnter={() => {
+                          setHint(
+                            <p>
+                              <span>2%</span> of US businesses would see a <span>0.43%</span> uptick in profit through
+                              the installation of the Buzzier service.
+                            </p>
+                          );
+                        }}
+                      />
                     </div>
                     <div className={styles.xlabelNumbers}>
                       <div>
@@ -158,6 +198,7 @@ const CalculatorPreview = ({ className }) => {
                     </div>
                   </div>
                 </div>
+                <div className={styles.returnLabel}>Percentage of US companies x return</div>
               </div>
             </div>
           </div>
