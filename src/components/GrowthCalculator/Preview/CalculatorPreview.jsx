@@ -171,7 +171,7 @@ const CalculatorPreview = ({ className }) => {
                           setHint(
                             <p>
                               <span>77.9%</span> of US businesses would see a <span>24.12%</span> uptick in profit
-                              through the installation of the Buzzier service.
+                              through the installation of a single Buzzier device.
                             </p>
                           );
                         }}>
@@ -183,7 +183,7 @@ const CalculatorPreview = ({ className }) => {
                           setHint(
                             <p>
                               <span>15%</span> of US businesses would see a <span>2.54%</span> uptick in profit through
-                              the installation of the Buzzier service.
+                              the installation of a single Buzzier device.
                             </p>
                           );
                         }}
@@ -194,7 +194,7 @@ const CalculatorPreview = ({ className }) => {
                           setHint(
                             <p>
                               <span>5%</span> of US businesses would see a <span>1.3%</span> uptick in profit through
-                              the installation of the Buzzier service.
+                              the installation of a single Buzzier device.
                             </p>
                           );
                         }}
@@ -205,7 +205,7 @@ const CalculatorPreview = ({ className }) => {
                           setHint(
                             <p>
                               <span>2%</span> of US businesses would see a <span>0.43%</span> uptick in profit through
-                              the installation of the Buzzier service.
+                              the installation of a single Buzzier device.
                             </p>
                           );
                         }}

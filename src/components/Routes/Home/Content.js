@@ -10,7 +10,7 @@ export const content = {
     video: {
       poster: '/img/into.jpg',
       source:
-        'https://player.vimeo.com/progressive_redirect/playback/670643104/rendition/720p/720p.mp4?loc=external&signature=e8aec9b210f541358cfac79dfd17a41ebbbca671acb205b93e2f55bc762dd678',
+        'https://player.vimeo.com/progressive_redirect/playback/671168751/rendition/720p/720p.mp4?loc=external&signature=1733ac2e0cab67f9523a32454d0856af8a5002a3e7a2004394919d13287c0cea',
       caption: 'How do we make money for you?',
     },
   },
@@ -272,7 +272,7 @@ export const content = {
           poster: '/img/how.jpg',
           caption: 'How it works?',
           source:
-            'https://player.vimeo.com/progressive_redirect/playback/670640828/rendition/720p/720p.mp4?loc=external&signature=181476d957b383ef6f13e0c63f8ff1103590ed855d89adc7fbe12402271c75ea',
+            'https://player.vimeo.com/progressive_redirect/playback/671167577/rendition/720p/720p.mp4?loc=external&signature=3800a563548c47faeeb47091650b2783176c75647bf1ed9b505c10e8a1058cda',
         },
       },
       {
@@ -524,7 +524,7 @@ export const content = {
           size: '370x245',
           poster: '/img/tech.jpg',
           source:
-            'https://player.vimeo.com/progressive_redirect/playback/670640828/rendition/720p/720p.mp4?loc=external&signature=181476d957b383ef6f13e0c63f8ff1103590ed855d89adc7fbe12402271c75ea',
+            'https://player.vimeo.com/progressive_redirect/playback/671167577/rendition/720p/720p.mp4?loc=external&signature=3800a563548c47faeeb47091650b2783176c75647bf1ed9b505c10e8a1058cda',
         },
       },
     ],
