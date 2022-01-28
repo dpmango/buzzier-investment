@@ -5,22 +5,22 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { UiStoreContext } from '@store';
 import { CalculatorPreview } from '@c/Calculator';
 import {
-  HomeHero,
-  HomeVideo,
-  HomeFeatures,
   HomeBenefits,
-  HomeHowItWorks,
   HomeBusinessModel,
+  HomeCore,
+  HomeFeatures,
+  HomeHero,
+  HomeHowItWorks,
   HomeIndustries,
   HomeScope,
   HomeSteps,
-  HomeWhyInvest,
-  HomeCore,
   HomeTeam,
   HomeUploads,
+  HomeVideo,
+  HomeWhyInvest,
 } from '@c/Home';
-import { EventCountdown, EventBanner, EventLive } from '@c/Event';
-import { EventSignupModal, AssumptionsModal } from '@c/Modal';
+import { EventBanner, EventCountdown, EventLive } from '@c/Event';
+import { AssumptionsModal, EventSignupModal } from '@c/Modal';
 import { GrowthCalculator } from '../../GrowthCalculator';
 import { content } from './Content.js';
 
@@ -38,13 +38,13 @@ const HomePage = observer(() => {
       </Helmet>
 
       <ParallaxProvider>
-        {/*<HomeHero {...content.hero} />
+        <HomeHero {...content.hero} />
         <HomeVideo {...content.video} />
         <CalculatorPreview {...content.calculator} />
         <HomeFeatures {...content.features} />
         <HomeBenefits {...content.benefits} />
         <HomeHowItWorks {...content.howItWorks} />
-        <HomeBusinessModel {...content.model} />*/}
+        <HomeBusinessModel {...content.model} />
         <GrowthCalculator {...content.calculator1} />
         <HomeIndustries {...content.industries} />
         <HomeScope {...content.scope} />
