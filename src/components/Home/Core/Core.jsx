@@ -39,7 +39,7 @@ const CoreImages = {
 const Core = ({ className, title, header, cols }) => {
   const handleDownloadClick = (e) => {
     e.preventDefault();
-    window.open('/uploads/pitch.pdf');
+    window.open('/uploads/Fact_Sheet.pdf');
   };
 
   return (
@@ -86,7 +86,7 @@ const Core = ({ className, title, header, cols }) => {
         </div>
 
         <div className={styles.cta}>
-          <Button onClick={handleDownloadClick}>Download our pitch deck</Button>
+          <Button onClick={handleDownloadClick}>Download our fact sheet</Button>
         </div>
       </div>
     </section>

@@ -327,7 +327,7 @@ export const content = {
         link: {
           type: 2,
           target: '_blank',
-          to: '/uploads/Technology.pdf',
+          to: '/uploads/Fact_Sheet.pdf',
           label: 'Download <u>our fact sheet</u>',
         },
       },

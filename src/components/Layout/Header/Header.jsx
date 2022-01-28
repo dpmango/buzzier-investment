@@ -86,7 +86,13 @@ const Header = observer(({ className }) => {
             </Link>
 
             <div className={styles.cta}>
-              <Button theme="black">Pitch deck</Button>
+              <Button
+                theme="black"
+                onClick={() => {
+                  window.open('/uploads/Fact_Sheet.pdf');
+                }}>
+                Fact sheet
+              </Button>
               <Button theme="primary" onClick={() => uiContext.setModal('eventSignup')}>
                 Join our live event
               </Button>
@@ -112,8 +118,13 @@ const Header = observer(({ className }) => {
           </div>
 
           <div className={styles.menuCta}>
-            <Button theme="black" block>
-              Download our pitch deck
+            <Button
+              onClick={() => {
+                window.open('/uploads/Fact_Sheet.pdf');
+              }}
+              theme="black"
+              block>
+              Download our fact sheet
             </Button>
             <Button theme="primary" block onClick={() => uiContext.setModal('eventSignup')}>
               Join our live event
