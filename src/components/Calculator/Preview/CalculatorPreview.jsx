@@ -1,7 +1,7 @@
 import cns from 'classnames';
-import React, { useState, useMemo, useCallback, useContext } from 'react';
+import React, { useCallback, useContext, useMemo, useState } from 'react';
 
-import { SvgIcon, RangeSlider, Button } from '@ui';
+import { Button, RangeSlider, SvgIcon } from '@ui';
 import { UiStoreContext } from '@store';
 import { numberWithCommas } from '@helpers';
 
@@ -31,11 +31,11 @@ const CalculatorPreview = ({ className, title, fact }) => {
       let val = 0;
       let r = roi(investment, locations, cost, selloutRate);
       if (years === 3) {
-        val = r[0];
+        val = r[0] * 0.7;
       }
 
       if (years === 5) {
-        val = r[1];
+        val = r[1] * 0.7;
       }
 
       return numberWithCommas(Math.round(val));
